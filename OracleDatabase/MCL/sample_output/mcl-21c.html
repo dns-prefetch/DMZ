@@ -1,36 +1,38 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=WINDOWS-1252">
-<meta name="generator" content="SQL*Plus 18.3.0">
-  <meta name='author' content='Michael Hartley'>  <meta name='version' content='Thu, 28 Feb 2019 10:36:36 GMT'>  <meta name='title' content='Migration Check List'>  <title>Migration Check List</title>  <style id=myStyles>.x {border: solid 1px black;width: 300px;height: 300px;}</style>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="SQL*Plus 21.3.0">
+  <meta name='author' content='Michael Hartley'>  <meta name='version' content='Fri, 15 Jul 2022 13:23:28 GMT'>  <meta name='title' content='Migration Check List'>  <title>Migration Check List</title>  <style id=myStyles>.x {border: solid 1px black;width: 300px;height: 300px;}</style>
 </head>
 <body>
 <a id="z-header"/>
 <br>
 
 <br>
+<img width=100% height=120px src="https://dns-prefetch.github.io/assets/logos/mcl.svg" alt="mcl"/>
+<br>
 <button class="button" id="myBtn">Migration Check List</button>
 <br>
 <!-- The Modal -->
 <br>
 <div id="myModal" class="modal"><div class="modal-content"><table><tr valign=top><td><table class="TT"><caption>Session information</caption><tr><th scope="col">USRENV Parameter</th><th scope="col">Value</th></tr>
-<tr><td align="right">Document Compiled</td><td>Thursday  28 February  2019 10:36</td></tr>
-<tr><td align="right">Schema Filter</td><td></td></tr><tr><td align="right">AUTHENTICATED_IDENTITY</td><td>SYS</td></tr><tr><td align="right">AUTHENTICATION_METHOD</td><td>PASSWORD</td></tr><tr><td align="right">AUTHENTICATION_TYPE</td><td>OS</td></tr>
-<tr><td align="right">CURRENT_SCHEMA</td><td>SYS</td></tr>
-<tr><td align="right">CURRENT_USER</td><td>SYS</td></tr><tr><td align="right">DB_NAME</td><td>LC1</td></tr><tr><td align="right">DB_UNIQUE_NAME</td><td>LC1</td></tr><tr><td align="right">HOST</td><td>uk-ORACLE\MHARTLEY-GB</td></tr>
+<tr><td align="right">Document Compiled</td><td>Friday    15 July      2022 14:25</td></tr>
+<tr><td align="right">Schema Filter</td><td></td></tr><tr><td align="right">AUTHENTICATED_IDENTITY</td><td>oracle</td></tr><tr><td align="right">AUTHENTICATION_METHOD</td><td>OS</td></tr><tr><td align="right">CURRENT_SCHEMA</td><td>SYS</td></tr>
+<tr><td align="right">CURRENT_USER</td><td>SYS</td></tr>
+<tr><td align="right">DB_NAME</td><td>db21c</td></tr><tr><td align="right">DB_UNIQUE_NAME</td><td>db21c</td></tr><tr><td align="right">EXTERNAL_NAME</td><td>oracle</td></tr><tr><td align="right">HOST</td><td>db21c.mlh</td></tr>
 <tr><td align="right">IDENTIFICATION_TYPE</td><td>LOCAL</td></tr>
-<tr><td align="right">INSTANCE</td><td>1</td></tr><tr><td align="right">INSTANCE_NAME</td><td>LC1</td></tr><tr><td align="right">IP_ADDRESS</td><td>192.168.1.1</td></tr><tr><td align="right">ISDBA</td><td>TRUE</td></tr>
-<tr><td align="right">LANG</td><td>GB</td></tr>
-<tr><td align="right">LANGUAGE</td><td>ENGLISH_UNITED KINGDOM.AL32UTF8</td></tr><tr><td align="right">MODULE</td><td>sqlplus.exe</td></tr><tr><td align="right">NETWORK_PROTOCOL</td><td>tcp</td></tr><tr><td align="right">NLS_CURRENCY</td><td>£</td></tr>
-<tr><td align="right">NLS_DATE_FORMAT</td><td>YYYY-MM-DD HH24:Mi:SS</td></tr>
-<tr><td align="right">NLS_DATE_LANGUAGE</td><td>ENGLISH</td></tr><tr><td align="right">NLS_TERRITORY</td><td>UNITED KINGDOM</td></tr><tr><td align="right">OS_USER</td><td>mhartley</td></tr><tr><td align="right">SERVER_HOST</td><td>l1</td></tr>
-<tr><td align="right">SERVICE_NAME</td><td>LC1</td></tr>
-<tr><td align="right">SESSIONID</td><td>4294967295</td></tr><tr><td align="right">SESSION_USERID</td><td>0</td></tr><tr><td align="right">TERMINAL</td><td>MHARTLEY-GB</td></tr><tr><td align="right">PROGRAM</td><td>sqlplus.exe</td></tr>
+<tr><td align="right">INSTANCE</td><td>1</td></tr><tr><td align="right">INSTANCE_NAME</td><td>db21c</td></tr><tr><td align="right">ISDBA</td><td>TRUE</td></tr><tr><td align="right">LANG</td><td>US</td></tr>
+<tr><td align="right">LANGUAGE</td><td>AMERICAN_UNITED KINGDOM.AL32UTF8</td></tr>
+<tr><td align="right">MODULE</td><td>sqlplus@db21c.mlh (TNS V1-V3)</td></tr><tr><td align="right">NLS_CURRENCY</td><td>#</td></tr><tr><td align="right">NLS_DATE_FORMAT</td><td>YYYY-MM-DD HH24:Mi:SS</td></tr>
+<tr><td align="right">NLS_DATE_LANGUAGE</td><td>ENGLISH</td></tr>
+<tr><td align="right">NLS_TERRITORY</td><td>UNITED KINGDOM</td></tr><tr><td align="right">OS_USER</td><td>oracle</td></tr><tr><td align="right">SERVER_HOST</td><td>db21c</td></tr><tr><td align="right">SERVICE_NAME</td><td>SYS$USERS</td></tr>
+<tr><td align="right">SESSIONID</td><td>4294967295</td></tr>
+<tr><td align="right">SESSION_USERID</td><td>0</td></tr><tr><td align="right">TERMINAL</td><td>pts/0</td></tr><tr><td align="right">PROGRAM</td><td>sqlplus@db21c.mlh (TNS V1-V3)</td></tr>
 </table>
 </td><td><div class="modal-header"><span class="close"></span><b>Migration Check List</b></div><div class="modal-body">
 <p>About.  What does it mean to be a "Migration Check List"</p>
-<table class="TT"><caption>FAQ</caption><tr><td align="right">.Q.</td><td>.A.</td></tr><tr><td align="right">Who am I</td><td>Migration Check List</td></tr><tr><td align="right">What is my version</td><td>1901</td></tr>
-<tr><td align="right">What is my patch date</td><td>Thu, 28 Feb 2019 10:36:36 GMT</td></tr>
+<table class="TT"><caption>FAQ</caption><tr><td align="right">.Q.</td><td>.A.</td></tr><tr><td align="right">Who am I</td><td>Migration Check List</td></tr><tr><td align="right">What is my version</td><td>2206</td></tr>
+<tr><td align="right">What is my patch date</td><td>Fri, 15 Jul 2022 13:23:28 GMT</td></tr>
 <tr><td align="right">Who is my creator</td><td>Michael Hartley</td></tr>
 <tr><td align="right">Why am I here</td><td>In 2014, the author was writing migration gap analysis documents and was struggling to collect information he needed, so he started writing your code.</td></tr>
 <tr><td align="right">What does my version number mean?</td><td>Your version is incremented roughly every 6 months, around January and June every year.  The four digits are the year and month you were created.</td></tr>
@@ -54,11 +56,7 @@ stroke:black; stroke-width:1px;"> <circle cx="1.5cm" cy="1.5cm" r="1cm" style="f
 <div id='Menu1'></div>
 
 <br>
-Database migrations are complicated and detailed and even the most simple lift and shift exercises can go wrong if an insufficient degree of analysis is undertaken.  The information collected by this script can be used to help with migration planning for even small simplistic database environments.
-<br>
-
-<br>
-This script is read-only against the database catalogue, database objects are not created or modified.  There is no attempt to capture information contained within an application schema, other than table and column names.  If you have any table or column names that you wish to keep private, simply edit and rename the resulting spool file.  Any gap analysis performed with the data extract by this script does not rely on the table or column names, though the names may be used as points for discussion within a migration gap analysis document.
+This script is read-only against the database catalogue, database objects are not created or modified.  There is no attempt to capture information contained within an application schema, other than table and column names.  If you have any table or column names that you wish to keep private, simply edit and rename the resulting spool file.  Any gap analysis performed with the data extract by this script does not rely on the table or column names, though the names may be used as points for discussion within a gap analysis document.
 <br>
 
 <br>
@@ -72,86 +70,78 @@ Top level summary of the database configuration and sizing.
 <br>
 <table class="TT"><tr><th scope="col">Parameter</th><th scope="col">Value</th></tr>
 <tr><td align="right"><b>Section</b></td><td>+- db -+</td></tr>
-<tr><td align="right">Database host</td><td>l1</td></tr>
-<tr><td align="right">Host name</td><td>L1.mlh</td></tr>
+<tr><td align="right">Database host</td><td>db21c</td></tr>
+<tr><td align="right">Host name</td><td>db21c.mlh</td></tr>
 <tr><td align="right">Platform name</td><td>Linux x86 64-bit</td></tr>
 <tr><td align="right">Operating system and two task protocol version</td><td>x86_64/Linux 2.4.xx</td></tr>
 <tr><td align="right">CPU Socket Core Count</td><td>1</td></tr>
-<tr><td align="right">CPU Count</td><td>2</td></tr>
+<tr><td align="right">CPU Count</td><td>4</td></tr>
 <tr><td align="right">CPU Endian Format</td><td>Little</td></tr>
-<tr><td align="right">Physical memory(gb)</td><td>3.61</td></tr>
-<tr><td align="right">SGA + PGA(now) usage mb</td><td>1.4</td></tr>
-<tr><td align="right">SGA + PGA(max) usage mb</td><td>1.54</td></tr>
-<tr><td align="right">Database name</td><td>LC1</td></tr>
-<tr><td align="right">Unique name</td><td>LC1</td></tr>
-<tr><td align="right">Database version</td><td>Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production</td></tr>
-<tr><td align="right">Created</td><td>2019-02-04 12:58</td></tr>
-<tr><td align="right">Age years</td><td>0.07</td></tr>
+<tr><td align="right">Physical memory(gb)</td><td>7.49</td></tr>
+<tr><td align="right">SGA + PGA(now) usage mb</td><td>1.45</td></tr>
+<tr><td align="right">SGA + PGA(max) usage mb</td><td>1.78</td></tr>
+<tr><td align="right">Database name</td><td>DB21C</td></tr>
+<tr><td align="right">Unique name</td><td>db21c</td></tr>
+<tr><td align="right">Database version</td><td>Oracle Database 21c Enterprise Edition Release 21.0.0.0.0 - Production</td></tr>
+<tr><td align="right">Created</td><td>2021-12-21 16:12</td></tr>
+<tr><td align="right">Age years</td><td>0.56</td></tr>
 <tr><td align="right">Time zone</td><td>+00:00</td></tr>
-<tr><td align="right">Time zone version</td><td>26</td></tr>
-<tr><td align="right">Time zone Filename</td><td>timezlrg_26.dat</td></tr>
+<tr><td align="right">Time zone version</td><td>35</td></tr>
+<tr><td align="right">Time zone Filename</td><td>timezlrg_35.dat</td></tr>
 <tr><td align="right">User count</td><td>6</td></tr>
-<tr><td align="right">Startup time</td><td>2019-02-28 10:30</td></tr>
+<tr><td align="right">Startup time</td><td>2022-07-15 13:28</td></tr>
 <tr><td align="right">Open mode</td><td>READ WRITE</td></tr>
-<tr><td align="right">Current SCN</td><td>3142175 AVG/y(47984728) AVG/m(3998727) AVG/d(131465) AVG/hr(5478)</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right">Current SCN</td><td>3081371 AVG/y(5461683) AVG/m(455140) AVG/d(14964) AVG/hr(623)</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- db character set -+</td></tr>
-<tr><td align="right">nls_language</td><td>ENGLISH</td></tr>
+<tr><td align="right">nls_language</td><td>AMERICAN</td></tr>
 <tr><td align="right">nls_territory</td><td>UNITED KINGDOM</td></tr>
 <tr><td align="right">nls_characterset</td><td>AL32UTF8</td></tr>
 <tr><td align="right">nls_nchar_characterset</td><td>AL16UTF16</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- db tablespace footprint -+</td></tr>
-<tr><td align="right">db disk space gb</td><td>2.04</td></tr>
+<tr><td align="right">db disk space gb</td><td>3.10</td></tr>
 <tr><td align="right">db free space gb</td><td>0.00</td></tr>
-<tr><td align="right">db free space percentage</td><td>0.19</td></tr>
+<tr><td align="right">db free space percentage</td><td>0.07</td></tr>
 <tr><td align="right">control files</td><td>.03</td></tr>
+<tr><td align="right">temp gb</td><td>.47</td></tr>
 <tr><td align="right">application tablespaces gb</td><td>0</td></tr>
+<tr><td align="right">sysaux gb</td><td>.72</td></tr>
+<tr><td align="right">system gb</td><td>1.31</td></tr>
+<tr><td align="right">undotbs1 gb</td><td>.12</td></tr>
 <tr><td align="right">online redo logs gb</td><td>.47</td></tr>
-<tr><td align="right">sysaux gb</td><td>.64</td></tr>
-<tr><td align="right">system gb</td><td>.79</td></tr>
-<tr><td align="right">temp gb</td><td>.03</td></tr>
-<tr><td align="right">undotbs1 gb</td><td>.1</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- db application segments -+</td></tr>
 <tr><td align="right">cluster gb</td><td>0</td></tr>
-<tr><td align="right">index gb</td><td>0.01</td></tr>
+<tr><td align="right">index gb</td><td>0.00</td></tr>
 <tr><td align="right">index partition gb</td><td>0</td></tr>
 <tr><td align="right">lob partition gb</td><td>0</td></tr>
-<tr><td align="right">lobindex gb</td><td>0.00</td></tr>
-<tr><td align="right">lobsegment gb</td><td>0.00</td></tr>
+<tr><td align="right">lobindex gb</td><td>0</td></tr>
+<tr><td align="right">lobsegment gb</td><td>0</td></tr>
 <tr><td align="right">nested table gb</td><td>0.00</td></tr>
 <tr><td align="right">system statistics gb</td><td>0</td></tr>
 <tr><td align="right">table gb</td><td>0.00</td></tr>
 <tr><td align="right">table partition gb</td><td>0</td></tr>
 <tr><td align="right">table subpartition gb</td><td>0</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>3</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- db registry segments -+</td></tr>
+<tr><td align="right">Oracle XML Database (XDB) gb</td><td>0.10</td></tr>
 <tr><td align="right">Oracle Workspace Manager (WMSYS) gb</td><td>0.01</td></tr>
-<tr><td align="right">Oracle Label Security (LBACSYS) gb</td><td>0.00</td></tr>
-<tr><td align="right">Spatial (MDSYS) gb</td><td>0.09</td></tr>
-<tr><td align="right">Oracle XML Database (XDB) gb</td><td>0.07</td></tr>
-<tr><td align="right">Oracle Multimedia (ORDSYS) gb</td><td>0.00</td></tr>
-<tr><td align="right">Oracle Database Vault (DVSYS) gb</td><td>0.00</td></tr>
 <tr><td align="right">Oracle Text (CTXSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Oracle Multimedia (ORDSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Spatial (MDSYS) gb</td><td>0.17</td></tr>
+<tr><td align="right">Oracle Locator (MDSYS) gb</td><td>0.17</td></tr>
+<tr><td align="right">Oracle Label Security (LBACSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Oracle Database Vault (DVSYS) gb</td><td>0.00</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- ASM -+</td></tr>
-<tr><td align="right">DATA</td><td>total_gb = 10
-                  used_gb = 4
-                  free_gb = 6</td></tr>
-<tr><td align="right">FRA</td><td>total_gb = 10
-                  used_gb = 0
-                  free_gb = 10</td></tr>
-<tr><td align="right">REDO</td><td>total_gb = 0
-                  used_gb = 0
-                  free_gb = 0</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- cdb -+</td></tr>
 <tr><td align="right">Am I a CDB</td><td>YES</td></tr>
 <tr><td align="right">Container name</td><td>CDB$ROOT</td></tr>
 <tr><td align="right">container 1</td><td>CDB$ROOT [0 gb]</td></tr>
-<tr><td align="right">container 2</td><td>PDB$SEED [.89 gb]</td></tr>
-<tr><td align="right">container 3</td><td>P1 [.91 gb]</td></tr>
+<tr><td align="right">container 2</td><td>PDB$SEED [.74 gb]</td></tr>
+<tr><td align="right">container 3</td><td>P1 [1.25 gb]</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- db logging -+</td></tr>
 <tr><td align="right">Log mode</td><td>NOARCHIVELOG</td></tr>
@@ -164,41 +154,41 @@ Top level summary of the database configuration and sizing.
 <tr><td align="right">Supplemental log data pk</td><td>NO</td></tr>
 <tr><td align="right">Supplemental log data ui</td><td>NO</td></tr>
 <tr><td align="right">3 log Groups</td><td>2 members of 80 mb</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- db parameters -+</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ General ++</td></tr>
-<tr><td align="right">compatible</td><td>[N=1] 12.2.0</td></tr>
+<tr><td align="right">compatible</td><td>[N=1] 21.0.0</td></tr>
 <tr><td align="right">db_block_size</td><td>[N=1] 8192</td></tr>
-<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=LC1XDB)</td></tr>
+<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=db21cXDB)</td></tr>
 <tr><td align="right">open_cursors</td><td>[N=1] 300</td></tr>
-<tr><td align="right">processes</td><td>[N=1] 300</td></tr>
+<tr><td align="right">processes</td><td>[N=1] 320</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ Networking ++</td></tr>
-<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=LC1XDB)</td></tr>
-<tr><td align="right">local_listener</td><td>[N=1] LISTENER_LC1</td></tr>
+<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=db21cXDB)</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ Memory ++</td></tr>
 <tr><td align="right">pga_aggregate_target</td><td>[N=1] 314572800</td></tr>
 <tr><td align="right">sga_target</td><td>[N=1] 1258291200</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ File Destinations ++</td></tr>
-<tr><td align="right">audit_file_dest</td><td>[N=1] /u01/app/oracle/admin/LC1/adump</td></tr>
-<tr><td align="right">control_files</td><td>[N=1] +DATA/LC1/CONTROLFILE/current.266.999349135, +FRA/LC1/CONTROLFILE/current.256.999349137</td></tr>
-<tr><td align="right">db_create_file_dest</td><td>[N=1] +DATA</td></tr>
-<tr><td align="right">db_recovery_file_dest</td><td>[N=1] +FRA</td></tr>
+<tr><td align="right">audit_file_dest</td><td>[N=1] /opt/oracle/admin/db21c/adump</td></tr>
+<tr><td align="right">control_files</td><td>[N=1] /u01/data/DB21C/controlfile/o1_mf_jw3z7mc5_.ctl, /u01/fra/DB21C/controlfile/o1_mf_jw3z7mdm_.ctl</td></tr>
+<tr><td align="right">db_create_file_dest</td><td>[N=1] /u01/data</td></tr>
+<tr><td align="right">db_recovery_file_dest</td><td>[N=1] /u01/fra</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ CPU caging and resource limits ++</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ SQL tuning ++</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ Deprecated - in use ++</td></tr>
 <tr><td align="right"><b>Section</b></td><td>++ Hidden underscore - in use ++</td></tr>
 <tr><td align="right">__data_transfer_cache_size</td><td>[N=1] 0 [Actual size of data transfer cache ]</td></tr>
-<tr><td align="right">__db_cache_size</td><td>[N=1] 889192448 [Actual size of DEFAULT buffer pool for standard block size buffers ]</td></tr>
+<tr><td align="right">__db_cache_size</td><td>[N=1] 503316480 [Actual size of DEFAULT buffer pool for standard block size buffers ]</td></tr>
 <tr><td align="right">__inmemory_ext_roarea</td><td>[N=1] 0 [Actual size in bytes of inmemory ro extension area ]</td></tr>
 <tr><td align="right">__inmemory_ext_rwarea</td><td>[N=1] 0 [Actual size in bytes of inmemory rw extension area ]</td></tr>
-<tr><td align="right">__java_pool_size</td><td>[N=1] 16777216 [Actual size in bytes of java pool ]</td></tr>
-<tr><td align="right">__large_pool_size</td><td>[N=1] 33554432 [Actual size in bytes of large pool ]</td></tr>
-<tr><td align="right">__oracle_base</td><td>[N=1] /u01/app/oracle [ORACLE_BASE ORACLE_BASE set from environment]</td></tr>
+<tr><td align="right">__java_pool_size</td><td>[N=1] 0 [Actual size in bytes of java pool ]</td></tr>
+<tr><td align="right">__large_pool_size</td><td>[N=1] 16777216 [Actual size in bytes of large pool ]</td></tr>
+<tr><td align="right">__oracle_base</td><td>[N=1] /opt/oracle [ORACLE_BASE ORACLE_BASE set from environment]</td></tr>
 <tr><td align="right">__pga_aggregate_target</td><td>[N=1] 318767104 [Current target size for the aggregate PGA memory consumed ]</td></tr>
 <tr><td align="right">__sga_target</td><td>[N=1] 1258291200 [Actual size of SGA ]</td></tr>
-<tr><td align="right">__shared_io_pool_size</td><td>[N=1] 0 [Actual size of shared IO pool ]</td></tr>
-<tr><td align="right">__shared_pool_size</td><td>[N=1] 301989888 [Actual size in bytes of shared pool ]</td></tr>
+<tr><td align="right">__shared_io_pool_size</td><td>[N=1] 67108864 [Actual size of shared IO pool ]</td></tr>
+<tr><td align="right">__shared_pool_size</td><td>[N=1] 654311424 [Actual size in bytes of shared pool ]</td></tr>
 <tr><td align="right">__streams_pool_size</td><td>[N=1] 0 [Actual size in bytes of streams pool ]</td></tr>
+<tr><td align="right">__unified_pga_pool_size</td><td>[N=1] 0 [Actual size in bytes of unified pga pool ]</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- Security configuration -+</td></tr>
 <tr><td align="right">SYS.AUD$ tablespace</td><td>SYSTEM[.06mb]</td></tr>
@@ -212,83 +202,84 @@ Top level summary of the database configuration and sizing.
 <tr><td align="right">Audit Vault Agent</td><td>N/A</td></tr>
 <tr><td align="right">dbms_audit_mgmt installed</td><td>Yes</td></tr>
 <tr><td align="right">Encrypted Columns</td><td>0</td></tr>
-<tr><td align="right">Encryption wallets</td><td>2</td></tr>
+<tr><td align="right">Encryption wallets</td><td>3</td></tr>
 <tr><td align="right">Encrypted Tablespace (11g+)</td><td>0</td></tr>
 <tr><td align="right">Compressed tablespaces</td><td>0</td></tr>
 <tr><td align="right">Encrypted Backups</td><td>0</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- RAC configuration -+</td></tr>
-<tr><td align="right">RAC nodes</td><td>LC1(L1.mlh)</td></tr>
+<tr><td align="right">RAC nodes</td><td>db21c(db21c.mlh)</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- Data Guard configuration -+</td></tr>
 <tr><td align="right">remote_login_passwordfile</td><td>[N=1] EXCLUSIVE</td></tr>
 <tr><td align="right">Database Instance</td><td>N/A</td></tr>
 <tr><td align="right">Database Role</td><td>PRIMARY</td></tr>
-<tr><td align="right">Database Unique Name</td><td>LC1</td></tr>
+<tr><td align="right">Database Unique Name</td><td>db21c</td></tr>
 <tr><td align="right">Dataguard Broker</td><td>DISABLED</td></tr>
 <tr><td align="right">Guard Status</td><td>NONE</td></tr>
 <tr><td align="right">Open Mode</td><td>READ WRITE</td></tr>
 <tr><td align="right">Protection Level</td><td>UNPROTECTED</td></tr>
 <tr><td align="right">Protection Mode</td><td>MAXIMUM PERFORMANCE</td></tr>
 <tr><td align="right">Switchover Status</td><td>NOT ALLOWED</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- Logical Standby Readiness Assessment -+</td></tr>
 <tr><td align="right">-</td><td>DBA_LOGSTDBY_NOT_UNIQUE</td></tr>
 <tr><td align="right">Bad Columns</td><td>0</td></tr>
 <tr><td align="right">-</td><td>DBA_LOGSTDBY_UNSUPPORTED</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>2</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- Transportable Tablespace Readiness Assessment -+</td></tr>
 <tr><td align="right">SUM(tablespace_names)</td><td>17</td></tr>
 <tr><td align="right">Spatial Indexes</td><td>0 --need drop before EXP</td></tr>
 <tr><td align="right">Recycle Bin gb</td><td>(0 objects )</td></tr>
-<tr><td align="right">data-type: BINARY_DOUBLE</td><td>1 --Data Pump</td></tr>
+<tr><td align="right">data-type: BINARY_DOUBLE</td><td>3 --Data Pump</td></tr>
 <tr><td align="right">data-type: BINARY_FLOAT</td><td>1 --Data Pump</td></tr>
 <tr><td align="right">data-type: TIMESTAMP(0) WITH TIME ZONE</td><td>4 --Check target TZ file version</td></tr>
-<tr><td align="right">data-type: TIMESTAMP(6) WITH TIME ZONE</td><td>78 --Check target TZ file version</td></tr>
-<tr><td align="right">data-type: XMLTYPE</td><td>54 --10gR2 EXP/IMP, 11.1+ Datapump</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>3</td></tr>
+<tr><td align="right">data-type: TIMESTAMP(3) WITH TIME ZONE</td><td>9 --Check target TZ file version</td></tr>
+<tr><td align="right">data-type: TIMESTAMP(6) WITH TIME ZONE</td><td>89 --Check target TZ file version</td></tr>
+<tr><td align="right">data-type: XMLTYPE</td><td>51 --10gR2 EXP/IMP, 11.1+ Datapump</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- Streams configuration -+</td></tr>
-<tr><td align="right">compatible</td><td>[N=1] 12.2.0</td></tr>
+<tr><td align="right">compatible</td><td>[N=1] 21.0.0</td></tr>
 <tr><td align="right">sga_target</td><td>[N=1] 1258291200</td></tr>
-<tr><td align="right">CDC-Source tables</td><td>0</td></tr>
-<tr><td align="right">CDC-Change tables</td><td>0</td></tr>
-<tr><td align="right">CDC-Subscriptions</td><td>0</td></tr>
-<tr><td align="right">CDC-Subscribed Tables</td><td>0</td></tr>
+<tr><td align="right">CDC-Source tables</td><td>N/A</td></tr>
+<tr><td align="right">CDC-Change tables</td><td>N/A</td></tr>
+<tr><td align="right">CDC-Subscriptions</td><td>N/A</td></tr>
+<tr><td align="right">CDC-Subscribed Tables</td><td>N/A</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- XDB configuration -+</td></tr>
-<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=LC1XDB)</td></tr>
+<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=db21cXDB)</td></tr>
 <tr><td align="right">XDB FTP Port</td><td>0</td></tr>
 <tr><td align="right">XDB HTTP Port</td><td>0</td></tr>
 <tr><td align="right">XDB Tablespace</td><td>SYSAUX</td></tr>
-<tr><td align="right">XDB User Resources Guess</td><td>4</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>4</td></tr>
+<tr><td align="right">XDB User Resources Guess</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- Workflow configuration -+</td></tr>
 <tr><td align="right">Looking for 13 tables, found</td><td>0</td></tr>
 <tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- Workspace manager -+</td></tr>
-<tr><td align="right">ADD_UNIQUE_COLUMN_TO_HISTORY_VIEW</td><td>OFF</td></tr>
-<tr><td align="right">ALLOW_CAPTURE_EVENTS</td><td>OFF</td></tr>
-<tr><td align="right">ALLOW_MULTI_PARENT_WORKSPACES</td><td>OFF</td></tr>
-<tr><td align="right">ALLOW_NESTED_TABLE_COLUMNS</td><td>OFF</td></tr>
-<tr><td align="right">COMPRESS_PARENT_AFTER_REMOVE</td><td>ON</td></tr>
-<tr><td align="right">CREATEWORKSPACE_SHARED_LOCK</td><td>OFF</td></tr>
 <tr><td align="right">CR_WORKSPACE_MODE</td><td>OPTIMISTIC_LOCKING</td></tr>
-<tr><td align="right">DEFAULT_WORKSPACE</td><td>LIVE</td></tr>
-<tr><td align="right">FIRE_TRIGGERS_FOR_NONDML_EVENTS</td><td>ON</td></tr>
-<tr><td align="right">KEEP_REMOVED_WORKSPACES_INFO</td><td>OFF</td></tr>
 <tr><td align="right">NONCR_WORKSPACE_MODE</td><td>OPTIMISTIC_LOCKING</td></tr>
+<tr><td align="right">FIRE_TRIGGERS_FOR_NONDML_EVENTS</td><td>ON</td></tr>
+<tr><td align="right">ALLOW_MULTI_PARENT_WORKSPACES</td><td>OFF</td></tr>
+<tr><td align="right">ALLOW_CAPTURE_EVENTS</td><td>OFF</td></tr>
+<tr><td align="right">ALLOW_NESTED_TABLE_COLUMNS</td><td>OFF</td></tr>
+<tr><td align="right">USE_TIMESTAMP_TYPE_FOR_HISTORY</td><td>ON</td></tr>
 <tr><td align="right">NUMBER_OF_COMPRESS_BATCHES</td><td>50</td></tr>
-<tr><td align="right">OWM_VERSION</td><td>12.2.0.1.0</td></tr>
-<tr><td align="right">REMOVEWORKSPACE_DEFERRED</td><td>OFF</td></tr>
-<tr><td align="right">ROW_LEVEL_LOCKING</td><td>OFF</td></tr>
-<tr><td align="right">TARGET_PGA_MEMORY</td><td>8388608</td></tr>
 <tr><td align="right">UNDO_SPACE</td><td>UNLIMITED</td></tr>
 <tr><td align="right">USE_SCALAR_TYPES_FOR_VALIDTIME</td><td>OFF</td></tr>
-<tr><td align="right">USE_TIMESTAMP_TYPE_FOR_HISTORY</td><td>ON</td></tr>
+<tr><td align="right">KEEP_REMOVED_WORKSPACES_INFO</td><td>OFF</td></tr>
+<tr><td align="right">ADD_UNIQUE_COLUMN_TO_HISTORY_VIEW</td><td>OFF</td></tr>
+<tr><td align="right">COMPRESS_PARENT_AFTER_REMOVE</td><td>ON</td></tr>
+<tr><td align="right">ROW_LEVEL_LOCKING</td><td>OFF</td></tr>
+<tr><td align="right">TARGET_PGA_MEMORY</td><td>8388608</td></tr>
+<tr><td align="right">CREATEWORKSPACE_SHARED_LOCK</td><td>OFF</td></tr>
+<tr><td align="right">REMOVEWORKSPACE_DEFERRED</td><td>OFF</td></tr>
+<tr><td align="right">DEFAULT_WORKSPACE</td><td>LIVE</td></tr>
+<tr><td align="right">OWM_VERSION</td><td>21.0.0.0.0</td></tr>
 <tr><td align="right">workspace</td><td>SYS.LIVE</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
 <tr><td align="right"><b>Section</b></td><td>+- GoldenGate high level review-+</td></tr>
-<tr><td align="right">Application tables</td><td>90</td></tr>
+<tr><td align="right">Application tables</td><td>96</td></tr>
 <tr><td align="right">Compressed tables</td><td>0</td></tr>
 <tr><td align="right">External tables</td><td>0</td></tr>
 <tr><td align="right">Materialised Views</td><td>0</td></tr>
@@ -299,25 +290,25 @@ Top level summary of the database configuration and sizing.
 <tr><td align="right">Unused columns - partitioned tables</td><td>0</td></tr>
 <tr><td align="right">Hidden Columns</td><td>11</td></tr>
 <tr><td align="right">ROWID tables</td><td>0</td></tr>
-<tr><td align="right">Sequences</td><td>13</td></tr>
+<tr><td align="right">Sequences</td><td>15</td></tr>
 <tr><td align="right">Triggers</td><td>0</td></tr>
 <tr><td align="right">User defined types</td><td>0</td></tr>
 <tr><td align="right">Data-types not supported</td><td>0</td></tr>
 <tr><td align="right">XMLTYPE tables</td><td>0</td></tr>
-<tr><td align="right">@Elapsed Seconds to INIT</td><td>1</td></tr>
-<tr><td align="right">Compressed gb</td><td>0.00 @Elapsed Seconds 1</td></tr>
+<tr><td align="right">@Elapsed Seconds to INIT</td><td>0</td></tr>
+<tr><td align="right">Compressed gb</td><td>0.00 @Elapsed Seconds 0</td></tr>
 <tr><td align="right">Non log tables [ts+tab] gb</td><td>0.00 @Elapsed Seconds 0</td></tr>
-<tr><td align="right">One column non-scalar gb</td><td>0.00 @Elapsed Seconds 2</td></tr>
-<tr><td align="right">PKUK missing gb</td><td>0.00 @Elapsed Seconds 1</td></tr>
+<tr><td align="right">One column non-scalar gb</td><td>0.00 @Elapsed Seconds 0</td></tr>
+<tr><td align="right">PKUK missing gb</td><td>0.00 @Elapsed Seconds 0</td></tr>
 <tr><td align="right">ROWID gb</td><td>0.00 @Elapsed Seconds 1</td></tr>
-<tr><td align="right">UDT gb</td><td>0.00 @Elapsed Seconds 2</td></tr>
-<tr><td align="right">Unsupported data-type gb</td><td>0.00 @Elapsed Seconds 2</td></tr>
-<tr><td align="right">@Elapsed Seconds</td><td>32</td></tr>
+<tr><td align="right">UDT gb</td><td>0.00 @Elapsed Seconds 0</td></tr>
+<tr><td align="right">Unsupported data-type gb</td><td>0.00 @Elapsed Seconds 0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>2</td></tr>
 <tr><td align="right">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td><td>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td></tr>
-<tr><td align="right">@Elapsed run time</td><td>28-feb-2019 10:36:40 -> 10:37:29, 49 seconds</td></tr>
+<tr><td align="right">@Elapsed run time</td><td>15-jul-2022 14:25:27 -> 14:25:30, 3 seconds</td></tr>
 <tr><td align="right">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td><td>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td></tr>
 </table>
-Elapsed: 00:00:50.46
+Elapsed: 00:00:03.38
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -330,7 +321,7 @@ Archive log hourly megabyte statistical analysis for each destination - for the 
 <br>
 
 <br>
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -343,7 +334,7 @@ Sample of average archive log generation for: 1 month, 3 months, 3 months Monday
 <br>
 
 <br>
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -356,21 +347,23 @@ The database needs statistics gathered against the system, database dictionary, 
 <br>
 
 <br>
-owner                    ,         2019,         2018,         2017,         2016,         2015, NOT_GATHERED
+owner                    ,         2022,         2021,         2020,         2019,         2018, NOT_GATHERED
 <br>
 -------------------------,-------------,-------------,-------------,-------------,-------------,-------------
 <br>
- Components              ,            0,            0,          306,            0,            0,           21
+ Components              ,           25,          300,            0,            0,            0,           22
 <br>
- Dictionary              ,          149,            0,         1264,            0,            0,           72
+ Dictionary              ,          430,         1193,            0,            0,            0,           74
 <br>
- Fixed objects           ,            0,            0,            0,            0,            0,         1289
+ Fixed objects           ,         1221,            0,            0,            0,            0,          156
 <br>
-ORDDATA                  ,            0,            0,           71,            0,            0,           19
+OJVMSYS                  ,            0,            6,            0,            0,            0,            0
 <br>
-_Totals                  ,          149,            0,         1641,            0,            0,         1401
+ORDDATA                  ,            0,           71,            0,            0,            0,           19
 <br>
-Elapsed: 00:00:03.02
+_Totals                  ,         1676,         1570,            0,            0,            0,          271
+<br>
+Elapsed: 00:00:00.11
 
 <br>
 System Statistics generated by "exec dbms_stats.gather_system_stats();"
@@ -416,7 +409,7 @@ DSTART
 &nbsp;
 </td>
 <td>
-01-26-2017 15:28
+07-27-2021 20:35
 </td>
 </tr>
 <tr>
@@ -430,7 +423,7 @@ DSTOP
 &nbsp;
 </td>
 <td>
-01-26-2017 15:28
+07-27-2021 20:35
 </td>
 </tr>
 <tr>
@@ -455,7 +448,7 @@ SYSSTATS_MAIN
 CPUSPEEDNW
 </td>
 <td align="right">
-3137.7137713771
+3305.8321479374
 </td>
 <td>
 &nbsp;
@@ -575,7 +568,7 @@ SLAVETHR
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.00
 
 <br>
 System Statistics calculated for comparison
@@ -615,7 +608,7 @@ CPUSPEED
 CPUSPEEDNW
 </td>
 <td align="right">
-3137.7137713771
+3305.8321479374
 </td>
 <td align="right">
 &nbsp;
@@ -730,7 +723,7 @@ SREADTIM
 &nbsp;
 </td>
 <td align="right">
-229.96610169492
+138.15873015873
 </td>
 <td>
 = buffer cache size in blocks / sessions
@@ -766,7 +759,7 @@ by definition
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.10
+Elapsed: 00:00:00.01
 
 <br>
 Gather statistics job
@@ -1449,7 +1442,7 @@ FALSE
 </tr>
 </table>
 <p>
-Elapsed: 00:00:01.08
+Elapsed: 00:00:00.03
 
 <br>
 11g+ Automated Maintenance Task Operation Configuration
@@ -1572,7 +1565,7 @@ ENABLED
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.11
+Elapsed: 00:00:00.01
 
 <br>
 The list of tables and/or table partitions that have manually locked statistics or have defined extensions
@@ -1597,7 +1590,7 @@ Deprecated parameters are supported but a warning will be written to the alert l
 <br>
 ---------------------------------------------,-------------,-------------,---------------------------------------------,-------------
 <br>
-Elapsed: 00:00:00.10
+Elapsed: 00:00:00.01
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -1610,7 +1603,538 @@ This is the list of features known database features and whether they have been 
 <br>
 
 <br>
-Elapsed: 00:00:00.06
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+CURRE
+</th>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VERSION
+</th>
+<th scope="col">
+DETECTED_USAGES
+</th>
+<th scope="col">
+DESCRIPTION
+</th>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Adaptive Plans
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Adaptive Plans have been used
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic Maintenance - Optimizer Statistics Gathering
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Automatic initiation of Optimizer Statistics Collection
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic Maintenance - SQL Tuning Advisor
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Automatic initiation of SQL Tuning Advisor
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic Maintenance - Space Advisor
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Automatic initiation of Space Advisor
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic Reoptimization
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Automatic Reoptimization have been used
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic SGA Tuning
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Automatic SGA Tuning is enabled.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic SQL Execution Memory
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Sizing of work areas for all dedicated sessions (PGA) is automatic.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic Segment Space Management (system)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Extents of locally managed tablespaces are managed automatically by Oracle.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Automatic Undo Management
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Oracle automatically manages undo data using an UNDO tablespace.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Character Set
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Character set is used in Oracle Database
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Deferred Segment Creation
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Deferred Segment Creation is being used
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Locally Managed Tablespaces (system)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+There exists tablespaces that are locally managed in the database.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Locally Managed Tablespaces (user)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+There exists user tablespaces that are locally managed in the database.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Logfile Multiplexing
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Multiple members are used in a single log file group
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Oracle Java Virtual Machine (system)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+OJVM default system users
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Oracle Managed Files
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Database files are being managed by Oracle.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Oracle Multitenant
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Oracle Multitenant is being used.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Partitioning (system)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Oracle Partitioning option is being used - there is at least one partitioned object created.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Real-Time SQL Monitoring
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Real-Time SQL Monitoring Usage.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Recovery Area
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+The recovery area is configured.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+SQL Plan Directive
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Sql plan directive has been used
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+SQL Tuning Set (system)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+A SQL Tuning Set has been created in the database in the SYS schema.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+SQL*Plus
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+SQL*Plus used
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+SecureFiles (system)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+SecureFiles is being used by system users
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+SecureFiles (user)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+SecureFiles is being used
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Server Parameter File
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+The server parameter file (SPFILE) was used to startup the database.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Traditional Audit
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Traditional Audit in use.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Unified Audit
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              2
+</td>
+<td>
+Unified Audit in use.
+</td>
+</tr>
+<tr>
+<td>
+TRUE
+</td>
+<td>
+Oracle Utility External Table (ORACLE_LOADER)
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              1
+</td>
+<td>
+Oracle Utility External Table (ORACLE_LOADER) has been used.
+</td>
+</tr>
+<tr>
+<td>
+FALSE
+</td>
+<td>
+Parallel SQL Query Execution
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              1
+</td>
+<td>
+Parallel SQL Query Execution is being used.
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -1656,7 +2180,7 @@ branches
               0
 </td>
 <td>
-       519
+       554
 </td>
 <td>
  UNLIMITED
@@ -1673,10 +2197,10 @@ cmtcallbk
               0
 </td>
 <td align="right">
-              1
+              2
 </td>
 <td>
-       519
+       554
 </td>
 <td>
  UNLIMITED
@@ -1693,10 +2217,10 @@ dml_locks
               0
 </td>
 <td align="right">
-              0
+             26
 </td>
 <td>
-      2076
+      2216
 </td>
 <td>
  UNLIMITED
@@ -1710,16 +2234,16 @@ dml_locks
 enqueue_locks
 </td>
 <td align="right">
-             32
+             35
 </td>
 <td align="right">
-             59
+             48
 </td>
 <td>
-      5700
+      6060
 </td>
 <td>
-      5700
+      6060
 </td>
 <td align="right">
               1
@@ -1730,13 +2254,13 @@ enqueue_locks
 enqueue_resources
 </td>
 <td align="right">
-             32
+             29
 </td>
 <td align="right">
-             32
+             57
 </td>
 <td>
-      2296
+      2436
 </td>
 <td>
  UNLIMITED
@@ -1936,7 +2460,7 @@ k2q_locks
               0
 </td>
 <td>
-       944
+      1008
 </td>
 <td>
  UNLIMITED
@@ -1956,7 +2480,7 @@ max_rollback_segments
              22
 </td>
 <td>
-       519
+       554
 </td>
 <td>
      65535
@@ -2010,16 +2534,16 @@ parallel_max_servers
 processes
 </td>
 <td align="right">
-             91
+             74
 </td>
 <td align="right">
-            115
+             80
 </td>
 <td>
-       300
+       320
 </td>
 <td>
-       300
+       320
 </td>
 <td align="right">
               1
@@ -2030,16 +2554,16 @@ processes
 sessions
 </td>
 <td align="right">
-             67
+             89
 </td>
 <td align="right">
-            102
+             93
 </td>
 <td>
-       472
+       504
 </td>
 <td>
-       472
+       504
 </td>
 <td align="right">
               1
@@ -2130,10 +2654,10 @@ smartio_sessions
 sort_segment_locks
 </td>
 <td align="right">
-              1
+              0
 </td>
 <td align="right">
-              2
+              4
 </td>
 <td>
  UNLIMITED
@@ -2153,7 +2677,7 @@ temporary_table_locks
               0
 </td>
 <td align="right">
-              0
+              7
 </td>
 <td>
  UNLIMITED
@@ -2173,10 +2697,10 @@ transactions
               0
 </td>
 <td align="right">
-              0
+              1
 </td>
 <td>
-       519
+       554
 </td>
 <td>
  UNLIMITED
@@ -2196,27 +2720,7 @@ Elapsed: 00:00:00.00
 <br>
 
 <br>
-<p>
-<table class='TT'>
-<tr>
-<th scope="col">
-OWNER
-</th>
-<th scope="col">
-HOST
-</th>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-SEEDDATA
-</td>
-</tr>
-</table>
-<p>
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -2229,7 +2733,7 @@ Tables with monitoring enabled (see dba_tables) are updated regularly with the D
 <br>
 
 <br>
-Elapsed: 00:00:00.52
+Elapsed: 00:00:00.05
 
 <br>
 Working out the daily_inserts, daily_updates and daily_deletes is difficult because large high transaction rate tables sometimes do not have any statistics gathered on them, and so the dba_tables last_analyzed column is null.  Often there are a lot of tables with a NULL values for the last_analyzed column which can cause the selector for the TOP 50 tables to be inaccurate.  To work around this, when the last_analyzed column is null, I have substituted the dba_tables.create date.  This may not be an accurate approach, but it seems like a good approximation for calculating the daily change rate.
@@ -2278,120 +2782,6 @@ TRU
 </tr>
 <tr>
 <td>
-MDSYS
-</td>
-<td>
-SDO_COORD_OP_PARAM_VALS
-</td>
-<td align="right">
-              2
-</td>
-<td>
-2017-01-26 15:05:00
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-          15099
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-             20
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-SYSTEM
-</td>
-<td>
-LOGSTDBY$SKIP_SUPPORT
-</td>
-<td align="right">
-              0
-</td>
-<td>
-2017-01-26 14:25:00
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-            407
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-            406
-</td>
-<td align="right">
-              1
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              1
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-MDSYS
-</td>
-<td>
-SDO_XSD_TABLE
-</td>
-<td align="right">
-              1
-</td>
-<td>
-2017-01-26 15:18:29
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-            150
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
 AUDSYS
 </td>
 <td>
@@ -2401,209 +2791,19 @@ AUD$UNIFIED
               3
 </td>
 <td>
-2017-01-26 14:24:44
+2022-04-23 10:18:04
 </td>
 <td align="right">
-            763
+             83
 </td>
 <td align="right">
-             76
-</td>
-<td align="right">
-             30
+              4
 </td>
 <td align="right">
               0
 </td>
 <td align="right">
               0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-DBSNMP
-</td>
-<td>
-BSLN_STATISTICS
-</td>
-<td align="right">
-              0
-</td>
-<td>
-2017-01-26 14:24:46
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-             49
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-             49
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-MDSYS
-</td>
-<td>
-SDO_STYLES_TABLE
-</td>
-<td align="right">
-              2
-</td>
-<td>
-2017-01-26 15:05:01
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-             78
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-LBACSYS
-</td>
-<td>
-OLS$PROPS
-</td>
-<td align="right">
-              0
-</td>
-<td>
-2017-01-26 15:25:52
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              3
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              3
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-MDSYS
-</td>
-<td>
-SDO_XML_SCHEMAS
-</td>
-<td align="right">
-              1
-</td>
-<td>
-2017-01-26 15:05:02
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              6
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-LBACSYS
-</td>
-<td>
-OLS$INSTALLATIONS
-</td>
-<td align="right">
-              0
-</td>
-<td>
-2017-01-26 15:25:52
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              2
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              2
 </td>
 <td align="right">
               0
@@ -2623,60 +2823,22 @@ NO
 DBSNMP
 </td>
 <td>
-BSLN_BASELINES
+BSLN_TIMEGROUPS
 </td>
 <td align="right">
               0
 </td>
 <td>
-2017-01-26 14:24:45
+2021-07-27 19:33:12
 </td>
 <td align="right">
-            763
-</td>
-<td align="right">
-              1
-</td>
-<td align="right">
-              2
+            353
 </td>
 <td align="right">
               0
 </td>
 <td align="right">
               0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-MDSYS
-</td>
-<td>
-SDO_GEOR_XMLSCHEMA_TABLE
-</td>
-<td align="right">
-              1
-</td>
-<td>
-2017-01-26 15:18:28
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              1
 </td>
 <td align="right">
               0
@@ -2696,63 +2858,25 @@ NO
 </tr>
 <tr>
 <td>
-WMSYS
+CTXSYS
 </td>
 <td>
-WM$ENV_VARS$
-</td>
-<td align="right">
-              0
-</td>
-<td>
-2017-01-26 14:49:20
-</td>
-<td align="right">
-            763
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              1
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              0
+DR$DBO
 </td>
 <td align="right">
               0
 </td>
 <td>
-NO
-</td>
-</tr>
-<tr>
-<td>
-XDB
-</td>
-<td>
-XDB$XDB_READY
+2021-07-27 20:16:53
 </td>
 <td align="right">
-              1
-</td>
-<td>
-2017-01-26 14:30:35
-</td>
-<td align="right">
-            763
+            353
 </td>
 <td align="right">
               0
 </td>
 <td align="right">
-              1
+              0
 </td>
 <td align="right">
               0
@@ -2772,7 +2896,7 @@ NO
 </tr>
 </table>
 <p>
-Elapsed: 00:00:02.06
+Elapsed: 00:00:00.02
 
 <br>
 The list of 50 tables with the most physical writes
@@ -2803,7 +2927,75 @@ VALUE
 SYS
 </td>
 <td>
-I_OPTSTAT_SNAPSHOT$
+SYS_LOB0000011834C00038$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+            835
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SYS_LOB0000011834C00038$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes direct
+</td>
+<td align="right">
+            816
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_SQL_PLAN_PK
+</td>
+<td>
+INDEX PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+            408
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_SQL_PLAN
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+            390
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_HH_OBJ_ICOL_ST
 </td>
 <td>
 INDEX
@@ -2812,7 +3004,109 @@ INDEX
 physical writes
 </td>
 <td align="right">
-             13
+            376
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_HISTHEAD_HISTORY
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+            149
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_HH_ST
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+            133
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SYS_LOB0000010715C00001$$
+</td>
+<td>
+LOB
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             97
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_OPR_TASKS_TGST
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             93
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_OPR_TASKS
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             72
+</td>
+</tr>
+<tr>
+<td>
+PUBLIC
+</td>
+<td>
+SQLSET
+</td>
+<td>
+SYNONYM
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             66
 </td>
 </tr>
 <tr>
@@ -2829,7 +3123,7 @@ TABLE
 physical writes
 </td>
 <td align="right">
-              9
+             65
 </td>
 </tr>
 <tr>
@@ -2837,16 +3131,16 @@ physical writes
 SYS
 </td>
 <td>
-OBJ$
+SYS_LOB0000010715C00001$$
 </td>
 <td>
-TABLE
+LOB
 </td>
 <td>
-physical writes
+physical writes direct
 </td>
 <td align="right">
-              6
+             64
 </td>
 </tr>
 <tr>
@@ -2854,16 +3148,33 @@ physical writes
 SYS
 </td>
 <td>
-SCHEDULER$_JOB
+I_ACTIVITY_TABLE$_OBJ
 </td>
 <td>
-TABLE
+INDEX
 </td>
 <td>
 physical writes
 </td>
 <td align="right">
-              5
+             57
+</td>
+</tr>
+<tr>
+<td>
+PUBLIC
+</td>
+<td>
+DBA_UMF_SERVICE
+</td>
+<td>
+SYNONYM
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             49
 </td>
 </tr>
 <tr>
@@ -2871,33 +3182,16 @@ physical writes
 SYS
 </td>
 <td>
-SCHEDULER$_JOB_RUN_DETAILS
+WRH$_SYSSTAT_PK
 </td>
 <td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              5
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-SCHEDULER$_EVENT_LOG
-</td>
-<td>
-TABLE
+INDEX PARTITION
 </td>
 <td>
 physical writes
 </td>
 <td align="right">
-              5
+             47
 </td>
 </tr>
 <tr>
@@ -2914,24 +3208,7 @@ TABLE
 physical writes
 </td>
 <td align="right">
-              4
-</td>
-</tr>
-<tr>
-<td>
-DBSNMP
-</td>
-<td>
-BSLN_STATISTICS
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              3
+             45
 </td>
 </tr>
 <tr>
@@ -2939,24 +3216,7 @@ physical writes
 SYS
 </td>
 <td>
-TS$
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              2
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-SYS_C004882
+I_OPTSTAT_SNAPSHOT$
 </td>
 <td>
 INDEX
@@ -2965,7 +3225,24 @@ INDEX
 physical writes
 </td>
 <td align="right">
-              2
+             45
+</td>
+</tr>
+<tr>
+<td>
+PUBLIC
+</td>
+<td>
+DBA_UMF_TOPOLOGY
+</td>
+<td>
+SYNONYM
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             37
 </td>
 </tr>
 <tr>
@@ -2973,7 +3250,194 @@ physical writes
 SYS
 </td>
 <td>
-WRI$_ALERT_THRESHOLD_LOG_PK
+WRH$_SQLSTAT_INDEX
+</td>
+<td>
+INDEX PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             36
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SYS_LOB0000011814C00004$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             33
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SYS_LOB0000007763C00009$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             30
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SMON_SCN_TIME
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             29
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_EVENT_HISTOGRAM_PK
+</td>
+<td>
+INDEX PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             28
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_SYSSTAT
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             27
+</td>
+</tr>
+<tr>
+<td>
+AUDSYS
+</td>
+<td>
+SYS_LOB0000019834C00097$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             26
+</td>
+</tr>
+<tr>
+<td>
+AUDSYS
+</td>
+<td>
+SYS_LOB0000019834C00030$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             26
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+UMF_SCHEMA_XMLTYPE
+</td>
+<td>
+VIEW
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             26
+</td>
+</tr>
+<tr>
+<td>
+AUDSYS
+</td>
+<td>
+SYS_LOB0000019834C00031$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             26
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SYS_LOB0000011814C00004$$
+</td>
+<td>
+LOB PARTITION
+</td>
+<td>
+physical writes direct
+</td>
+<td align="right">
+             26
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_TAB_OBJ#_ST
 </td>
 <td>
 INDEX
@@ -2982,7 +3446,7 @@ INDEX
 physical writes
 </td>
 <td align="right">
-              2
+             25
 </td>
 </tr>
 <tr>
@@ -2990,7 +3454,24 @@ physical writes
 SYS
 </td>
 <td>
-WRI$_ALERT_THRESHOLD_LOG
+WRH$_LATCH_PK
+</td>
+<td>
+INDEX PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             24
+</td>
+</tr>
+<tr>
+<td>
+OUTLN
+</td>
+<td>
+OL$NODES
 </td>
 <td>
 TABLE
@@ -2999,7 +3480,7 @@ TABLE
 physical writes
 </td>
 <td align="right">
-              2
+             24
 </td>
 </tr>
 <tr>
@@ -3007,7 +3488,109 @@ physical writes
 SYS
 </td>
 <td>
-I_SCHEDULER_JOB4
+WRH$_ACTIVE_SESSION_HISTORY
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             23
+</td>
+</tr>
+<tr>
+<td>
+PUBLIC
+</td>
+<td>
+DBA_UMF_SERVICE
+</td>
+<td>
+SYNONYM
+</td>
+<td>
+physical writes direct
+</td>
+<td align="right">
+             22
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_LATCH
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             22
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_SQLSTAT
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             21
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_SQLTEXT_PK
+</td>
+<td>
+INDEX PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             20
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_SQLTEXT
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             20
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SYS_C00859
 </td>
 <td>
 INDEX
@@ -3016,7 +3599,7 @@ INDEX
 physical writes
 </td>
 <td align="right">
-              2
+             19
 </td>
 </tr>
 <tr>
@@ -3024,7 +3607,75 @@ physical writes
 SYS
 </td>
 <td>
-I_SCHEDULER_JOB1
+WRH$_PROCESS_WAITTIME_PK
+</td>
+<td>
+INDEX PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             19
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_OPTSTAT_OPR
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             19
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRH$_PROCESS_WAITTIME
+</td>
+<td>
+TABLE PARTITION
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             19
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SEG$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             19
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_WRI$_OPTSTAT_IND_OBJ#_ST
 </td>
 <td>
 INDEX
@@ -3033,7 +3684,7 @@ INDEX
 physical writes
 </td>
 <td align="right">
-              2
+             18
 </td>
 </tr>
 <tr>
@@ -3041,16 +3692,16 @@ physical writes
 SYS
 </td>
 <td>
-MON_MODS_ALL$
+WRH$_SEG_STAT
 </td>
 <td>
-TABLE
+TABLE PARTITION
 </td>
 <td>
 physical writes
 </td>
 <td align="right">
-              2
+             18
 </td>
 </tr>
 <tr>
@@ -3058,24 +3709,7 @@ physical writes
 SYS
 </td>
 <td>
-FILE$
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              2
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-I_FILE2
+I_WRI$_OPTSTAT_OPR_TASKS_OPOBJ
 </td>
 <td>
 INDEX
@@ -3084,7 +3718,7 @@ INDEX
 physical writes
 </td>
 <td align="right">
-              2
+             17
 </td>
 </tr>
 <tr>
@@ -3092,16 +3726,16 @@ physical writes
 SYS
 </td>
 <td>
-UNDO$
+WRH$_SQLSTAT_PK
 </td>
 <td>
-TABLE
+INDEX PARTITION
 </td>
 <td>
 physical writes
 </td>
 <td align="right">
-              1
+             17
 </td>
 </tr>
 <tr>
@@ -3109,16 +3743,16 @@ physical writes
 SYS
 </td>
 <td>
-SEQ$
+WRH$_PARAMETER_PK
 </td>
 <td>
-TABLE
+INDEX PARTITION
 </td>
 <td>
 physical writes
 </td>
 <td align="right">
-              1
+             17
 </td>
 </tr>
 <tr>
@@ -3126,429 +3760,21 @@ physical writes
 SYS
 </td>
 <td>
-CONTAINER$
+WRH$_ROWCACHE_SUMMARY
 </td>
 <td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-OPTSTAT_HIST_CONTROL$
-</td>
-<td>
-TABLE
+TABLE PARTITION
 </td>
 <td>
 physical writes
 </td>
 <td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-EXP_OBJ$
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-EXP_STAT$
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-HEAT_MAP_STAT$
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-RECENT_RESOURCE_INCARNATIONS$P
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-SCHEDULER$_WINDOW
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-I_SCHEDULER_WINDOW1
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-SCHEDULER$_INSTANCE_PK
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-I_SCHEDULER_JOB_RUN_DETAILS
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-KU_UTLUSE
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRI$_ALERT_OUTSTANDING
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRI$_ALERTS_OUTSTANDING_PK
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRI$_ALERT_HISTORY
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRI$_ALERT_HISTORY_PK
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-OPATCH_XINV_TAB
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRI$_SCH_CONTROL
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRI$_SCH_VOTES
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRM$_DATABASE_INSTANCE
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRM$_DATABASE_INSTANCE_PK
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-WRM$_WR_SETTINGS
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-DBMS_LOCK_ALLOCATED
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-DBMS_LOCK_EXPIRATION_IND
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-SYS
-</td>
-<td>
-ALERT_QT
-</td>
-<td>
-TABLE
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
-</td>
-</tr>
-<tr>
-<td>
-DBSNMP
-</td>
-<td>
-BSLN_STATISTICS_PK1
-</td>
-<td>
-INDEX
-</td>
-<td>
-physical writes
-</td>
-<td align="right">
-              1
+             16
 </td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.32
+Elapsed: 00:00:00.09
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -3569,7 +3795,7 @@ COMP_NAME
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 JServer JAVA Virtual Machine
@@ -3577,7 +3803,7 @@ JServer JAVA Virtual Machine
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 OLAP Analytic Workspace
@@ -3585,7 +3811,7 @@ OLAP Analytic Workspace
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Database Catalog Views
@@ -3593,7 +3819,7 @@ Oracle Database Catalog Views
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Database Java Packages
@@ -3601,7 +3827,7 @@ Oracle Database Java Packages
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Database Packages and Types
@@ -3609,7 +3835,7 @@ Oracle Database Packages and Types
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Database Vault
@@ -3617,7 +3843,7 @@ Oracle Database Vault
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Label Security
@@ -3625,7 +3851,15 @@ Oracle Label Security
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
+</td>
+<td>
+Oracle Locator
+</td>
+</tr>
+<tr>
+<td>
+21.0.0.0.0
 </td>
 <td>
 Oracle Multimedia
@@ -3633,7 +3867,7 @@ Oracle Multimedia
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle OLAP API
@@ -3641,7 +3875,7 @@ Oracle OLAP API
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Real Application Clusters
@@ -3649,7 +3883,7 @@ Oracle Real Application Clusters
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Text
@@ -3657,7 +3891,7 @@ Oracle Text
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle Workspace Manager
@@ -3665,7 +3899,7 @@ Oracle Workspace Manager
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle XDK
@@ -3673,7 +3907,7 @@ Oracle XDK
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Oracle XML Database
@@ -3681,7 +3915,7 @@ Oracle XML Database
 </tr>
 <tr>
 <td>
-12.2.0.1.0
+21.0.0.0.0
 </td>
 <td>
 Spatial
@@ -3696,36 +3930,151 @@ Elapsed: 00:00:00.00
 <table class='TT'>
 <tr>
 <th scope="col">
+ACTION_TIM
+</th>
+<th scope="col">
+ID
+</th>
+<th scope="col">
+ACTION
+</th>
+<th scope="col">
 VERSION
 </th>
 <th scope="col">
 COMMENTS
 </th>
+<th scope="col">
+BUNDLE_SERIES
+</th>
 </tr>
 <tr>
 <td>
-12.2.0.1
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
 </td>
 <td>
-RDBMS_12.2.0.1.0DBOCT2018RU_LINUX.X64_181002
+BOOTSTRAP
+</td>
+<td>
+21
+</td>
+<td>
+RDBMS_21.3.0.0.0_LINUX.X64_210727
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+BOOTSTRAP
+</td>
+<td>
+21
+</td>
+<td>
+a04658e94333ebe235cb89478898783b|67C4742D6E7B47B38E96C72AB2CF1C78
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+BOOTSTRAP
+</td>
+<td>
+21
+</td>
+<td>
+3e6f709fb2b71a980f653c10a6ad1751|30AACA36D390865CF47D1B5005B372E7
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+BOOTSTRAP
+</td>
+<td>
+21
+</td>
+<td>
+cc33d7b58f7f4efa82f56bcd4e4cc655|CFE1C0F9D24EFBEAA05917AD4A3957B9
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+BOOTSTRAP
+</td>
+<td>
+21
+</td>
+<td>
+b6d0e43f641e333e3d05706f5cf3d8f8|4FA41E190A04920A06DFB0B5F46FA04B
+</td>
+<td>
+&nbsp;
 </td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.00
+
+<br>
+12c CDB_REGISTRY_SQLPATCH
+<br>
 
 <br>
 <pre>
-      TARGET_VERSION
-      *
+ VERSION,
+ *
 </pre>
-ERROR at line 8:
+ERROR at line 6:
 <br>
-ORA-00904: "TARGET_VERSION": invalid identifier
+ORA-00904: "VERSION": invalid identifier
 <br>
 
 
-Elapsed: 00:00:00.04
+Elapsed: 00:00:00.00
+
+<br>
+18c CDB_REGISTRY_SQLPATCH
+<br>
+
+<br>
+Elapsed: 00:00:00.01
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -3746,7 +4095,17 @@ Change Data Capture Publishers
 <br>
 Change Data Capture Publishers
 <br>
-Elapsed: 00:00:00.02
+<pre>
+select * from DBA_SUBSCRIPTIONS
+              *
+</pre>
+ERROR at line 1:
+<br>
+ORA-00942: table or view does not exist
+<br>
+
+
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -3759,43 +4118,7 @@ This is an earlier iteration to find documents stored in XDB which is difficult 
 <br>
 
 <br>
-<p>
-<table class='TT'>
-<tr>
-<th scope="col">
-RESOURCES
-</th>
-<th scope="col">
-PATH
-</th>
-</tr>
-<tr>
-<td align="right">
-              1
-</td>
-<td>
-/home/
-</td>
-</tr>
-<tr>
-<td align="right">
-              1
-</td>
-<td>
-/home/MDSYS/
-</td>
-</tr>
-<tr>
-<td align="right">
-              2
-</td>
-<td>
-/home/MDSYS/epsg/
-</td>
-</tr>
-</table>
-<p>
-Elapsed: 00:00:00.25
+Elapsed: 00:00:00.01
 
 <br>
 This is the list of XMLTYPE tables as in "CREATE TABLE schema.table OF XMLTYPE".
@@ -4094,7 +4417,7 @@ ContainerStats
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.34
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -4142,7 +4465,62 @@ Has the real application testing feature been used before?
 <br>
 
 <br>
-Elapsed: 00:00:00.06
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+NAME
+</th>
+<th scope="col">
+VERSION
+</th>
+<th scope="col">
+DETECTED_USAGES
+</th>
+<th scope="col">
+CURRE
+</th>
+<th scope="col">
+DESCRIPTION
+</th>
+</tr>
+<tr>
+<td>
+Database Replay: Workload Capture
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+FALSE
+</td>
+<td>
+Database Replay: Workload was ever captured.
+</td>
+</tr>
+<tr>
+<td>
+Database Replay: Workload Replay
+</td>
+<td>
+21.0.0.0.0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+FALSE
+</td>
+<td>
+Database Replay: Workload was ever replayed.
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.00
 
 <br>
 
@@ -4151,10 +4529,10 @@ Are there any recent workload captures or replays?
 <br>
 
 <br>
-Elapsed: 00:00:00.26
+Elapsed: 00:00:00.00
 
 <br>
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -4173,7 +4551,7 @@ DBA_LOGSTDBY_UNSUPPORTED displays the schemas, tables, and columns in those tabl
 <br>
 
 <br>
-Elapsed: 00:00:01.22
+Elapsed: 00:00:00.10
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -4225,10 +4603,10 @@ AVAILABLE
 YES
 </td>
 <td align="right">
-            660
+            740
 </td>
 <td align="right">
-          32108
+          32028
 </td>
 <td align="right">
           32768
@@ -4237,7 +4615,7 @@ YES
              10
 </td>
 <td>
-+DATA/LC1/DATAFILE/sysaux.261.999349045
+/u01/data/DB21C/datafile/o1_mf_sysaux_jw3z6ls0_.dbf
 </td>
 </tr>
 <tr>
@@ -4251,10 +4629,10 @@ AVAILABLE
 YES
 </td>
 <td align="right">
-            810
+           1340
 </td>
 <td align="right">
-          31958
+          31428
 </td>
 <td align="right">
           32768
@@ -4263,7 +4641,7 @@ YES
              10
 </td>
 <td>
-+DATA/LC1/DATAFILE/system.276.999348999
+/u01/data/DB21C/datafile/o1_mf_system_jw3z4vn3_.dbf
 </td>
 </tr>
 <tr>
@@ -4277,10 +4655,10 @@ ONLINE
 YES
 </td>
 <td align="right">
-             33
+            485
 </td>
 <td align="right">
-          32735
+          32283
 </td>
 <td align="right">
           32768
@@ -4289,7 +4667,7 @@ YES
            .625
 </td>
 <td>
-+DATA/LC1/TEMPFILE/temp.275.999349171
+/u01/data/DB21C/datafile/o1_mf_temp_jw3z7py1_.tmp
 </td>
 </tr>
 <tr>
@@ -4303,10 +4681,10 @@ AVAILABLE
 YES
 </td>
 <td align="right">
-            105
+            125
 </td>
 <td align="right">
-          32663
+          32643
 </td>
 <td align="right">
           32768
@@ -4315,7 +4693,7 @@ YES
               5
 </td>
 <td>
-+DATA/LC1/DATAFILE/undotbs1.274.999349071
+/u01/data/DB21C/datafile/o1_mf_undotbs1_jw3z7cws_.dbf
 </td>
 </tr>
 <tr>
@@ -4341,12 +4719,12 @@ YES
            1.25
 </td>
 <td>
-+DATA/LC1/DATAFILE/users.270.999349071
+/u01/data/DB21C/datafile/o1_mf_users_jw3z7f0p_.dbf
 </td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.19
+Elapsed: 00:00:00.01
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -4400,108 +4778,6 @@ GSMLOGOFF
 ENABLED
 </td>
 <td>
-LBACSYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-ALTER
-</td>
-<td>
-LBAC$BEFORE_ALTER
-</td>
-</tr>
-<tr>
-<td>
-ENABLED
-</td>
-<td>
-LBACSYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-CREATE
-</td>
-<td>
-LBAC$AFTER_CREATE
-</td>
-</tr>
-<tr>
-<td>
-ENABLED
-</td>
-<td>
-LBACSYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-DROP
-</td>
-<td>
-LBAC$AFTER_DROP
-</td>
-</tr>
-<tr>
-<td>
-ENABLED
-</td>
-<td>
-MDSYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-CREATE
-</td>
-<td>
-SDO_ST_SYN_CREATE
-</td>
-</tr>
-<tr>
-<td>
-ENABLED
-</td>
-<td>
-MDSYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-DDL
-</td>
-<td>
-SDO_GEOR_ADDL_TRIGGER
-</td>
-</tr>
-<tr>
-<td>
-ENABLED
-</td>
-<td>
-MDSYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-DDL
-</td>
-<td>
-SDO_GEOR_BDDL_TRIGGER
-</td>
-</tr>
-<tr>
-<td>
-ENABLED
-</td>
-<td>
 MDSYS
 </td>
 <td>
@@ -4545,7 +4821,7 @@ DATABASE
 DROP
 </td>
 <td>
-AW_DROP_TRG
+DELETE_ENTRIES
 </td>
 </tr>
 <tr>
@@ -4593,27 +4869,61 @@ SYS
 DATABASE
 </td>
 <td>
-RENAME
+LOGON
 </td>
 <td>
-AW_REN_TRG
+DBMS_SET_PDB
 </td>
 </tr>
 <tr>
 <td>
-ENABLED
+DISABLED
 </td>
 <td>
-SYS
+LBACSYS
 </td>
 <td>
 DATABASE
 </td>
 <td>
-TRUNCATE
+ALTER
 </td>
 <td>
-AW_TRUNC_TRG
+LBAC$BEFORE_ALTER
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+CREATE
+</td>
+<td>
+LBAC$AFTER_CREATE
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+LBAC$AFTER_DROP
 </td>
 </tr>
 <tr>
@@ -4631,57 +4941,6 @@ DROP
 </td>
 <td>
 SDO_TOPO_DROP_FTBL
-</td>
-</tr>
-<tr>
-<td>
-DISABLED
-</td>
-<td>
-SYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-ALTER
-</td>
-<td>
-CDC_ALTER_CTABLE_BEFORE
-</td>
-</tr>
-<tr>
-<td>
-DISABLED
-</td>
-<td>
-SYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-CREATE
-</td>
-<td>
-CDC_CREATE_CTABLE_AFTER
-</td>
-</tr>
-<tr>
-<td>
-DISABLED
-</td>
-<td>
-SYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-CREATE
-</td>
-<td>
-CDC_CREATE_CTABLE_BEFORE
 </td>
 </tr>
 <tr>
@@ -4723,23 +4982,6 @@ LOGMNRGGC_TRIGGER
 DISABLED
 </td>
 <td>
-SYS
-</td>
-<td>
-DATABASE
-</td>
-<td>
-DROP
-</td>
-<td>
-CDC_DROP_CTABLE_BEFORE
-</td>
-</tr>
-<tr>
-<td>
-DISABLED
-</td>
-<td>
 WMSYS
 </td>
 <td>
@@ -4771,7 +5013,7 @@ NO_VM_DROP_A
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.31
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -4843,7 +5085,7 @@ SYS
 &nbsp;
 </td>
 <td>
-NETWORK_ACL_4700D20FF5FF557EE05387E5E50A8899
+NETWORK_ACL_C820EDDB7EAD0470E053362EE80A663B
 </td>
 <td>
 0000000080002724
@@ -4854,7 +5096,7 @@ SYS
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.10
+Elapsed: 00:00:00.00
 
 <br>
 The network privileges defined in all access control lists that are currently assigned to network hosts.
@@ -4894,7 +5136,7 @@ ACL_OWNER
 </tr>
 <tr>
 <td>
-NETWORK_ACL_4700D20FF5FF557EE05387E5E50A8899
+NETWORK_ACL_C820EDDB7EAD0470E053362EE80A663B
 </td>
 <td>
 0000000080002724
@@ -4923,7 +5165,7 @@ SYS
 </tr>
 <tr>
 <td>
-NETWORK_ACL_4700D20FF5FF557EE05387E5E50A8899
+NETWORK_ACL_C820EDDB7EAD0470E053362EE80A663B
 </td>
 <td>
 0000000080002724
@@ -4981,7 +5223,7 @@ SYS
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.16
+Elapsed: 00:00:00.00
 
 <br>
 Shared Server dispatchers
@@ -5039,10 +5281,10 @@ CON_ID
 OFF
 </td>
 <td>
-(ADDRESS=(PROTOCOL=IPC)(HOST=l1.mlh)(KEY=LISTENER_DATAGUARD)) (ADDRESS=(PROTOCOL=IPC)(HOST=l1.mlh)(KEY=LISTENER_APPLICATIONS)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1943)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1521)) (ADDRESS=(PROTOCOL=IPC)(HOST=l1.mlh)(KEY=LISTENER_MANAGEMENT)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1941)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1942))
+(ADDRESS=(PROTOCOL=TCP)(HOST=db21c.mlh)(PORT=1521))
 </td>
 <td>
-LC1XDB
+db21cXDB
 </td>
 <td align="right">
               0
@@ -5050,7 +5292,7 @@ LC1XDB
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.00
 
 <br>
 Shared Servers
@@ -5099,7 +5341,7 @@ CON_ID
               2
 </td>
 <td align="right">
-          18302
+          80804
 </td>
 <td align="right">
               0
@@ -5107,7 +5349,7 @@ CON_ID
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.00
 
 <br>
 Database Resident Connection Pooling (DRCP)
@@ -5156,6 +5398,9 @@ MAXCONN_CBROK
 <th scope="col">
 MAX_TXN_THINK_TIME
 </th>
+<th scope="col">
+CON_ID
+</th>
 </tr>
 <tr>
 <td>
@@ -5197,12 +5442,15 @@ INACTIVE
 <td align="right">
               0
 </td>
+<td align="right">
+              1
+</td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.03
-Elapsed: 00:00:00.03
 Elapsed: 00:00:00.01
+Elapsed: 00:00:00.00
+Elapsed: 00:00:00.00
 EXECUTE DBMS_CONNECTION_POOL.START_POOL('SYS_DEFAULT_CONNECTION_POOL')
 <br>
 ezconnect -> IP:PORT/SERVICE_NAME:POOLED
@@ -5233,1281 +5481,6 @@ DRCP restart automatically after a database shutdown/startup
 <br>
 <a href="#z-header">Back to Top</a>
 <br>
-<h2 id="SQL_stability_-_advisor_configuration">SQL stability - advisor configuration</h2>
-<br>
-
-<br>
-DBA advisor configuration parameters
-<br>
-
-<br>
-<p>
-<table class='TT'>
-<tr>
-<th scope="col">
-TASK_NAME
-</th>
-<th scope="col">
-PARAMETER_NAME
-</th>
-<th scope="col">
-VALUE
-</th>
-<th scope="col">
-I
-</th>
-<th scope="col">
-DESCRIPTION
-</th>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ACCEPT_PLANS
-</td>
-<td>
-TRUE
-</td>
-<td>
-N
-</td>
-<td>
-TRUE if SQL plan baselines should be accepted by the task, FALSE otherwise
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-DAYS_TO_EXPIRE
-</td>
-<td>
-UNLIMITED
-</td>
-<td>
-N
-</td>
-<td>
-The expiration time in days for the current SQL Access Advisor task
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-DEFAULT_EXECUTION_TYPE
-</td>
-<td>
-SPM EVOLVE
-</td>
-<td>
-N
-</td>
-<td>
-Tune the performance of SQL statements
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-EXECUTION_DAYS_TO_EXPIRE
-</td>
-<td>
-30
-</td>
-<td>
-N
-</td>
-<td>
-Specifies the expiration time in days for individual executions of the current task
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-TARGET_OBJECTS
-</td>
-<td>
-1
-</td>
-<td>
-N
-</td>
-<td>
-Deprecated Parameter
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-TIME_LIMIT
-</td>
-<td>
-3600
-</td>
-<td>
-N
-</td>
-<td>
-The maximum time that an analysis can execute
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-DAYS_TO_EXPIRE
-</td>
-<td>
-UNLIMITED
-</td>
-<td>
-N
-</td>
-<td>
-The expiration time in days for the current SQL Access Advisor task
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-DEFAULT_EXECUTION_TYPE
-</td>
-<td>
-TUNE SQL
-</td>
-<td>
-N
-</td>
-<td>
-Tune the performance of SQL statements
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-EXECUTION_DAYS_TO_EXPIRE
-</td>
-<td>
-30
-</td>
-<td>
-N
-</td>
-<td>
-Specifies the expiration time in days for individual executions of the current task
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-LOCAL_TIME_LIMIT
-</td>
-<td>
-1200
-</td>
-<td>
-N
-</td>
-<td>
-Time limit per statement in a SQL Tuning Set
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-TARGET_OBJECTS
-</td>
-<td>
-1
-</td>
-<td>
-N
-</td>
-<td>
-Deprecated Parameter
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-TEST_EXECUTE
-</td>
-<td>
-FULL
-</td>
-<td>
-N
-</td>
-<td>
-FULL if SQL statements should be test-executed for the full local time limit to measure benefit, AUT
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-TIME_LIMIT
-</td>
-<td>
-3600
-</td>
-<td>
-N
-</td>
-<td>
-The maximum time that an analysis can execute
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ALTERNATE_PLAN_BASELINE
-</td>
-<td>
-EXISTING
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ALTERNATE_PLAN_LIMIT
-</td>
-<td>
-10
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ALTERNATE_PLAN_SOURCE
-</td>
-<td>
-CURSOR_CACHE+AUTOMATIC_WORKLOAD_REPOSITORY
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-APPLY_CAPTURED_COMPILENV
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-Indicated whether the advisor could use the compilation environment captured with the SQL statements
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-CON_DBID_MAPPING
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-END_SNAPSHOT
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The last snapshot id in the analysis period
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-END_TIME
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The end time filter for selecting data
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-INSTANCE
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The instance number for analysis
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-JOURNALING
-</td>
-<td>
-INFORMATION
-</td>
-<td>
-Y
-</td>
-<td>
-Specifies logging of messages to the advisor journal
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-LOCAL_TIME_LIMIT
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-Time limit per statement in a SQL Tuning Set
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-MODE
-</td>
-<td>
-COMPREHENSIVE
-</td>
-<td>
-Y
-</td>
-<td>
-Specifies either a limited or comprehensive analysis operation, where limited runs in less time but
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM1
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM10
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM2
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM3
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM4
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM5
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM6
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM7
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM8
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-ORA_EM_PARAM9
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-REMOTE_SOURCE
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-SQLSET_NAME
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-SQLSET_OWNER
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-START_SNAPSHOT
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The first snapshot id in the analysis period
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-START_TIME
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The start time filter for selecting data
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SPM_EVOLVE_TASK
-</td>
-<td>
-_SPM_VERIFY
-</td>
-<td>
-TRUE
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ACCEPT_SQL_PROFILES
-</td>
-<td>
-FALSE
-</td>
-<td>
-Y
-</td>
-<td>
-TRUE if SQL Profiles should be created by the task, FALSE otherwise
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-APPLY_CAPTURED_COMPILENV
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-Indicated whether the advisor could use the compilation environment captured with the SQL statements
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-BASIC_FILTER
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-SQL predicate to filter the SQL from the SQL Tuning Set
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-CON_DBID_MAPPING
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-DATABASE_LINK_TO
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-END_SNAPSHOT
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The last snapshot id in the analysis period
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-END_TIME
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The end time filter for selecting data
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-INSTANCE
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The instance number for analysis
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-JOURNALING
-</td>
-<td>
-INFORMATION
-</td>
-<td>
-Y
-</td>
-<td>
-Specifies logging of messages to the advisor journal
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-MAX_AUTO_SQL_PROFILES
-</td>
-<td>
-10000
-</td>
-<td>
-Y
-</td>
-<td>
-Maximum number of system SQL Profiles that are allowable at any one time
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-MAX_SQL_PROFILES_PER_EXEC
-</td>
-<td>
-20
-</td>
-<td>
-Y
-</td>
-<td>
-Maximum number of SQL Profiles that can be created by the system in one run
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-MODE
-</td>
-<td>
-COMPREHENSIVE
-</td>
-<td>
-Y
-</td>
-<td>
-Specifies either a limited or comprehensive analysis operation, where limited runs in less time but
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM1
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM10
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM2
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM3
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM4
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM5
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM6
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM7
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM8
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-ORA_EM_PARAM9
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-PLAN_FILTER
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-Plan filter applicable in case there are multiple plans (plan_hash_value) associated with the same s
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-RANK_MEASURE1
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-A first ORDER BY clause on the selected SQL
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-RANK_MEASURE2
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-A second ORDER BY clause on the selected SQL
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-RANK_MEASURE3
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-A third ORDER BY clause on the selected SQL
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-REMOTE_SOURCE
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-RESUME_FILTER
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-Specify the default action of a task execution.
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-SQL_LIMIT
-</td>
-<td>
--1
-</td>
-<td>
-Y
-</td>
-<td>
-Limit the number of SQL from the filtered and ranked SQL tuning set
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-SQL_PERCENTAGE
-</td>
-<td>
-1
-</td>
-<td>
-Y
-</td>
-<td>
-A percentage on the sum of a ranking measure
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-START_SNAPSHOT
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The first snapshot id in the analysis period
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-START_TIME
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The start time filter for selecting data
-</td>
-</tr>
-<tr>
-<td>
-SYS.SYS_AUTO_SQL_TUNING_TASK
-</td>
-<td>
-USERNAME
-</td>
-<td>
-UNUSED
-</td>
-<td>
-Y
-</td>
-<td>
-The username for whom the SQL statement will be tuned
-</td>
-</tr>
-</table>
-<p>
-Elapsed: 00:00:00.40
-
-<br>
-<a href="#z-header">Back to Top</a>
-<br>
 <h2 id="SQL_stability_-_outlines">SQL stability - outlines</h2>
 <br>
 
@@ -6516,7 +5489,7 @@ Database outlines - deprecated from 12c forwards.  Datapump expdp does not expor
 <br>
 
 <br>
-Elapsed: 00:00:00.05
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -6529,7 +5502,7 @@ SQL plan baselines (See the SQL baseline spfile settings above)
 <br>
 
 <br>
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -6554,23 +5527,7 @@ PARAMETER_VALUE
 </tr>
 <tr>
 <td>
-SPACE_BUDGET_PERCENT
-</td>
-<td>
-10
-</td>
-</tr>
-<tr>
-<td>
-PLAN_RETENTION_WEEKS
-</td>
-<td>
-53
-</td>
-</tr>
-<tr>
-<td>
-AUTO_CAPTURE_PARSING_SCHEMA_NAME
+AUTO_CAPTURE_ACTION
 </td>
 <td>
 &nbsp;
@@ -6586,7 +5543,7 @@ AUTO_CAPTURE_MODULE
 </tr>
 <tr>
 <td>
-AUTO_CAPTURE_ACTION
+AUTO_CAPTURE_PARSING_SCHEMA_NAME
 </td>
 <td>
 &nbsp;
@@ -6600,9 +5557,49 @@ AUTO_CAPTURE_SQL_TEXT
 &nbsp;
 </td>
 </tr>
+<tr>
+<td>
+AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+OFF
+</td>
+</tr>
+<tr>
+<td>
+AUTO_SPM_EVOLVE_TASK_INTERVAL
+</td>
+<td>
+3600
+</td>
+</tr>
+<tr>
+<td>
+AUTO_SPM_EVOLVE_TASK_MAX_RUNTIME
+</td>
+<td>
+1800
+</td>
+</tr>
+<tr>
+<td>
+PLAN_RETENTION_WEEKS
+</td>
+<td>
+53
+</td>
+</tr>
+<tr>
+<td>
+SPACE_BUDGET_PERCENT
+</td>
+<td>
+10
+</td>
+</tr>
 </table>
 <p>
-Elapsed: 00:00:00.33
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -6615,7 +5612,7 @@ SQL profiles
 <br>
 
 <br>
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -6628,7 +5625,7 @@ SQL tuning statistics
 <br>
 
 <br>
-Elapsed: 00:00:00.03
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -6639,14 +5636,14 @@ Investigation into the advanced queue tables and views.
 <br>
 
 <br>
-Elapsed: 00:00:01.02
+Elapsed: 00:00:00.01
 
 <br>
 Review of the AQ table types
 <br>
 
 <br>
-Elapsed: 00:00:01.70
+Elapsed: 00:00:00.00
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -6677,13 +5674,15 @@ Column 2 is sum of gigabytes
 <br>
                         -,           -,           -,           -,           -,           -,           -,           -,           -,           -
 <br>
-                   AUDSYS,         0 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
+                   AUDSYS,         0 0,        11 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
 <br>
                    CTXSYS,         0 0,         6 0,         0 0,         9 0,         0 0,         0 0,         0 0,         0 0,         0 0
 <br>
-        GSMADMIN_INTERNAL,         0 0,         4 0,         8 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0
+                    DVSYS,         0 0,         1 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
 <br>
-                    MDSYS,         0 0,      34 .07,        17 0,         7 0,        24 0,         0 0,         0 0,         0 0,         0 0
+        GSMADMIN_INTERNAL,         0 0,         6 0,        10 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                    MDSYS,         0 0,      36 .13,        17 0,         6 0,        17 0,         0 0,         0 0,         0 0,         0 0
 <br>
                   OJVMSYS,         0 0,         0 0,         1 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
 <br>
@@ -6691,17 +5690,17 @@ Column 2 is sum of gigabytes
 <br>
                     OUTLN,         1 0,         1 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
 <br>
-                      SYS,       246 0,       778 0,        75 0,        57 0,        72 0,         0 0,         3 0,         0 0,         1 0
+                      SYS,       252 0,       862 0,        88 0,        58 0,        80 0,         0 0,         3 0,         0 0,         1 0
 <br>
-                   SYSTEM,        11 0,         3 0,         6 0,         4 0,         0 0,         0 0,         0 0,         0 0,         0 0
+                   SYSTEM,        11 0,         3 0,         5 0,         4 0,         0 0,         0 0,         0 0,         0 0,         0 0
 <br>
-                    WMSYS,         3 0,        19 0,         0 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0
+                    WMSYS,         3 0,        21 0,         0 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0
 <br>
                       XDB,         0 0,         4 0,         1 0,         2 0,        26 0,         0 0,         0 0,         0 0,         0 0
 <br>
-                  _Totals,       261 0,     852 .07,       108 0,        85 0,       133 0,         0 0,         3 0,         0 0,         1 0
+                  _Totals,       267 0,     951 .13,       122 0,        85 0,       134 0,         0 0,         3 0,         0 0,         1 0
 <br>
-Elapsed: 00:00:05.56
+Elapsed: 00:00:00.54
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -6806,13 +5805,57 @@ DVF
 </tr>
 <tr>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+       6
+</td>
+<td align="right">
+       7
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       2
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+      33
+</td>
+</tr>
+<tr>
+<td>
 ORDDATA
 </td>
 <td align="right">
       90
 </td>
 <td align="right">
-     155
+     138
 </td>
 <td align="right">
       25
@@ -6845,7 +5888,7 @@ ORDDATA
               0
 </td>
 <td align="right">
-     292
+     275
 </td>
 </tr>
 <tr>
@@ -6877,10 +5920,10 @@ ORDPLUGINS
        0
 </td>
 <td align="right">
-       5
+       3
 </td>
 <td align="right">
-       5
+       3
 </td>
 <td align="right">
        0
@@ -6889,7 +5932,7 @@ ORDPLUGINS
               0
 </td>
 <td align="right">
-      10
+       6
 </td>
 </tr>
 <tr>
@@ -6985,10 +6028,10 @@ SI_INFORMTN_SCHEMA
 sum
 </td>
 <td align="right">
-      90
+      96
 </td>
 <td align="right">
-     155
+     145
 </td>
 <td align="right">
       25
@@ -6997,7 +6040,7 @@ sum
        0
 </td>
 <td align="right">
-      13
+      15
 </td>
 <td align="right">
        8
@@ -7009,10 +6052,10 @@ sum
        0
 </td>
 <td align="right">
-       6
+       4
 </td>
 <td align="right">
-       6
+       4
 </td>
 <td align="right">
        0
@@ -7021,12 +6064,12 @@ sum
               0
 </td>
 <td align="right">
-     332
+     344
 </td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.99
+Elapsed: 00:00:00.20
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -7105,6 +6148,44 @@ Totals
 </tr>
 <tr>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       2
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       2
+</td>
+</tr>
+<tr>
+<td>
 ORDDATA
 </td>
 <td align="right">
@@ -7120,7 +6201,7 @@ ORDDATA
       24
 </td>
 <td align="right">
-      57
+      40
 </td>
 <td align="right">
       35
@@ -7138,7 +6219,7 @@ ORDDATA
       75
 </td>
 <td align="right">
-     475
+     458
 </td>
 </tr>
 <tr>
@@ -7196,7 +6277,7 @@ sum
       24
 </td>
 <td align="right">
-      57
+      42
 </td>
 <td align="right">
       35
@@ -7214,12 +6295,12 @@ sum
       75
 </td>
 <td align="right">
-     475
+     460
 </td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:01.02
+Elapsed: 00:00:00.08
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -7349,7 +6430,7 @@ sum
 </tr>
 </table>
 <p>
-Elapsed: 00:00:01.01
+Elapsed: 00:00:00.07
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -7374,15 +6455,23 @@ COUNT(*)
 </tr>
 <tr>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+              4
+</td>
+</tr>
+<tr>
+<td>
 ORDDATA
 </td>
 <td align="right">
-             21
+             38
 </td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:01.61
+Elapsed: 00:00:00.14
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -7415,6 +6504,98 @@ DELETES
 <th scope="col">
 TRU
 </th>
+</tr>
+<tr>
+<td>
+OJVMSYS
+</td>
+<td>
+OJDS$INODE$
+</td>
+<td align="right">
+              3
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+OJVMSYS
+</td>
+<td>
+OJDS$PERMISSIONS$
+</td>
+<td align="right">
+              9
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+OJVMSYS
+</td>
+<td>
+OJDS$REFADDR$
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+OJVMSYS
+</td>
+<td>
+OJDS$SHARED$OBJ$
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
 </tr>
 <tr>
 <td>
@@ -7516,7 +6697,7 @@ ORDDATA
 ORDDCM_CT_LOCATORPATHS
 </td>
 <td align="right">
-             95
+              0
 </td>
 <td align="right">
 &nbsp;
@@ -7789,10 +6970,401 @@ ORDDCM_PREFS_VALID_VALUES_TAB
 ORDDATA
 </td>
 <td>
+ORDDCM_PROTOCOL_ADMIN_DOCS
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_ATTR_CONFIG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_DICOM_CONFIG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_METADATA
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_PRVW_CONFIG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_SPECIAL_TAG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_VERSION_CONFIG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_WADO_CONFIG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PROTOCOL_XML_CONFIG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
 ORDDCM_PRV_ATTRS_TMP
 </td>
 <td align="right">
 &nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_ADMIN_DOCS_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_ATTR_CONFIG_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_DICOM_CONFIG_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_PRVW_CONFIG_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_SPECIAL_TAG_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_VERSION_CONFIG_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_WADO_CONFIG_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PR_XML_CONFIG_WRK
+</td>
+<td align="right">
+              0
 </td>
 <td align="right">
 &nbsp;
@@ -7901,7 +7473,7 @@ ORDDCM_UID_DEFS_TMP
 </tr>
 </table>
 <p>
-Elapsed: 00:00:02.57
+Elapsed: 00:00:00.21
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -8070,7 +7642,7 @@ sum
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.86
+Elapsed: 00:00:00.03
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -8104,1910 +7676,6 @@ Target Object Type
 <th scope="col">
 Target Object
 </th>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_ADMIN_DOCS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_DICOM_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_PRVW_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_SPECIAL_TAG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_VERSION_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_WADO_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_XML_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_DOCUMENTS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_ATTRS_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_DATA_MODEL_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_DICT_A_DA_ID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_DOCS_ID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_MPD_P_MPID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_VERSION_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_PRV_A_PA_ID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_RT_PREF_P_PPID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_STD_A_SA_ID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_STOREDTAGS_STID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-SEQUENCE
-</td>
-<td>
-ORDDATA.ORDDCM_UID_DEFS_UDID_SEQ
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_ACTION_TYPES
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_ATTRS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_ATTRS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_ATTRS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_RULES
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_RULES_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_RULES_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_ANON_RULE_TYPES
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_ACTION
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_ACTION_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_ACTION_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_DAREFS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_DAREFS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_DAREFS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_LOCATORPATHS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_LOCATORPATHS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_LOCATORPATHS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_MACRO_DEP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_MACRO_DEP_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_MACRO_PAR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_MACRO_PAR_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_OPRD
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_OPRD_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_OPRD_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_PAR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_PAR_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_PAR_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_SET
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_SET_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_SET_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DATA_MODEL
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DATA_MODEL_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DICT_ATTRS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DICT_ATTRS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DICT_ATTRS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOCS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOCS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOCS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOC_REFS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOC_REFS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOC_REFS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOC_TYPES
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_INSTALL_DOCS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPED_PATHS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPED_PATHS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPED_PATHS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPING_DOCS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPING_DOCS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPING_DOCS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PREFS_LOOKUP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_ADMIN_DOCS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_DICOM_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_PRVW_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_SPECIAL_TAG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_VERSION_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_WADO_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_XML_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PRV_ATTRS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PRV_ATTRS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PRV_ATTRS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_ADMIN_DOCS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_ATTR_CONFIG_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_DICOM_CONFIG_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_PRVW_CONFIG_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_SPECIAL_TAG_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_VERSION_CONFIG_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_WADO_CONFIG_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PR_XML_CONFIG_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_RT_PREF_PARAMS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_RT_PREF_PARAMS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_RT_PREF_PARAMS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_STD_ATTRS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_STD_ATTRS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_STD_ATTRS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_STORED_TAGS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_STORED_TAGS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_STORED_TAGS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_UID_DEFS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_UID_DEFS_TMP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_UID_DEFS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_VR_DT_MAP
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_CONSTRAINT_NAMES
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_DICT_ATTRS_USR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_DOCS_USR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_DOCUMENTS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_DOCUMENT_TYPES
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPED_PATHS_USR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_MAPPING_DOCS_USR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_PRV_ATTRS_USR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_ADMIN_PRV
-</td>
-<td>
-VIEW
-</td>
-<td>
-ORDDATA.ORDDCM_STD_ATTRS_USR
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_ACTION_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_DAREFS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_LOCATORPATHS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_MACRO_DEP_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_MACRO_PAR_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_OPRD_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_PAR_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_SET_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_CT_PRED_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOCS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_CT
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOC_REFS_WRK
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_ADMIN_DOCS
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_DICOM_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_PRVW_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_SPECIAL_TAG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_VERSION_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_WADO_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-ORDSYS.ORD_DICOM_PROTOCOL
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_PROTOCOL_XML_CONFIG
-</td>
-</tr>
-<tr>
-<td>
-PACKAGE BODY
-</td>
-<td>
-SYS.ORDIMDPCALLOUTS
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOC_TYPES
-</td>
-</tr>
-<tr>
-<td>
-PROCEDURE
-</td>
-<td>
-SYS.VALIDATE_ORDIM
-</td>
-<td>
-TABLE
-</td>
-<td>
-ORDDATA.ORDDCM_DOCS
-</td>
 </tr>
 <tr>
 <td>
@@ -10095,35 +7763,119 @@ ORDDATA.ORDDCM_DOCUMENT_TYPES
 </tr>
 <tr>
 <td>
-TYPE BODY
+SYNONYM
 </td>
 <td>
-ORDSYS.ORDSOURCE
+SYS.OJDS$ATTRIBUTES$
 </td>
 <td>
-PACKAGE
+TABLE
 </td>
 <td>
-ORDPLUGINS.ORDX_FILE_SOURCE
+OJVMSYS.OJDS$ATTRIBUTES$
 </td>
 </tr>
 <tr>
 <td>
-TYPE BODY
+SYNONYM
 </td>
 <td>
-ORDSYS.ORDSOURCE
+SYS.OJDS$BINDINGS$
 </td>
 <td>
-PACKAGE
+TABLE
 </td>
 <td>
-ORDPLUGINS.ORDX_HTTP_SOURCE
+OJVMSYS.OJDS$BINDINGS$
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+SYS.OJDS$INODE$
+</td>
+<td>
+TABLE
+</td>
+<td>
+OJVMSYS.OJDS$INODE$
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+SYS.OJDS$NODE_NUMBER$
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+OJVMSYS.OJDS$NODE_NUMBER$
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+SYS.OJDS$PERMISSIONS$
+</td>
+<td>
+TABLE
+</td>
+<td>
+OJVMSYS.OJDS$PERMISSIONS$
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+SYS.OJDS$REFADDR$
+</td>
+<td>
+TABLE
+</td>
+<td>
+OJVMSYS.OJDS$REFADDR$
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+SYS.OJDS$SHARED$OBJ$
+</td>
+<td>
+TABLE
+</td>
+<td>
+OJVMSYS.OJDS$SHARED$OBJ$
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+SYS.OJDS$SHARED$OBJ$SEQ$
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+OJVMSYS.OJDS$SHARED$OBJ$SEQ$
 </td>
 </tr>
 </table>
 <p>
-Elapsed: 00:00:04.97
+Elapsed: 00:00:00.28
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -10140,11 +7892,13 @@ owner                    ,       total,         tab,    tab_part, tab_subpart,  
 <br>
 -------------------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------
 <br>
-ORDDATA                  ,        16.2,         4.9,           0,           0,         7.9,           0,           0,         2.9,          .4,           0,           0,           0,          .1
+OJVMSYS                  ,          .4,          .2,           0,           0,          .2,           0,           0,           0,           0,           0,           0,           0,           0
 <br>
-XDB                      ,          68,         7.1,           0,           0,         4.6,           0,           0,        38.2,        18.1,           0,           0,           0,           0
+ORDDATA                  ,         1.3,          .4,           0,           0,          .8,           0,           0,           0,           0,           0,           0,           0,          .1
 <br>
-Elapsed: 00:00:01.54
+XDB                      ,       102.1,         6.1,           0,           0,         4.8,           0,           0,        73.1,        18.1,           0,           0,           0,           0
+<br>
+Elapsed: 00:00:00.04
 <a href="#z-header">Back to Top</a>
 <br>
 <h2 id="Schema_sequences">Schema sequences</h2>
@@ -10167,6 +7921,14 @@ COUNT(*)
 </tr>
 <tr>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
 ORDDATA
 </td>
 <td align="right">
@@ -10175,7 +7937,7 @@ ORDDATA
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.69
+Elapsed: 00:00:00.01
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -10671,7 +8433,7 @@ ORDDCM_STD_ATTRS_TMP
 ORDDATA
 </td>
 <td>
-SYS_C006172
+SYS_C007261
 </td>
 <td>
 NORMAL
@@ -10688,7 +8450,7 @@ ORDDCM_DICT_ATTRS_TMP
 ORDDATA
 </td>
 <td>
-SYS_C006216
+SYS_C007305
 </td>
 <td>
 NORMAL
@@ -10705,7 +8467,7 @@ ORDDCM_CT_PRED_TMP
 ORDDATA
 </td>
 <td>
-SYS_C006218
+SYS_C007307
 </td>
 <td>
 NORMAL
@@ -10722,7 +8484,7 @@ ORDDCM_CT_PRED_SET_TMP
 ORDDATA
 </td>
 <td>
-SYS_IL0000062319C00005$$
+SYS_IL0000066288C00005$$
 </td>
 <td>
 LOB
@@ -10739,7 +8501,7 @@ ORDDCM_DOCS_TMP
 ORDDATA
 </td>
 <td>
-SYS_IL0000062341C00007$$
+SYS_IL0000066310C00007$$
 </td>
 <td>
 LOB
@@ -10756,7 +8518,7 @@ ORDDCM_MAPPING_DOCS_TMP
 ORDDATA
 </td>
 <td>
-SYS_IL0000062355C00004$$
+SYS_IL0000066324C00004$$
 </td>
 <td>
 LOB
@@ -10770,7 +8532,7 @@ ORDDCM_CT_PRED_OPRD_TMP
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.61
+Elapsed: 00:00:00.03
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -10783,7 +8545,7 @@ Deferred constaints may cause ADD TRANDATA to select the wrong column for loggin
 <br>
 
 <br>
-Elapsed: 00:00:00.92
+Elapsed: 00:00:00.01
 <a href="#z-header">Back to Top</a>
 <br>
 <h2 id="Schema_data_type_usage_summary">Schema data type usage summary</h2>
@@ -10812,6 +8574,17 @@ COUNT(*)
 BLOB
 </td>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
 ORDDATA
 </td>
 <td align="right">
@@ -10823,6 +8596,17 @@ ORDDATA
 DATE
 </td>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+              3
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
 ORDDATA
 </td>
 <td align="right">
@@ -10832,6 +8616,17 @@ ORDDATA
 <tr>
 <td>
 NUMBER
+</td>
+<td>
+OJVMSYS
+</td>
+<td align="right">
+             17
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
 </td>
 <td>
 ORDDATA
@@ -10856,6 +8651,17 @@ ORDDATA
 RAW
 </td>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
 ORDDATA
 </td>
 <td align="right">
@@ -10878,6 +8684,17 @@ ORDDATA
 VARCHAR2
 </td>
 <td>
+OJVMSYS
+</td>
+<td align="right">
+             10
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
 ORDDATA
 </td>
 <td align="right">
@@ -10897,7 +8714,7 @@ ORDDATA
 </tr>
 </table>
 <p>
-Elapsed: 00:00:01.96
+Elapsed: 00:00:00.39
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -10927,6 +8744,20 @@ TABLE_NAME
 <th scope="col">
 COLUMN_NAME
 </th>
+</tr>
+<tr>
+<td>
+BLOB
+</td>
+<td>
+OJVMSYS
+</td>
+<td>
+OJDS$ATTRIBUTES$
+</td>
+<td>
+DATA
+</td>
 </tr>
 <tr>
 <td>
@@ -11084,7 +8915,7 @@ XSLT
 </tr>
 </table>
 <p>
-Elapsed: 00:00:02.03
+Elapsed: 00:00:00.50
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11097,7 +8928,7 @@ Single column tables with non scalar data types generally cannot be replicated b
 <br>
 
 <br>
-Elapsed: 00:00:02.71
+Elapsed: 00:00:00.44
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11108,7 +8939,7 @@ Elapsed: 00:00:02.71
 <br>
 Tables with unused columns are not directly replicable with GoldenGate so the approach can be a little complicated in so much that you need to defgen the source table and create a SOURCEDEFS entry in the target replicat.  However, when we used SOURCEDEFS replicat cannot apply DDL to the affected target because with SOURCEDEFS we have created a static dictionary metadata entry.  Not only DDL that modified the table column structure but also DDL for table partitioning.  And it is the partitioning element that is generally the reason we need to know about unused columns.
 <br>
-Elapsed: 00:00:00.75
+Elapsed: 00:00:00.02
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11291,7 +9122,7 @@ SYS_NC0000900010$
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.75
+Elapsed: 00:00:00.08
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11302,7 +9133,7 @@ Elapsed: 00:00:00.75
 <br>
 Tables containing any of the following data types need special treatment in the GoldenGate classic extract mode.  Mostly these tables are candidates to be excluded from replication but there may use cases where the supported columns are replicated and the unsupported column values pragmatically treated at the target database.  The decision to replicate the table or exclude and transport during the database migration window will depend largely on the size of the table, the time to transfer the table and the cost/value of the unsupported column - in cases where the unsupported column has a very low cost/value, it may be expedient to exclude the affected column.
 <br>
-Elapsed: 00:00:03.09
+Elapsed: 00:00:00.29
 
 <br>
 The ROWID data-type is replicated by GoldenGate, but you must consider whether the ROWID will be valid in the target database.  Generally, the ROWID value will not point to the correct table row when it gets to the target database, but that understanding really only derives from your own understanding of your business data.
@@ -11311,7 +9142,7 @@ ROWID are not always stored as a ROWID data-type, occasionally we find the ROWID
 <br>
 UROWID is supported from GoldenGate 12.1.2.0.x, Integrated Capture, but not classic capture.
 <br>
-Elapsed: 00:00:03.08
+Elapsed: 00:00:00.33
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11322,7 +9153,7 @@ Any table with compression enabled cannot be captured with classic GoldenGate re
 <br>
 
 <br>
-Elapsed: 00:00:02.71
+Elapsed: 00:00:00.05
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11335,98 +9166,7 @@ Large tables are necessarily difficult to migrate, but when they are missing a P
 <br>
 
 <br>
-<p>
-<table class='TT'>
-<tr>
-<th scope="col">
-Table Name
-</th>
-<th scope="col">
-M_BYTES
-</th>
-<th scope="col">
-TABLE_BLOCKS
-</th>
-<th scope="col">
-COMPRESS
-</th>
-<th scope="col">
-DRO
-</th>
-<th scope="col">
-PAR
-</th>
-<th scope="col">
-ENCRYPTED_COLUMNS
-</th>
-<th scope="col">
-PKUK_CONSTRAINTS
-</th>
-<th scope="col">
-TOTAL_INDEXES
-</th>
-</tr>
-<tr>
-<td>
-ORDDATA.ORDDCM_STD_ATTRS
-</td>
-<td align="right">
-            .38
-</td>
-<td align="right">
-             43
-</td>
-<td>
-DISABLED
-</td>
-<td>
-NO
-</td>
-<td>
-NO
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              1
-</td>
-<td align="right">
-              2
-</td>
-</tr>
-<tr>
-<td>
-ORDDATA.ORDDCM_STD_ATTRS_WRK
-</td>
-<td align="right">
-            .38
-</td>
-<td align="right">
-             43
-</td>
-<td>
-DISABLED
-</td>
-<td>
-NO
-</td>
-<td>
-NO
-</td>
-<td align="right">
-              0
-</td>
-<td align="right">
-              1
-</td>
-<td align="right">
-              2
-</td>
-</tr>
-</table>
-<p>
-Elapsed: 00:00:02.42
+Elapsed: 00:00:00.03
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11445,7 +9185,7 @@ The datapump tool has a couple of restrictions that should be considered
 <br>
 These tables cannot be imported over a network_link because of the LONG data-type
 <br>
-Elapsed: 00:00:02.70
+Elapsed: 00:00:00.21
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11522,14 +9262,14 @@ The list of users stored in mixed case
 <br>
 
 <br>
-Elapsed: 00:00:00.60
+Elapsed: 00:00:00.00
 
 <br>
 The list of tables stored in mixed case
 <br>
 
 <br>
-Elapsed: 00:00:00.63
+Elapsed: 00:00:00.05
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11589,7 +9329,7 @@ MDSYS
 SYS
 </td>
 <td align="right">
-              6
+              3
 </td>
 </tr>
 <tr>
@@ -11605,14 +9345,14 @@ SYS
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.26
+Elapsed: 00:00:00.00
 
 <br>
 The following is a list of parent schema that create index on child schema tables.  Similar to the triggers issue, it may be advisable to delay the parent schema import.
 <br>
 
 <br>
-Elapsed: 00:00:00.12
+Elapsed: 00:00:00.03
 
 <br>
 Sometimes we find that procedural code stored in a referenced schema has not been installed to the target database, for example EBS migration requires that AD_CTX_DDL be loaded into the CTXSYS schema during the database build.  So, the follow table attempts to help focus our attention to any referenced schema objects that may need special treated at the target database (such as installing).
@@ -11657,6 +9397,48 @@ DVSYS
 LBACSYS
 </td>
 <td>
+NUMERIC_DOMINATES
+</td>
+<td>
+FUNCTION
+</td>
+</tr>
+<tr>
+<td>
+DVSYS
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+NUMERIC_LABEL_TO_CHAR
+</td>
+<td>
+FUNCTION
+</td>
+</tr>
+<tr>
+<td>
+DVSYS
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+NUMERIC_STRICTLY_DOMINATES
+</td>
+<td>
+FUNCTION
+</td>
+</tr>
+<tr>
+<td>
+DVSYS
+</td>
+<td>
+LBACSYS
+</td>
+<td>
 SA_SESSION
 </td>
 <td>
@@ -11665,16 +9447,30 @@ PACKAGE
 </tr>
 <tr>
 <td>
-GSMADMIN_INTERNAL
+DVSYS
 </td>
 <td>
-XDB
+LBACSYS
 </td>
 <td>
-DBMS_XDB_CONFIG
+SA_UTL
 </td>
 <td>
 PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+DVSYS
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+TO_NUMERIC_LABEL
+</td>
+<td>
+FUNCTION
 </td>
 </tr>
 <tr>
@@ -11727,77 +9523,7 @@ ORDPLUGINS
 ORDSYS
 </td>
 <td>
-ORDIMERRORCODES
-</td>
-<td>
-PACKAGE
-</td>
-</tr>
-<tr>
-<td>
-ORDPLUGINS
-</td>
-<td>
-ORDSYS
-</td>
-<td>
-ORDSOURCEEXCEPTIONS
-</td>
-<td>
-PACKAGE
-</td>
-</tr>
-<tr>
-<td>
-ORDPLUGINS
-</td>
-<td>
-ORDSYS
-</td>
-<td>
-ORDUTIL_PRV
-</td>
-<td>
-PACKAGE
-</td>
-</tr>
-<tr>
-<td>
-ORDPLUGINS
-</td>
-<td>
-ORDSYS
-</td>
-<td>
 ORDVIDEO_PKG
-</td>
-<td>
-PACKAGE
-</td>
-</tr>
-<tr>
-<td>
-ORDSYS
-</td>
-<td>
-ORDPLUGINS
-</td>
-<td>
-ORDX_FILE_SOURCE
-</td>
-<td>
-PACKAGE
-</td>
-</tr>
-<tr>
-<td>
-ORDSYS
-</td>
-<td>
-ORDPLUGINS
-</td>
-<td>
-ORDX_HTTP_SOURCE
 </td>
 <td>
 PACKAGE
@@ -11819,7 +9545,7 @@ PACKAGE
 </tr>
 </table>
 <p>
-Elapsed: 00:00:00.34
+Elapsed: 00:00:00.09
 
 <br>
 
@@ -11828,7 +9554,7 @@ O2O/OOO does not support 4kb+ triggers.  The follow list of triggers will have t
 <br>
 
 <br>
-Elapsed: 00:00:01.41
+Elapsed: 00:00:00.02
 
 <br>
 <a href="#z-header">Back to Top</a>
@@ -11865,19 +9591,19 @@ Schema Filter
 </tr>
 <tr>
 <td>
-28-feb-2019 10:36:38
+15-jul-2022 14:25:27
 </td>
 <td>
-28-feb-2019 10:38:31
+15-jul-2022 14:25:35
 </td>
 <td align="right">
-           1.88
+            .13
 </td>
 <td align="right">
-           1.54
+           2.16
 </td>
 <td align="right">
-          72667
+          75561
 </td>
 <td>
 undefined, undefined, undefined
@@ -11891,35 +9617,39 @@ undefined, undefined, undefined
 <br>
 <script>
 var cssRules = [
-{ selector: ".TT b          ", rules: "font-family:Trebuchet MS,Arial,Helvetica,sans-serif;color:red;" },
-{ selector: ".TT caption    ", rules: "color:#004000;" },
-{ selector: ".TT table      ", rules: "table-layout:auto;" },
-{ selector: ".TT td         ", rules: "font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
-{ selector: ".TT th         ", rules: "font-size:.7em;text-align:left;padding-top:5px;padding-bottom:4px;background-color:#A7C942;color:#000;" },
-{ selector: ".TT            ", rules: "display: flex;flex-wrap: nowrap; font-family:Trebuchet MS,Arial,Helvetica,sans-serif;" },
-{ selector: ".button        ", rules: "background-color: #336699; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 2px;" },
-{ selector: ".cell-left     ", rules: "display: table-cell; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
-{ selector: ".cell-right    ", rules: "display: table-cell; nowrap; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
-{ selector: ".close         ", rules: "color: white; float: right; font-size: 28px; font-weight: bold;" },
-{ selector: ".close:hover   ", rules: "color: #000; text-decoration: none; cursor: pointer;" },
-{ selector: ".close:focus   ", rules: "color: #000; text-decoration: none; cursor: pointer;" },
-{ selector: ".column-center ", rules: "width=33%; padding: 4px;" },
-{ selector: ".column-left   ", rules: "float: left; width=33%;  padding: 4px;" },
-{ selector: ".column-right  ", rules: "float: right; width=33%; padding: 4px;" },
-{ selector: ".modal         ", rules: "display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: ; height: 100%; width: 100%; overflow: auto;   background-color: rgba(0,0,0,0.4);" },
-{ selector: ".modal-body    ", rules: "padding: 2px 16px;" },
-{ selector: ".modal-content ", rules: "position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 80%;" },
-{ selector: ".modal-hf      ", rules: "padding: 2px 16px; background-color: #5cb85c; color: white;" },
-{ selector: ".row           ", rules: "display: table-row;" },
-{ selector: "a              ", rules: "font:Arial,Helvetica,sans-serif;color:#630;vertical-align:top;margin-top:0;margin-bottom:0;" },
-{ selector: "body           ", rules: "border-left:.5em solid #EBEBEB;border-right:.5em solid #EBEBEB;border-top:.5em solid #d3d3d3;border-bottom:.5em solid #d3d3d3;font:.7em Arial,Helvetica,Geneva,sans-serif;color:#000;background:#F8F8F8;" },
-{ selector: "h1             ", rules: "font:bold 1.5em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;border-bottom: 3px double #336699; display: inline-block;margin-top:0pt;margin-bottom:0pt;padding:0px 0px 0px 0px;" },
-{ selector: "h2             ", rules: "font:bold 1.4em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;" },
-{ selector: "h3             ", rules: "font:bold 1.3em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;" },
-{ selector: "li             ", rules: "font:1em Arial,Helvetica,Geneva,sans-serif;color:black;" },
-{ selector: "pre            ", rules: "font:.7em Courier;color:#000;background:#fff;" },
-{ selector: "ul             ", rules: "list-style-type:circle;margin:1em;padding:0;background:#F8F8F8;" },
-{ selector: "p              ", rules: "color:#630; font-size: 1em;" }
+{ selector: '.TT b          ', rules: 'font-family:Trebuchet MS,Arial,Helvetica,sans-serif;color:red;' },
+{ selector: '.TT caption    ', rules: 'font-size:1em;color:#004000; caption-side: top;' },
+{ selector: '.TT table      ', rules: 'table-layout:auto;' },
+{ selector: '.TT td         ', rules: 'font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+{ selector: '.TT th         ', rules: 'font-size:1em;text-align:left;padding-top:5px;padding-bottom:4px;background-color:#A7C942;color:#000;' },
+{ selector: '.TT            ', rules: 'caption-side: bottom; flex-wrap: nowrap; font-family:Trebuchet MS,Arial,Helvetica,sans-serif;' },
+{ selector: '.button        ', rules: 'background-color: #336699; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 2px;' },
+{ selector: '.cell-left     ', rules: 'display: table-cell; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+{ selector: '.cell-right    ', rules: 'display: table-cell; nowrap; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+{ selector: '.close         ', rules: 'color: white; float: right; font-size: 28px; font-weight: bold;'},
+{ selector: '.close:hover   ', rules: 'color: #000; text-decoration: none; cursor: pointer;'},
+{ selector: '.close:focus   ', rules: 'color: #000; text-decoration: none; cursor: pointer;'},
+{ selector: '.column-center ', rules: 'width=33%; padding: 4px;' },
+{ selector: '.column-left   ', rules: 'float: left; width=33%;  padding: 4px;' },
+{ selector: '.column-right  ', rules: 'float: right; width=33%; padding: 4px;' },
+{ selector: '.modal         ', rules: 'display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width:0 ; height: 100%; width: 100%; overflow: auto;   background-color: rgba(0,0,0,0.4);' },
+{ selector: '.modal-body    ', rules: 'padding: 2px 16px;' },
+{ selector: '.modal-content ', rules: 'position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 90%;' },
+{ selector: '.modal-header  ', rules: 'padding: 20px; background-color: #5cb85c; color: white;' },
+{ selector: '.modal-footer  ', rules: 'padding: 2px 16px; background-color: #5cb85c; color: white;' },
+{ selector: '.row           ', rules: 'display: table-row;' },
+{ selector: '.column        ', rules: 'float: left;  padding: 30px;' },
+{ selector: '.row:after     ', rules: 'content: ""; display: table; clear: both;' },
+{ selector: 'a              ', rules: 'font:Arial,Helvetica,sans-serif;color:#630;vertical-align:top;margin-top:0;margin-bottom:0;' },
+{ selector: 'body           ', rules: 'border-left:.5em solid #EBEBEB;border-right:.5em solid #EBEBEB;border-top:.5em solid #d3d3d3;border-bottom:.5em solid #d3d3d3;font:1em Arial,Helvetica,Geneva,sans-serif;color:#000;background:#F8F8F8;' },
+{ selector: 'h1             ', rules: 'font:bold 1.5em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;border-bottom: 3px double #336699; display: inline-block;margin-top:0pt;margin-bottom:0pt;padding:0px 0px 0px 0px;' },
+{ selector: 'h2             ', rules: 'font:bold 1.4em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;' },
+{ selector: 'h3             ', rules: 'font:bold 1.3em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;' },
+{ selector: 'li             ', rules: 'font:1em Arial,Helvetica,Geneva,sans-serif;color:black;' },
+{ selector: 'pre            ', rules: 'font:.7em Courier;color:#000;background:#fff;' },
+{ selector: 'ul             ', rules: 'list-style-type:circle;margin:1em;padding:0;background:#F8F8F8;' },
+{ selector: 'p              ', rules: 'color:#630; font-size: 1em;' },
+{ selector: '*              ', rules: 'box-sizing: border-box;' },
 ];
 function quote ( line ){return ( "\"" + line + "\"" );}
 function addMenu() { var headings = []; var tag_names = { h1:1, h2:1, h3:1, h4:1, h5:1, h6:1 }; function walk( root ) { if( root.nodeType === 1 && root.nodeName !== 'script' ) { if( tag_names.hasOwnProperty(root.nodeName.toLowerCase()) ) { headings.push( root ); } else { for( var i = 0; i < root.childNodes.length; i++ ) { walk( root.childNodes[i] ); } } } } function writemenu() { var anchor_name = ""; var heading_title = ""; var r0 = ""; var r1 = ""; var r2 = ""; var r3 = ""; for( var i = 0; i < headings.length; i++ ) { heading_title = headings[i].innerHTML.trim(); anchor_name = heading_title.split ( " " ).join ( "_" ).trim(); r0 =  "<li><a href=" + quote ( "#" + anchor_name ) + ">" + heading_title + "</a></li>"; if ( i <= headings.length/3 ) { r1 = r1 + r0; } else { if ( i <= headings.length/3*2) { r2 = r2+ r0; } else { r3 = r3 + r0; } } } r0 = "<table><tr valign=top><td><ul>" + r1 + "</ul></td><td><ul>" + r2 + "</ul></td><td><ul>" + r3 + "</ul></td></tr></table>"; document.getElementById('Menu1').innerHTML = r0; } walk( document.body ); writemenu();}

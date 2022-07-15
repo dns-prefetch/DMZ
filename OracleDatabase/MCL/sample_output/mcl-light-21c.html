@@ -1,0 +1,298 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="SQL*Plus 21.3.0">
+  <meta name='author' content='Michael Hartley'>  <meta name='version' content='Fri, 15 Jul 2022 13:23:28 GMT'>  <meta name='title' content='Migration Check List - Light'>  <title>Migration Check List - Light</title>  <style id=myStyles>.x {border: solid 1px black;width: 300px;height: 300px;}</style>
+</head>
+<body>
+<a id="z-header"/>
+<br>
+
+<br>
+<img width=100% height=120px src="https://dns-prefetch.github.io/assets/logos/mcl.svg" alt="mcl"/>
+<br>
+<button class="button" id="myBtn">Migration Check List - Light</button>
+<br>
+<!-- The Modal -->
+<br>
+<div id="myModal" class="modal"><div class="modal-content"><table><tr valign=top><td><table class="TT"><caption>Session information</caption><tr><th scope="col">USRENV Parameter</th><th scope="col">Value</th></tr>
+<tr><td align="right">Document Compiled</td><td>Friday    15 July      2022 14:25</td></tr>
+<tr><td align="right">Schema Filter</td><td></td></tr><tr><td align="right">AUTHENTICATED_IDENTITY</td><td>oracle</td></tr><tr><td align="right">AUTHENTICATION_METHOD</td><td>OS</td></tr><tr><td align="right">CURRENT_SCHEMA</td><td>SYS</td></tr>
+<tr><td align="right">CURRENT_USER</td><td>SYS</td></tr>
+<tr><td align="right">DB_NAME</td><td>db21c</td></tr><tr><td align="right">DB_UNIQUE_NAME</td><td>db21c</td></tr><tr><td align="right">EXTERNAL_NAME</td><td>oracle</td></tr><tr><td align="right">HOST</td><td>db21c.mlh</td></tr>
+<tr><td align="right">IDENTIFICATION_TYPE</td><td>LOCAL</td></tr>
+<tr><td align="right">INSTANCE</td><td>1</td></tr><tr><td align="right">INSTANCE_NAME</td><td>db21c</td></tr><tr><td align="right">ISDBA</td><td>TRUE</td></tr><tr><td align="right">LANG</td><td>US</td></tr>
+<tr><td align="right">LANGUAGE</td><td>AMERICAN_UNITED KINGDOM.AL32UTF8</td></tr>
+<tr><td align="right">MODULE</td><td>sqlplus@db21c.mlh (TNS V1-V3)</td></tr><tr><td align="right">NLS_CURRENCY</td><td>#</td></tr><tr><td align="right">NLS_DATE_FORMAT</td><td>YYYY-MM-DD HH24:Mi:SS</td></tr>
+<tr><td align="right">NLS_DATE_LANGUAGE</td><td>ENGLISH</td></tr>
+<tr><td align="right">NLS_TERRITORY</td><td>UNITED KINGDOM</td></tr><tr><td align="right">OS_USER</td><td>oracle</td></tr><tr><td align="right">SERVER_HOST</td><td>db21c</td></tr><tr><td align="right">SERVICE_NAME</td><td>SYS$USERS</td></tr>
+<tr><td align="right">SESSIONID</td><td>4294967295</td></tr>
+<tr><td align="right">SESSION_USERID</td><td>0</td></tr><tr><td align="right">TERMINAL</td><td>pts/0</td></tr><tr><td align="right">PROGRAM</td><td>sqlplus@db21c.mlh (TNS V1-V3)</td></tr>
+</table>
+</td><td><div class="modal-header"><span class="close"></span><b>Migration Check List - Light</b></div><div class="modal-body">
+<p>About.  What does it mean to be a "Migration Check List - Light"</p>
+<table class="TT"><caption>FAQ</caption><tr><td align="right">.Q.</td><td>.A.</td></tr><tr><td align="right">Who am I</td><td>Migration Check List - Light</td></tr><tr><td align="right">What is my version</td><td>2206</td></tr>
+<tr><td align="right">What is my patch date</td><td>Fri, 15 Jul 2022 13:23:28 GMT</td></tr>
+<tr><td align="right">Who is my creator</td><td>Michael Hartley</td></tr>
+<tr><td align="right">Why am I here</td><td>In 2014, the author was writing migration gap analysis documents and was struggling to collect information he needed, so he started writing your code.</td></tr>
+<tr><td align="right">What does my version number mean?</td><td>Your version is incremented roughly every 6 months, around January and June every year.  The four digits are the year and month you were created.</td></tr>
+<tr><td align="right">What does my patch date mean?</td><td>Sometimes the author accidentally leaves a gremlin in your code, and eventually he fixes this gremlin.  The patch date represents your last build date, hopefully a date when you had some gremlins
+ removed.</td></tr>
+<tr><td align="right">Roger that</td><td>Out</td></tr>
+</table>
+<svg xmlns="http://www.w3.org/2000/svg" width="3cm" height="3cm"> <rect fill="#3C81C1" x="0" y="0" width="50" height="75"><animateTransform attributeName="transform" type="translate" from="-50 -50" to="150 120" begin="0s" dur="2s" repeatCount="indefinite"
+ /> </rect> <circle id="my-circle" r=".5cm" cx="1.5cm" cy="1.5cm" fill="orange"> <animateTransform attributeName="transform" type="translate" from="-50 -50" to="150 20" begin="0s" dur="2s" repeatCount="indefinite" /> </circle> <g style="fill-opacity:0.7;
+stroke:black; stroke-width:1px;"> <circle cx="1.5cm" cy="1.5cm" r="1cm" style="fill:red;"  transform="translate(0,-25)" /> <circle cx="1.5cm" cy="1.5cm" r="1cm" style="fill:blue;" transform="translate(35,30)" /> <circle cx="1.5cm" cy="1.5cm" r="1cm" style
+="fill:green;" transform="translate(-35,30)"/> </g> </svg>
+<p>Click outside the dialog box to close.</p>
+</td></tr></table></div><div class="modal-footer">
+<p>Have a great day.</p>
+</div>
+</div></div>
+<script>var modal = document.getElementById('myModal');var btn = document.getElementById("myBtn");var span = document.getElementsByClassName("close")[0];btn.onclick = function() {modal.style.display = "block";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}};</script>
+<br>
+
+<br>
+<div id='Menu1'></div>
+
+<br>
+This script is read-only against the database catalogue, database objects are not created or modified.  There is no attempt to capture information contained within an application schema, other than table and column names.  If you have any table or column names that you wish to keep private, simply edit and rename the resulting spool file.  Any gap analysis performed with the data extract by this script does not rely on the table or column names, though the names may be used as points for discussion within a gap analysis document.
+<br>
+
+<br>
+<h1 id="Database_Summary">Database Summary</h1>
+<br>
+
+<br>
+Top level summary of the database configuration and sizing.
+<br>
+
+<br>
+<table class="TT"><tr><th scope="col">Parameter</th><th scope="col">Value</th></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db -+</td></tr>
+<tr><td align="right">Database host</td><td>db21c</td></tr>
+<tr><td align="right">Host name</td><td>db21c.mlh</td></tr>
+<tr><td align="right">Platform name</td><td>Linux x86 64-bit</td></tr>
+<tr><td align="right">Operating system and two task protocol version</td><td>x86_64/Linux 2.4.xx</td></tr>
+<tr><td align="right">CPU Socket Core Count</td><td>1</td></tr>
+<tr><td align="right">CPU Count</td><td>4</td></tr>
+<tr><td align="right">CPU Endian Format</td><td>Little</td></tr>
+<tr><td align="right">Physical memory(gb)</td><td>7.49</td></tr>
+<tr><td align="right">SGA + PGA(now) usage mb</td><td>1.45</td></tr>
+<tr><td align="right">SGA + PGA(max) usage mb</td><td>1.78</td></tr>
+<tr><td align="right">Database name</td><td>DB21C</td></tr>
+<tr><td align="right">Unique name</td><td>db21c</td></tr>
+<tr><td align="right">Database version</td><td>Oracle Database 21c Enterprise Edition Release 21.0.0.0.0 - Production</td></tr>
+<tr><td align="right">Created</td><td>2021-12-21 16:12</td></tr>
+<tr><td align="right">Age years</td><td>0.56</td></tr>
+<tr><td align="right">Time zone</td><td>+00:00</td></tr>
+<tr><td align="right">Time zone version</td><td>35</td></tr>
+<tr><td align="right">Time zone Filename</td><td>timezlrg_35.dat</td></tr>
+<tr><td align="right">User count</td><td>6</td></tr>
+<tr><td align="right">Startup time</td><td>2022-07-15 13:28</td></tr>
+<tr><td align="right">Open mode</td><td>READ WRITE</td></tr>
+<tr><td align="right">Current SCN</td><td>3081345 AVG/y(5461637) AVG/m(455136) AVG/d(14963) AVG/hr(623)</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db character set -+</td></tr>
+<tr><td align="right">nls_language</td><td>AMERICAN</td></tr>
+<tr><td align="right">nls_territory</td><td>UNITED KINGDOM</td></tr>
+<tr><td align="right">nls_characterset</td><td>AL32UTF8</td></tr>
+<tr><td align="right">nls_nchar_characterset</td><td>AL16UTF16</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db tablespace footprint -+</td></tr>
+<tr><td align="right">db disk space gb</td><td>3.10</td></tr>
+<tr><td align="right">db free space gb</td><td>0.00</td></tr>
+<tr><td align="right">db free space percentage</td><td>0.07</td></tr>
+<tr><td align="right">control files</td><td>.03</td></tr>
+<tr><td align="right">temp gb</td><td>.47</td></tr>
+<tr><td align="right">application tablespaces gb</td><td>0</td></tr>
+<tr><td align="right">sysaux gb</td><td>.72</td></tr>
+<tr><td align="right">system gb</td><td>1.31</td></tr>
+<tr><td align="right">undotbs1 gb</td><td>.12</td></tr>
+<tr><td align="right">online redo logs gb</td><td>.47</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db application segments -+</td></tr>
+<tr><td align="right">cluster gb</td><td>0</td></tr>
+<tr><td align="right">index gb</td><td>0.00</td></tr>
+<tr><td align="right">index partition gb</td><td>0</td></tr>
+<tr><td align="right">lob partition gb</td><td>0</td></tr>
+<tr><td align="right">lobindex gb</td><td>0</td></tr>
+<tr><td align="right">lobsegment gb</td><td>0</td></tr>
+<tr><td align="right">nested table gb</td><td>0.00</td></tr>
+<tr><td align="right">system statistics gb</td><td>0</td></tr>
+<tr><td align="right">table gb</td><td>0.00</td></tr>
+<tr><td align="right">table partition gb</td><td>0</td></tr>
+<tr><td align="right">table subpartition gb</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db registry segments -+</td></tr>
+<tr><td align="right">Oracle XML Database (XDB) gb</td><td>0.10</td></tr>
+<tr><td align="right">Oracle Workspace Manager (WMSYS) gb</td><td>0.01</td></tr>
+<tr><td align="right">Oracle Text (CTXSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Oracle Multimedia (ORDSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Spatial (MDSYS) gb</td><td>0.17</td></tr>
+<tr><td align="right">Oracle Locator (MDSYS) gb</td><td>0.17</td></tr>
+<tr><td align="right">Oracle Label Security (LBACSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Oracle Database Vault (DVSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- ASM -+</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- cdb -+</td></tr>
+<tr><td align="right">Am I a CDB</td><td>YES</td></tr>
+<tr><td align="right">Container name</td><td>CDB$ROOT</td></tr>
+<tr><td align="right">container 1</td><td>CDB$ROOT [0 gb]</td></tr>
+<tr><td align="right">container 2</td><td>PDB$SEED [.74 gb]</td></tr>
+<tr><td align="right">container 3</td><td>P1 [1.25 gb]</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db logging -+</td></tr>
+<tr><td align="right">Log mode</td><td>NOARCHIVELOG</td></tr>
+<tr><td align="right">Flashback on</td><td>NO</td></tr>
+<tr><td align="right">Force logging</td><td>NO</td></tr>
+<tr><td align="right">Block Change Tracking</td><td>DISABLED</td></tr>
+<tr><td align="right">Supplemental log data all</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data fk</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data min</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data pk</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data ui</td><td>NO</td></tr>
+<tr><td align="right">3 log Groups</td><td>2 members of 80 mb</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Security configuration -+</td></tr>
+<tr><td align="right">SYS.AUD$ tablespace</td><td>SYSTEM[.06mb]</td></tr>
+<tr><td align="right">SYS.FGA_LOG$ tablespace</td><td>SYSTEM[.06mb]</td></tr>
+<tr><td align="right">SYS.AUD$ null dbid count</td><td>0</td></tr>
+<tr><td align="right">SYS.FGA_LOG$ null dbid count</td><td>0</td></tr>
+<tr><td align="right">Oracle Database Vault</td><td>is not installed</td></tr>
+<tr><td align="right">Backup Encryption</td><td>is installed</td></tr>
+<tr><td align="right">Transparent Data Encryption</td><td>is installed</td></tr>
+<tr><td align="right">Oracle Label Security</td><td>is not installed</td></tr>
+<tr><td align="right">Audit Vault Agent</td><td>N/A</td></tr>
+<tr><td align="right">dbms_audit_mgmt installed</td><td>Yes</td></tr>
+<tr><td align="right">Encrypted Columns</td><td>0</td></tr>
+<tr><td align="right">Encryption wallets</td><td>3</td></tr>
+<tr><td align="right">Encrypted Tablespace (11g+)</td><td>0</td></tr>
+<tr><td align="right">Compressed tablespaces</td><td>0</td></tr>
+<tr><td align="right">Encrypted Backups</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- RAC configuration -+</td></tr>
+<tr><td align="right">RAC nodes</td><td>db21c(db21c.mlh)</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Data Guard configuration -+</td></tr>
+<tr><td align="right">remote_login_passwordfile</td><td>[N=1] EXCLUSIVE</td></tr>
+<tr><td align="right">Database Instance</td><td>N/A</td></tr>
+<tr><td align="right">Database Role</td><td>PRIMARY</td></tr>
+<tr><td align="right">Database Unique Name</td><td>db21c</td></tr>
+<tr><td align="right">Dataguard Broker</td><td>DISABLED</td></tr>
+<tr><td align="right">Guard Status</td><td>NONE</td></tr>
+<tr><td align="right">Open Mode</td><td>READ WRITE</td></tr>
+<tr><td align="right">Protection Level</td><td>UNPROTECTED</td></tr>
+<tr><td align="right">Protection Mode</td><td>MAXIMUM PERFORMANCE</td></tr>
+<tr><td align="right">Switchover Status</td><td>NOT ALLOWED</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td><td>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td></tr>
+<tr><td align="right">@Elapsed run time</td><td>15-jul-2022 14:25:26 -> 14:25:26, 0 seconds</td></tr>
+<tr><td align="right">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td><td>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td></tr>
+</table>
+Elapsed: 00:00:00.39
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="And_finally.">And finally.</h2>
+<br>
+
+<br>
+This is the end of the document.  The generation runtime for this report is usually determined by the number of database objects and to some extent the volume of data.  However, sometimes, after adding some new code, the runtime increases.  Having a collection of runtimes from a large range of databases helps me keep track areas of unreasonable performance, which is why the final table exists below.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Report Start Time
+</th>
+<th scope="col">
+Report End Time
+</th>
+<th scope="col">
+Report Elapsed Minutes
+</th>
+<th scope="col">
+Database Size GB
+</th>
+<th scope="col">
+Database Object Count
+</th>
+<th scope="col">
+Schema Filter
+</th>
+</tr>
+<tr>
+<td>
+15-jul-2022 14:25:26
+</td>
+<td>
+15-jul-2022 14:25:26
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+           2.16
+</td>
+<td align="right">
+          75561
+</td>
+<td>
+undefined, undefined, undefined
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<script>
+var cssRules = [
+{ selector: '.TT b          ', rules: 'font-family:Trebuchet MS,Arial,Helvetica,sans-serif;color:red;' },
+{ selector: '.TT caption    ', rules: 'font-size:1em;color:#004000; caption-side: top;' },
+{ selector: '.TT table      ', rules: 'table-layout:auto;' },
+{ selector: '.TT td         ', rules: 'font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+{ selector: '.TT th         ', rules: 'font-size:1em;text-align:left;padding-top:5px;padding-bottom:4px;background-color:#A7C942;color:#000;' },
+{ selector: '.TT            ', rules: 'caption-side: bottom; flex-wrap: nowrap; font-family:Trebuchet MS,Arial,Helvetica,sans-serif;' },
+{ selector: '.button        ', rules: 'background-color: #336699; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 2px;' },
+{ selector: '.cell-left     ', rules: 'display: table-cell; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+{ selector: '.cell-right    ', rules: 'display: table-cell; nowrap; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+{ selector: '.close         ', rules: 'color: white; float: right; font-size: 28px; font-weight: bold;'},
+{ selector: '.close:hover   ', rules: 'color: #000; text-decoration: none; cursor: pointer;'},
+{ selector: '.close:focus   ', rules: 'color: #000; text-decoration: none; cursor: pointer;'},
+{ selector: '.column-center ', rules: 'width=33%; padding: 4px;' },
+{ selector: '.column-left   ', rules: 'float: left; width=33%;  padding: 4px;' },
+{ selector: '.column-right  ', rules: 'float: right; width=33%; padding: 4px;' },
+{ selector: '.modal         ', rules: 'display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width:0 ; height: 100%; width: 100%; overflow: auto;   background-color: rgba(0,0,0,0.4);' },
+{ selector: '.modal-body    ', rules: 'padding: 2px 16px;' },
+{ selector: '.modal-content ', rules: 'position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 90%;' },
+{ selector: '.modal-header  ', rules: 'padding: 20px; background-color: #5cb85c; color: white;' },
+{ selector: '.modal-footer  ', rules: 'padding: 2px 16px; background-color: #5cb85c; color: white;' },
+{ selector: '.row           ', rules: 'display: table-row;' },
+{ selector: '.column        ', rules: 'float: left;  padding: 30px;' },
+{ selector: '.row:after     ', rules: 'content: ""; display: table; clear: both;' },
+{ selector: 'a              ', rules: 'font:Arial,Helvetica,sans-serif;color:#630;vertical-align:top;margin-top:0;margin-bottom:0;' },
+{ selector: 'body           ', rules: 'border-left:.5em solid #EBEBEB;border-right:.5em solid #EBEBEB;border-top:.5em solid #d3d3d3;border-bottom:.5em solid #d3d3d3;font:1em Arial,Helvetica,Geneva,sans-serif;color:#000;background:#F8F8F8;' },
+{ selector: 'h1             ', rules: 'font:bold 1.5em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;border-bottom: 3px double #336699; display: inline-block;margin-top:0pt;margin-bottom:0pt;padding:0px 0px 0px 0px;' },
+{ selector: 'h2             ', rules: 'font:bold 1.4em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;' },
+{ selector: 'h3             ', rules: 'font:bold 1.3em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;' },
+{ selector: 'li             ', rules: 'font:1em Arial,Helvetica,Geneva,sans-serif;color:black;' },
+{ selector: 'pre            ', rules: 'font:.7em Courier;color:#000;background:#fff;' },
+{ selector: 'ul             ', rules: 'list-style-type:circle;margin:1em;padding:0;background:#F8F8F8;' },
+{ selector: 'p              ', rules: 'color:#630; font-size: 1em;' },
+{ selector: '*              ', rules: 'box-sizing: border-box;' },
+];
+function quote ( line ){return ( "\"" + line + "\"" );}
+function addMenu() { var headings = []; var tag_names = { h1:1, h2:1, h3:1, h4:1, h5:1, h6:1 }; function walk( root ) { if( root.nodeType === 1 && root.nodeName !== 'script' ) { if( tag_names.hasOwnProperty(root.nodeName.toLowerCase()) ) { headings.push( root ); } else { for( var i = 0; i < root.childNodes.length; i++ ) { walk( root.childNodes[i] ); } } } } function writemenu() { var anchor_name = ""; var heading_title = ""; var r0 = ""; var r1 = ""; var r2 = ""; var r3 = ""; for( var i = 0; i < headings.length; i++ ) { heading_title = headings[i].innerHTML.trim(); anchor_name = heading_title.split ( " " ).join ( "_" ).trim(); r0 =  "<li><a href=" + quote ( "#" + anchor_name ) + ">" + heading_title + "</a></li>"; if ( i <= headings.length/3 ) { r1 = r1 + r0; } else { if ( i <= headings.length/3*2) { r2 = r2+ r0; } else { r3 = r3 + r0; } } } r0 = "<table><tr valign=top><td><ul>" + r1 + "</ul></td><td><ul>" + r2 + "</ul></td><td><ul>" + r3 + "</ul></td></tr></table>"; document.getElementById('Menu1').innerHTML = r0; } walk( document.body ); writemenu();}
+function addRule(stylesheetId, selector, rule) { var stylesheet = document.getElementById(stylesheetId); if (stylesheet) { stylesheet = stylesheet.sheet; if (stylesheet.addRule) { stylesheet.addRule(selector, rule); } else if (stylesheet.insertRule) { stylesheet.insertRule(selector + ' { ' + rule + ' }', stylesheet.cssRules.length); } } }
+function addRules() { var index; for (index = 0; index < cssRules.length; index++) { addRule("myStyles", cssRules[index].selector.trim(), cssRules[index].rules); } }
+{ addMenu(); addRules(); }
+</script>
+</body>
+</html>
