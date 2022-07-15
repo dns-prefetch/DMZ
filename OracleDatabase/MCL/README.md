@@ -49,12 +49,12 @@ e.g.
 
 ```
     connect un/pw@//hostname:port/service_name as sysdba
+    or
     connect un/pw@db as sysdba
+    or
     connect / as sysdba
 
     SQL> @mcl.sql
-      or
-    SQL> @mcl.sql <schema_name_1> <schema_name_2> <schema_name_3>
 
     Finished. The spool file is mcl.html
     SQL>
