@@ -1,9 +1,8 @@
 # DMZ
  Oracle: Cloud, Linux, and Database
 
-<div style="width:100% ; height:200px">
-![DMZ](https://dns-prefetch.github.io/assets/logos/dmz-header.svg?raw=true "DMZ big title")
-<div>
+![DMZ](https://dns-prefetch.github.io/assets/logos/dmz-header.svg?raw=false "DMZ big title")
+
 
 &nbsp;
 
