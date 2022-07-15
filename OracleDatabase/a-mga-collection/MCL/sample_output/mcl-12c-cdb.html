@@ -1,0 +1,11933 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=WINDOWS-1252">
+<meta name="generator" content="SQL*Plus 18.3.0">
+  <meta name='author' content='Michael Hartley'>  <meta name='version' content='Thu, 28 Feb 2019 10:36:36 GMT'>  <meta name='title' content='Migration Check List'>  <title>Migration Check List</title>  <style id=myStyles>.x {border: solid 1px black;width: 300px;height: 300px;}</style>
+</head>
+<body>
+<a id="z-header"/>
+<br>
+
+<br>
+<svg id="svg115845"   height="20.209" width="127.96" version="1.0" ><g id="layer1" transform="matrix(.20056 0 0 .25269 -143.41 -181.85)"><path id="path16197" fill="#ea1b22" d="m980.65 771.7h40.652l-21.495-34.583-39.451 62.527h-17.955l47.986-75.108c2.0864-3.0347 5.5635-4.8681 9.4203-4.8681 3.7299 0 7.2071 1.7702 9.2303 4.7417l48.176 75.235h-17.955l-8.4719-13.972h-41.158l-8.9775-13.972zm186.51 13.972v-65.246h-15.237v71.631c0 1.9599 0.7588 3.8566 2.2128 5.3106 1.4539 1.4542 3.4139 2.276 5.5635 2.276h69.482l8.9775-13.972h-70.999zm-252.11-11.69c14.794 0 26.807-11.949 26.807-26.743s-12.012-26.806-26.807-26.806h-66.656v79.218h15.231v-65.246h50.414c7.0812 0 12.771 5.7532 12.771 12.834 0 7.0809-5.6899 12.834-12.771 12.834l-42.953-0.0633 45.482 39.64h22.128l-30.6-25.668h6.9543zm-160.41 25.668c-21.869 0-39.616-17.702-39.616-39.577s17.747-39.64 39.616-39.64h46.045c21.875 0 39.609 17.765 39.609 39.64s-17.734 39.577-39.609 39.577h-46.045zm45.02-13.972c14.168 0 25.643-11.443 25.643-25.605s-11.475-25.668-25.643-25.668h-44.003c-14.162 0-25.643 11.506-25.643 25.668s11.481 25.605 25.643 25.605h44.003zm289.32 13.972c-21.875 0-39.64-17.702-39.64-39.577s17.765-39.64 39.64-39.64h54.687l-8.9143 13.972h-44.762c-14.162 0-25.668 11.506-25.668 25.668s11.506 25.605 25.668 25.605h54.94l-8.9774 13.972h-46.974zm186.32-13.972c-11.696 0-21.622-7.8396-24.657-18.651h65.119l8.9775-13.972h-74.097c3.0348-10.748 12.961-18.651 24.657-18.651h44.698l9.0407-13.972h-54.751c-21.875 0-39.64 17.765-39.64 39.64s17.765 39.577 39.64 39.577h46.974l8.9774-13.972h-54.94m61.895-56.837c0-3.8566 3.0975-6.9545 6.9543-6.9545 3.92 0 7.0175 3.0979 7.0175 6.9545 0 3.9197-3.0975 7.0177-7.0175 7.0177-3.8568 0-6.9543-3.0979-6.9543-7.0177zm6.9543 8.9776c4.9311 0 8.9143-3.983 8.9143-8.9144 0-4.9313-3.9832-8.9143-8.9143-8.9143-4.8684 0-8.8511 3.983-8.8511 8.9143s3.9827 8.9144 8.8511 8.9144zm-0.822-14.225c1.3908 0 1.96 0.0632 2.5924 0.31606 1.77 0.56905 1.9595 2.1496 1.9595 2.7818 0 0.12644 0 0.44255-0.1264 0.82186-0.063 0.37937-0.3159 1.138-1.2011 1.707-0.1264 0.0632-0.1896 0.12644-0.4424 0.25287l2.276 4.1095h-2.2128l-2.0232-3.7934h-1.3907v3.7934h-1.96v-9.9891h2.5287zm0.6956 4.552c0.632-0.0632 1.2644-0.0632 1.6436-0.63224 0.1895-0.25287 0.2532-0.50574 0.2532-0.88511 0-0.50574-0.3164-0.9483-0.7588-1.2012-0.4428-0.18963-0.8852-0.18963-1.8336-0.18963h-0.5687v2.9082h1.2643"/></g></svg>
+<br>
+<button class="button" id="myBtn">Migration Check List</button>
+<br>
+<!-- The Modal -->
+<br>
+<div id="myModal" class="modal"><div class="modal-content"><table><tr valign=top><td><table class="TT"><caption>Session information</caption><tr><th scope="col">USRENV Parameter</th><th scope="col">Value</th></tr>
+<tr><td align="right">Document Compiled</td><td>Thursday  28 February  2019 10:36</td></tr>
+<tr><td align="right">Schema Filter</td><td></td></tr><tr><td align="right">AUTHENTICATED_IDENTITY</td><td>SYS</td></tr><tr><td align="right">AUTHENTICATION_METHOD</td><td>PASSWORD</td></tr><tr><td align="right">AUTHENTICATION_TYPE</td><td>OS</td></tr>
+<tr><td align="right">CURRENT_SCHEMA</td><td>SYS</td></tr>
+<tr><td align="right">CURRENT_USER</td><td>SYS</td></tr><tr><td align="right">DB_NAME</td><td>LC1</td></tr><tr><td align="right">DB_UNIQUE_NAME</td><td>LC1</td></tr><tr><td align="right">HOST</td><td>uk-ORACLE\MHARTLEY-GB</td></tr>
+<tr><td align="right">IDENTIFICATION_TYPE</td><td>LOCAL</td></tr>
+<tr><td align="right">INSTANCE</td><td>1</td></tr><tr><td align="right">INSTANCE_NAME</td><td>LC1</td></tr><tr><td align="right">IP_ADDRESS</td><td>192.168.1.1</td></tr><tr><td align="right">ISDBA</td><td>TRUE</td></tr>
+<tr><td align="right">LANG</td><td>GB</td></tr>
+<tr><td align="right">LANGUAGE</td><td>ENGLISH_UNITED KINGDOM.AL32UTF8</td></tr><tr><td align="right">MODULE</td><td>sqlplus.exe</td></tr><tr><td align="right">NETWORK_PROTOCOL</td><td>tcp</td></tr><tr><td align="right">NLS_CURRENCY</td><td>£</td></tr>
+<tr><td align="right">NLS_DATE_FORMAT</td><td>YYYY-MM-DD HH24:Mi:SS</td></tr>
+<tr><td align="right">NLS_DATE_LANGUAGE</td><td>ENGLISH</td></tr><tr><td align="right">NLS_TERRITORY</td><td>UNITED KINGDOM</td></tr><tr><td align="right">OS_USER</td><td>mhartley</td></tr><tr><td align="right">SERVER_HOST</td><td>l1</td></tr>
+<tr><td align="right">SERVICE_NAME</td><td>LC1</td></tr>
+<tr><td align="right">SESSIONID</td><td>4294967295</td></tr><tr><td align="right">SESSION_USERID</td><td>0</td></tr><tr><td align="right">TERMINAL</td><td>MHARTLEY-GB</td></tr><tr><td align="right">PROGRAM</td><td>sqlplus.exe</td></tr>
+</table>
+</td><td><div class="modal-header"><span class="close"></span><b>Migration Check List</b></div><div class="modal-body">
+<p>About.  What does it mean to be a "Migration Check List"</p>
+<table class="TT"><caption>FAQ</caption><tr><td align="right">.Q.</td><td>.A.</td></tr><tr><td align="right">Who am I</td><td>Migration Check List</td></tr><tr><td align="right">What is my version</td><td>1901</td></tr>
+<tr><td align="right">What is my patch date</td><td>Thu, 28 Feb 2019 10:36:36 GMT</td></tr>
+<tr><td align="right">Who is my creator</td><td>Michael Hartley</td></tr>
+<tr><td align="right">Why am I here</td><td>In 2014, the author was writing migration gap analysis documents and was struggling to collect information he needed, so he started writing your code.</td></tr>
+<tr><td align="right">What does my version number mean?</td><td>Your version is incremented roughly every 6 months, around January and June every year.  The four digits are the year and month you were created.</td></tr>
+<tr><td align="right">What does my patch date mean?</td><td>Sometimes the author accidentally leaves a gremlin in your code, and eventually he fixes this gremlin.  The patch date represents your last build date, hopefully a date when you had some gremlins
+ removed.</td></tr>
+<tr><td align="right">Roger that</td><td>Out</td></tr>
+</table>
+<svg xmlns="http://www.w3.org/2000/svg" width="3cm" height="3cm"> <rect fill="#3C81C1" x="0" y="0" width="50" height="75"><animateTransform attributeName="transform" type="translate" from="-50 -50" to="150 120" begin="0s" dur="2s" repeatCount="indefinite"
+ /> </rect> <circle id="my-circle" r=".5cm" cx="1.5cm" cy="1.5cm" fill="orange"> <animateTransform attributeName="transform" type="translate" from="-50 -50" to="150 20" begin="0s" dur="2s" repeatCount="indefinite" /> </circle> <g style="fill-opacity:0.7;
+stroke:black; stroke-width:1px;"> <circle cx="1.5cm" cy="1.5cm" r="1cm" style="fill:red;"  transform="translate(0,-25)" /> <circle cx="1.5cm" cy="1.5cm" r="1cm" style="fill:blue;" transform="translate(35,30)" /> <circle cx="1.5cm" cy="1.5cm" r="1cm" style
+="fill:green;" transform="translate(-35,30)"/> </g> </svg>
+<p>Click outside the dialog box to close.</p>
+</td></tr></table></div><div class="modal-footer">
+<p>Have a great day.</p>
+</div>
+</div></div>
+<script>var modal = document.getElementById('myModal');var btn = document.getElementById("myBtn");var span = document.getElementsByClassName("close")[0];btn.onclick = function() {modal.style.display = "block";};span.onclick = function() {modal.style.display = "none";};window.onclick = function(event) {if (event.target == modal) {modal.style.display = "none";}};</script>
+<br>
+
+<br>
+<div id='Menu1'></div>
+
+<br>
+Database migrations are complicated and detailed and even the most simple lift and shift exercises can go wrong if an insufficient degree of analysis is undertaken.  The information collected by this script can be used to help with migration planning for even small simplistic database environments.
+<br>
+
+<br>
+This script is read-only against the database catalogue, database objects are not created or modified.  There is no attempt to capture information contained within an application schema, other than table and column names.  If you have any table or column names that you wish to keep private, simply edit and rename the resulting spool file.  Any gap analysis performed with the data extract by this script does not rely on the table or column names, though the names may be used as points for discussion within a migration gap analysis document.
+<br>
+
+<br>
+<h1 id="Database_Summary">Database Summary</h1>
+<br>
+
+<br>
+Top level summary of the database configuration and sizing.
+<br>
+
+<br>
+<table class="TT"><tr><th scope="col">Parameter</th><th scope="col">Value</th></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db -+</td></tr>
+<tr><td align="right">Database host</td><td>l1</td></tr>
+<tr><td align="right">Host name</td><td>L1.mlh</td></tr>
+<tr><td align="right">Platform name</td><td>Linux x86 64-bit</td></tr>
+<tr><td align="right">Operating system and two task protocol version</td><td>x86_64/Linux 2.4.xx</td></tr>
+<tr><td align="right">CPU Socket Core Count</td><td>1</td></tr>
+<tr><td align="right">CPU Count</td><td>2</td></tr>
+<tr><td align="right">CPU Endian Format</td><td>Little</td></tr>
+<tr><td align="right">Physical memory(gb)</td><td>3.61</td></tr>
+<tr><td align="right">SGA + PGA(now) usage mb</td><td>1.4</td></tr>
+<tr><td align="right">SGA + PGA(max) usage mb</td><td>1.54</td></tr>
+<tr><td align="right">Database name</td><td>LC1</td></tr>
+<tr><td align="right">Unique name</td><td>LC1</td></tr>
+<tr><td align="right">Database version</td><td>Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production</td></tr>
+<tr><td align="right">Created</td><td>2019-02-04 12:58</td></tr>
+<tr><td align="right">Age years</td><td>0.07</td></tr>
+<tr><td align="right">Time zone</td><td>+00:00</td></tr>
+<tr><td align="right">Time zone version</td><td>26</td></tr>
+<tr><td align="right">Time zone Filename</td><td>timezlrg_26.dat</td></tr>
+<tr><td align="right">User count</td><td>6</td></tr>
+<tr><td align="right">Startup time</td><td>2019-02-28 10:30</td></tr>
+<tr><td align="right">Open mode</td><td>READ WRITE</td></tr>
+<tr><td align="right">Current SCN</td><td>3142175 AVG/y(47984728) AVG/m(3998727) AVG/d(131465) AVG/hr(5478)</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db character set -+</td></tr>
+<tr><td align="right">nls_language</td><td>ENGLISH</td></tr>
+<tr><td align="right">nls_territory</td><td>UNITED KINGDOM</td></tr>
+<tr><td align="right">nls_characterset</td><td>AL32UTF8</td></tr>
+<tr><td align="right">nls_nchar_characterset</td><td>AL16UTF16</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db tablespace footprint -+</td></tr>
+<tr><td align="right">db disk space gb</td><td>2.04</td></tr>
+<tr><td align="right">db free space gb</td><td>0.00</td></tr>
+<tr><td align="right">db free space percentage</td><td>0.19</td></tr>
+<tr><td align="right">control files</td><td>.03</td></tr>
+<tr><td align="right">application tablespaces gb</td><td>0</td></tr>
+<tr><td align="right">online redo logs gb</td><td>.47</td></tr>
+<tr><td align="right">sysaux gb</td><td>.64</td></tr>
+<tr><td align="right">system gb</td><td>.79</td></tr>
+<tr><td align="right">temp gb</td><td>.03</td></tr>
+<tr><td align="right">undotbs1 gb</td><td>.1</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db application segments -+</td></tr>
+<tr><td align="right">cluster gb</td><td>0</td></tr>
+<tr><td align="right">index gb</td><td>0.01</td></tr>
+<tr><td align="right">index partition gb</td><td>0</td></tr>
+<tr><td align="right">lob partition gb</td><td>0</td></tr>
+<tr><td align="right">lobindex gb</td><td>0.00</td></tr>
+<tr><td align="right">lobsegment gb</td><td>0.00</td></tr>
+<tr><td align="right">nested table gb</td><td>0.00</td></tr>
+<tr><td align="right">system statistics gb</td><td>0</td></tr>
+<tr><td align="right">table gb</td><td>0.00</td></tr>
+<tr><td align="right">table partition gb</td><td>0</td></tr>
+<tr><td align="right">table subpartition gb</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>3</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db registry segments -+</td></tr>
+<tr><td align="right">Oracle Workspace Manager (WMSYS) gb</td><td>0.01</td></tr>
+<tr><td align="right">Oracle Label Security (LBACSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Spatial (MDSYS) gb</td><td>0.09</td></tr>
+<tr><td align="right">Oracle XML Database (XDB) gb</td><td>0.07</td></tr>
+<tr><td align="right">Oracle Multimedia (ORDSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Oracle Database Vault (DVSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">Oracle Text (CTXSYS) gb</td><td>0.00</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- ASM -+</td></tr>
+<tr><td align="right">DATA</td><td>total_gb = 10 
+                  used_gb = 4 
+                  free_gb = 6</td></tr>
+<tr><td align="right">FRA</td><td>total_gb = 10 
+                  used_gb = 0 
+                  free_gb = 10</td></tr>
+<tr><td align="right">REDO</td><td>total_gb = 0 
+                  used_gb = 0 
+                  free_gb = 0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- cdb -+</td></tr>
+<tr><td align="right">Am I a CDB</td><td>YES</td></tr>
+<tr><td align="right">Container name</td><td>CDB$ROOT</td></tr>
+<tr><td align="right">container 1</td><td>CDB$ROOT [0 gb]</td></tr>
+<tr><td align="right">container 2</td><td>PDB$SEED [.89 gb]</td></tr>
+<tr><td align="right">container 3</td><td>P1 [.91 gb]</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db logging -+</td></tr>
+<tr><td align="right">Log mode</td><td>NOARCHIVELOG</td></tr>
+<tr><td align="right">Flashback on</td><td>NO</td></tr>
+<tr><td align="right">Force logging</td><td>NO</td></tr>
+<tr><td align="right">Block Change Tracking</td><td>DISABLED</td></tr>
+<tr><td align="right">Supplemental log data all</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data fk</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data min</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data pk</td><td>NO</td></tr>
+<tr><td align="right">Supplemental log data ui</td><td>NO</td></tr>
+<tr><td align="right">3 log Groups</td><td>2 members of 80 mb</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- db parameters -+</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ General ++</td></tr>
+<tr><td align="right">compatible</td><td>[N=1] 12.2.0</td></tr>
+<tr><td align="right">db_block_size</td><td>[N=1] 8192</td></tr>
+<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=LC1XDB)</td></tr>
+<tr><td align="right">open_cursors</td><td>[N=1] 300</td></tr>
+<tr><td align="right">processes</td><td>[N=1] 300</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ Networking ++</td></tr>
+<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=LC1XDB)</td></tr>
+<tr><td align="right">local_listener</td><td>[N=1] LISTENER_LC1</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ Memory ++</td></tr>
+<tr><td align="right">pga_aggregate_target</td><td>[N=1] 314572800</td></tr>
+<tr><td align="right">sga_target</td><td>[N=1] 1258291200</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ File Destinations ++</td></tr>
+<tr><td align="right">audit_file_dest</td><td>[N=1] /u01/app/oracle/admin/LC1/adump</td></tr>
+<tr><td align="right">control_files</td><td>[N=1] +DATA/LC1/CONTROLFILE/current.266.999349135, +FRA/LC1/CONTROLFILE/current.256.999349137</td></tr>
+<tr><td align="right">db_create_file_dest</td><td>[N=1] +DATA</td></tr>
+<tr><td align="right">db_recovery_file_dest</td><td>[N=1] +FRA</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ CPU caging and resource limits ++</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ SQL tuning ++</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ Deprecated - in use ++</td></tr>
+<tr><td align="right"><b>Section</b></td><td>++ Hidden underscore - in use ++</td></tr>
+<tr><td align="right">__data_transfer_cache_size</td><td>[N=1] 0 [Actual size of data transfer cache ]</td></tr>
+<tr><td align="right">__db_cache_size</td><td>[N=1] 889192448 [Actual size of DEFAULT buffer pool for standard block size buffers ]</td></tr>
+<tr><td align="right">__inmemory_ext_roarea</td><td>[N=1] 0 [Actual size in bytes of inmemory ro extension area ]</td></tr>
+<tr><td align="right">__inmemory_ext_rwarea</td><td>[N=1] 0 [Actual size in bytes of inmemory rw extension area ]</td></tr>
+<tr><td align="right">__java_pool_size</td><td>[N=1] 16777216 [Actual size in bytes of java pool ]</td></tr>
+<tr><td align="right">__large_pool_size</td><td>[N=1] 33554432 [Actual size in bytes of large pool ]</td></tr>
+<tr><td align="right">__oracle_base</td><td>[N=1] /u01/app/oracle [ORACLE_BASE ORACLE_BASE set from environment]</td></tr>
+<tr><td align="right">__pga_aggregate_target</td><td>[N=1] 318767104 [Current target size for the aggregate PGA memory consumed ]</td></tr>
+<tr><td align="right">__sga_target</td><td>[N=1] 1258291200 [Actual size of SGA ]</td></tr>
+<tr><td align="right">__shared_io_pool_size</td><td>[N=1] 0 [Actual size of shared IO pool ]</td></tr>
+<tr><td align="right">__shared_pool_size</td><td>[N=1] 301989888 [Actual size in bytes of shared pool ]</td></tr>
+<tr><td align="right">__streams_pool_size</td><td>[N=1] 0 [Actual size in bytes of streams pool ]</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Security configuration -+</td></tr>
+<tr><td align="right">SYS.AUD$ tablespace</td><td>SYSTEM[.06mb]</td></tr>
+<tr><td align="right">SYS.FGA_LOG$ tablespace</td><td>SYSTEM[.06mb]</td></tr>
+<tr><td align="right">SYS.AUD$ null dbid count</td><td>0</td></tr>
+<tr><td align="right">SYS.FGA_LOG$ null dbid count</td><td>0</td></tr>
+<tr><td align="right">Oracle Database Vault</td><td>is not installed</td></tr>
+<tr><td align="right">Backup Encryption</td><td>is installed</td></tr>
+<tr><td align="right">Transparent Data Encryption</td><td>is installed</td></tr>
+<tr><td align="right">Oracle Label Security</td><td>is not installed</td></tr>
+<tr><td align="right">Audit Vault Agent</td><td>N/A</td></tr>
+<tr><td align="right">dbms_audit_mgmt installed</td><td>Yes</td></tr>
+<tr><td align="right">Encrypted Columns</td><td>0</td></tr>
+<tr><td align="right">Encryption wallets</td><td>2</td></tr>
+<tr><td align="right">Encrypted Tablespace (11g+)</td><td>0</td></tr>
+<tr><td align="right">Compressed tablespaces</td><td>0</td></tr>
+<tr><td align="right">Encrypted Backups</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- RAC configuration -+</td></tr>
+<tr><td align="right">RAC nodes</td><td>LC1(L1.mlh)</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Data Guard configuration -+</td></tr>
+<tr><td align="right">remote_login_passwordfile</td><td>[N=1] EXCLUSIVE</td></tr>
+<tr><td align="right">Database Instance</td><td>N/A</td></tr>
+<tr><td align="right">Database Role</td><td>PRIMARY</td></tr>
+<tr><td align="right">Database Unique Name</td><td>LC1</td></tr>
+<tr><td align="right">Dataguard Broker</td><td>DISABLED</td></tr>
+<tr><td align="right">Guard Status</td><td>NONE</td></tr>
+<tr><td align="right">Open Mode</td><td>READ WRITE</td></tr>
+<tr><td align="right">Protection Level</td><td>UNPROTECTED</td></tr>
+<tr><td align="right">Protection Mode</td><td>MAXIMUM PERFORMANCE</td></tr>
+<tr><td align="right">Switchover Status</td><td>NOT ALLOWED</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Logical Standby Readiness Assessment -+</td></tr>
+<tr><td align="right">-</td><td>DBA_LOGSTDBY_NOT_UNIQUE</td></tr>
+<tr><td align="right">Bad Columns</td><td>0</td></tr>
+<tr><td align="right">-</td><td>DBA_LOGSTDBY_UNSUPPORTED</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>2</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Transportable Tablespace Readiness Assessment -+</td></tr>
+<tr><td align="right">SUM(tablespace_names)</td><td>17</td></tr>
+<tr><td align="right">Spatial Indexes</td><td>0 --need drop before EXP</td></tr>
+<tr><td align="right">Recycle Bin gb</td><td>(0 objects )</td></tr>
+<tr><td align="right">data-type: BINARY_DOUBLE</td><td>1 --Data Pump</td></tr>
+<tr><td align="right">data-type: BINARY_FLOAT</td><td>1 --Data Pump</td></tr>
+<tr><td align="right">data-type: TIMESTAMP(0) WITH TIME ZONE</td><td>4 --Check target TZ file version</td></tr>
+<tr><td align="right">data-type: TIMESTAMP(6) WITH TIME ZONE</td><td>78 --Check target TZ file version</td></tr>
+<tr><td align="right">data-type: XMLTYPE</td><td>54 --10gR2 EXP/IMP, 11.1+ Datapump</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>3</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Streams configuration -+</td></tr>
+<tr><td align="right">compatible</td><td>[N=1] 12.2.0</td></tr>
+<tr><td align="right">sga_target</td><td>[N=1] 1258291200</td></tr>
+<tr><td align="right">CDC-Source tables</td><td>0</td></tr>
+<tr><td align="right">CDC-Change tables</td><td>0</td></tr>
+<tr><td align="right">CDC-Subscriptions</td><td>0</td></tr>
+<tr><td align="right">CDC-Subscribed Tables</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- XDB configuration -+</td></tr>
+<tr><td align="right">dispatchers</td><td>[N=1] (PROTOCOL=TCP) (SERVICE=LC1XDB)</td></tr>
+<tr><td align="right">XDB FTP Port</td><td>0</td></tr>
+<tr><td align="right">XDB HTTP Port</td><td>0</td></tr>
+<tr><td align="right">XDB Tablespace</td><td>SYSAUX</td></tr>
+<tr><td align="right">XDB User Resources Guess</td><td>4</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>4</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Workflow configuration -+</td></tr>
+<tr><td align="right">Looking for 13 tables, found</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>0</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- Workspace manager -+</td></tr>
+<tr><td align="right">ADD_UNIQUE_COLUMN_TO_HISTORY_VIEW</td><td>OFF</td></tr>
+<tr><td align="right">ALLOW_CAPTURE_EVENTS</td><td>OFF</td></tr>
+<tr><td align="right">ALLOW_MULTI_PARENT_WORKSPACES</td><td>OFF</td></tr>
+<tr><td align="right">ALLOW_NESTED_TABLE_COLUMNS</td><td>OFF</td></tr>
+<tr><td align="right">COMPRESS_PARENT_AFTER_REMOVE</td><td>ON</td></tr>
+<tr><td align="right">CREATEWORKSPACE_SHARED_LOCK</td><td>OFF</td></tr>
+<tr><td align="right">CR_WORKSPACE_MODE</td><td>OPTIMISTIC_LOCKING</td></tr>
+<tr><td align="right">DEFAULT_WORKSPACE</td><td>LIVE</td></tr>
+<tr><td align="right">FIRE_TRIGGERS_FOR_NONDML_EVENTS</td><td>ON</td></tr>
+<tr><td align="right">KEEP_REMOVED_WORKSPACES_INFO</td><td>OFF</td></tr>
+<tr><td align="right">NONCR_WORKSPACE_MODE</td><td>OPTIMISTIC_LOCKING</td></tr>
+<tr><td align="right">NUMBER_OF_COMPRESS_BATCHES</td><td>50</td></tr>
+<tr><td align="right">OWM_VERSION</td><td>12.2.0.1.0</td></tr>
+<tr><td align="right">REMOVEWORKSPACE_DEFERRED</td><td>OFF</td></tr>
+<tr><td align="right">ROW_LEVEL_LOCKING</td><td>OFF</td></tr>
+<tr><td align="right">TARGET_PGA_MEMORY</td><td>8388608</td></tr>
+<tr><td align="right">UNDO_SPACE</td><td>UNLIMITED</td></tr>
+<tr><td align="right">USE_SCALAR_TYPES_FOR_VALIDTIME</td><td>OFF</td></tr>
+<tr><td align="right">USE_TIMESTAMP_TYPE_FOR_HISTORY</td><td>ON</td></tr>
+<tr><td align="right">workspace</td><td>SYS.LIVE</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>1</td></tr>
+<tr><td align="right"><b>Section</b></td><td>+- GoldenGate high level review-+</td></tr>
+<tr><td align="right">Application tables</td><td>90</td></tr>
+<tr><td align="right">Compressed tables</td><td>0</td></tr>
+<tr><td align="right">External tables</td><td>0</td></tr>
+<tr><td align="right">Materialised Views</td><td>0</td></tr>
+<tr><td align="right">Table with 33+ Columns</td><td>0</td></tr>
+<tr><td align="right">PKUKFK invalid</td><td>0</td></tr>
+<tr><td align="right">PK novalidate</td><td>0</td></tr>
+<tr><td align="right">Unused columns - normal tables</td><td>0</td></tr>
+<tr><td align="right">Unused columns - partitioned tables</td><td>0</td></tr>
+<tr><td align="right">Hidden Columns</td><td>11</td></tr>
+<tr><td align="right">ROWID tables</td><td>0</td></tr>
+<tr><td align="right">Sequences</td><td>13</td></tr>
+<tr><td align="right">Triggers</td><td>0</td></tr>
+<tr><td align="right">User defined types</td><td>0</td></tr>
+<tr><td align="right">Data-types not supported</td><td>0</td></tr>
+<tr><td align="right">XMLTYPE tables</td><td>0</td></tr>
+<tr><td align="right">@Elapsed Seconds to INIT</td><td>1</td></tr>
+<tr><td align="right">Compressed gb</td><td>0.00 @Elapsed Seconds 1</td></tr>
+<tr><td align="right">Non log tables [ts+tab] gb</td><td>0.00 @Elapsed Seconds 0</td></tr>
+<tr><td align="right">One column non-scalar gb</td><td>0.00 @Elapsed Seconds 2</td></tr>
+<tr><td align="right">PKUK missing gb</td><td>0.00 @Elapsed Seconds 1</td></tr>
+<tr><td align="right">ROWID gb</td><td>0.00 @Elapsed Seconds 1</td></tr>
+<tr><td align="right">UDT gb</td><td>0.00 @Elapsed Seconds 2</td></tr>
+<tr><td align="right">Unsupported data-type gb</td><td>0.00 @Elapsed Seconds 2</td></tr>
+<tr><td align="right">@Elapsed Seconds</td><td>32</td></tr>
+<tr><td align="right">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td><td>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td></tr>
+<tr><td align="right">@Elapsed run time</td><td>28-feb-2019 10:36:40 -> 10:37:29, 49 seconds</td></tr>
+<tr><td align="right">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td><td>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</td></tr>
+</table>
+Elapsed: 00:00:50.46
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_archive_analysis_for_1_month">Database archive analysis for 1 month</h2>
+<br>
+
+<br>
+Archive log hourly megabyte statistical analysis for each destination - for the last 3 month
+<br>
+
+<br>
+Elapsed: 00:00:00.01
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_archive_analysis_for_3_months">Database archive analysis for 3 months</h2>
+<br>
+
+<br>
+Sample of average archive log generation for: 1 month, 3 months, 3 months Monday - Friday and 3 months Saturday - Sunday
+<br>
+
+<br>
+Elapsed: 00:00:00.01
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_statistics_Review">Database statistics Review</h2>
+<br>
+
+<br>
+The database needs statistics gathered against the system, database dictionary, database fixed views, database components and your database application schema, this information can then be used to optimise the use of CPU and disk access.
+<br>
+
+<br>
+owner                    ,         2019,         2018,         2017,         2016,         2015, NOT_GATHERED
+<br>
+-------------------------,-------------,-------------,-------------,-------------,-------------,-------------
+<br>
+ Components              ,            0,            0,          306,            0,            0,           21
+<br>
+ Dictionary              ,          149,            0,         1264,            0,            0,           72
+<br>
+ Fixed objects           ,            0,            0,            0,            0,            0,         1289
+<br>
+ORDDATA                  ,            0,            0,           71,            0,            0,           19
+<br>
+_Totals                  ,          149,            0,         1641,            0,            0,         1401
+<br>
+Elapsed: 00:00:03.02
+
+<br>
+System Statistics generated by "exec dbms_stats.gather_system_stats();"
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+SNAME
+</th>
+<th scope="col">
+PNAME
+</th>
+<th scope="col">
+PVAL1
+</th>
+<th scope="col">
+PVAL2
+</th>
+</tr>
+<tr>
+<td>
+SYSSTATS_INFO
+</td>
+<td>
+STATUS
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+COMPLETED
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_INFO
+</td>
+<td>
+DSTART
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+01-26-2017 15:28
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_INFO
+</td>
+<td>
+DSTOP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+01-26-2017 15:28
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_INFO
+</td>
+<td>
+FLAGS
+</td>
+<td align="right">
+              1
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+CPUSPEEDNW
+</td>
+<td align="right">
+3137.7137713771
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+IOSEEKTIM
+</td>
+<td align="right">
+             10
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+IOTFRSPEED
+</td>
+<td align="right">
+           4096
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+SREADTIM
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+MREADTIM
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+CPUSPEED
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+MBRC
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+MAXTHR
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYSSTATS_MAIN
+</td>
+<td>
+SLAVETHR
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.02
+
+<br>
+System Statistics calculated for comparison
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+PNAME
+</th>
+<th scope="col">
+PVAL1
+</th>
+<th scope="col">
+CALCULATED
+</th>
+<th scope="col">
+FORMULA
+</th>
+</tr>
+<tr>
+<td>
+CPUSPEED
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+CPUSPEEDNW
+</td>
+<td align="right">
+3137.7137713771
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+IOSEEKTIM
+</td>
+<td align="right">
+             10
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+IOTFRSPEED
+</td>
+<td align="right">
+           4096
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+MAXTHR
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+MBRC
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              8
+</td>
+<td>
+= _db_file_optimizer_read_count
+</td>
+</tr>
+<tr>
+<td>
+MREADTIM
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             26
+</td>
+<td>
+= IOSEEKTIM + db_block_size * MBRC / IOTFRSPEED
+</td>
+</tr>
+<tr>
+<td>
+SLAVETHR
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SREADTIM
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+             12
+</td>
+<td>
+= IOSEEKTIM + db_block_size        / IOTFRSPEED
+</td>
+</tr>
+<tr>
+<td>
+   maximum mbrc
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+229.96610169492
+</td>
+<td>
+= buffer cache size in blocks / sessions
+</td>
+</tr>
+<tr>
+<td>
+   single block Cost per block
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+              1
+</td>
+<td>
+by definition
+</td>
+</tr>
+<tr>
+<td>
+   multi block Cost per block
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+          .2708
+</td>
+<td>
+= 1/MBRC * MREADTIM/SREADTIM
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.10
+
+<br>
+Gather statistics job
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+JOB_NAME
+</th>
+<th scope="col">
+WINDOW_GROUP_NAME
+</th>
+<th scope="col">
+WINDOW_NAME
+</th>
+<th scope="col">
+REPEAT_INTERVAL
+</th>
+<th scope="col">
+DURATION
+</th>
+<th scope="col">
+ENABL
+</th>
+<th scope="col">
+ACTIV
+</th>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+MAINTENANCE_WINDOW_G
+ROUP
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=FRI;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+MAINTENANCE_WINDOW_G
+ROUP
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=MON;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+MAINTENANCE_WINDOW_G
+ROUP
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SAT;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+MAINTENANCE_WINDOW_G
+ROUP
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SUN;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+MAINTENANCE_WINDOW_G
+ROUP
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=THU;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+MAINTENANCE_WINDOW_G
+ROUP
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=TUE;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+MAINTENANCE_WINDOW_G
+ROUP
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=WED;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_OS
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=FRI;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_OS
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=MON;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_OS
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SAT;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_OS
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SUN;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_OS
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=THU;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_OS
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=TUE;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_OS
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=WED;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SA
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=FRI;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SA
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=MON;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SA
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SAT;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SA
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SUN;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SA
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=THU;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SA
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=TUE;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SA
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=WED;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SQ
+</td>
+<td>
+FRIDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=FRI;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SQ
+</td>
+<td>
+MONDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=MON;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SQ
+</td>
+<td>
+SATURDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SAT;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SQ
+</td>
+<td>
+SUNDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=SUN;byhour=6;byminute=0; bysecond=0
+</td>
+<td>
++000 20:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SQ
+</td>
+<td>
+THURSDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=THU;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SQ
+</td>
+<td>
+TUESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=TUE;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+<tr>
+<td>
+auto_task
+</td>
+<td>
+ORA$AT_WGRP_SQ
+</td>
+<td>
+WEDNESDAY_WINDOW
+</td>
+<td>
+freq=daily;byday=WED;byhour=22;byminute=0; bysecond=0
+</td>
+<td>
++000 04:00:00
+</td>
+<td>
+TRUE
+</td>
+<td>
+FALSE
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:01.08
+
+<br>
+11g+ Automated Maintenance Task Operation Configuration
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+CLIENT_NAME
+</th>
+<th scope="col">
+OPERATION_NAME
+</th>
+<th scope="col">
+OPERATION_TAG
+</th>
+<th scope="col">
+PRIORITY_OVERRIDE
+</th>
+<th scope="col">
+ATTRIBUTES
+</th>
+<th scope="col">
+USE_RESOURCE_ESTIMAT
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+LAST_CHANGE
+</th>
+</tr>
+<tr>
+<td>
+auto optimizer stats
+ collection
+</td>
+<td>
+auto optimizer stats
+ job
+</td>
+<td>
+OPT
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ON BY DEFAULT, VOLAT
+ILE, SAFE TO KILL
+</td>
+<td>
+FALSE
+</td>
+<td>
+ENABLED
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+auto space advisor
+</td>
+<td>
+auto space advisor j
+ob
+</td>
+<td>
+SPC
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ON BY DEFAULT, VOLAT
+ILE, SAFE TO KILL
+</td>
+<td>
+FALSE
+</td>
+<td>
+ENABLED
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+sql tuning advisor
+</td>
+<td>
+automatic sql tuning
+ task
+</td>
+<td>
+SQL
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+ONCE PER WINDOW, ON
+BY DEFAULT, VOLATILE
+, SAFE TO KILL
+</td>
+<td>
+FALSE
+</td>
+<td>
+ENABLED
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.11
+
+<br>
+The list of tables and/or table partitions that have manually locked statistics or have defined extensions
+<br>
+
+<br>
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_parameters_Review">Database parameters Review</h2>
+<br>
+
+<br>
+These are parameters you have configured in your database that are deprecated or obsoleted.
+<br>
+Deprecated parameters are supported but a warning will be written to the alert log as the database is started.  Obsoleted parameters have been removed from the database and the historic functionality of which has been removed.  You should also receive a warning in the alert log but the database should still start.
+<br>
+
+<br>
+                               PARAMETER_NAME,      VERSION,        EVENT,                                     NEW_NAME,CURRENT_VALUE
+<br>
+---------------------------------------------,-------------,-------------,---------------------------------------------,-------------
+<br>
+Elapsed: 00:00:00.10
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_feature_usage">Database feature usage</h2>
+<br>
+
+<br>
+This is the list of features known database features and whether they have been consumed at any  point in the database life.  For a database migration it makes a lot of sense to understand which features may need to be enabled at the target database, and to identify which features are currently used but not compatible with our short list of anticipated migration techniques.
+<br>
+
+<br>
+Elapsed: 00:00:00.06
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_resource_Limit">Database resource Limit</h2>
+<br>
+
+<br>
+Displays information about global resource use for some of the system resources. Use this view to monitor the consumption of resources so that you can take corrective action, if necessary. Many of the resources correspond to initialization parameters
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+RESOURCE_NAME
+</th>
+<th scope="col">
+CURRENT_UTILIZATION
+</th>
+<th scope="col">
+MAX_UTILIZATION
+</th>
+<th scope="col">
+INITIAL_ALLOCATION
+</th>
+<th scope="col">
+LIMIT_VALUE
+</th>
+<th scope="col">
+CON_ID
+</th>
+</tr>
+<tr>
+<td>
+branches
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+       519
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+cmtcallbk
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td>
+       519
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+dml_locks
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+      2076
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+enqueue_locks
+</td>
+<td align="right">
+             32
+</td>
+<td align="right">
+             59
+</td>
+<td>
+      5700
+</td>
+<td>
+      5700
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+enqueue_resources
+</td>
+<td align="right">
+             32
+</td>
+<td align="right">
+             32
+</td>
+<td>
+      2296
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+gcs_resources
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+gcs_shadows
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+ges_big_msgs
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+ges_cache_ress
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+ges_locks
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+ges_procs
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+         0
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+ges_reg_msgs
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+ges_ress
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+ges_rsv_msgs
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+         0
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+k2q_locks
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+       944
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+max_rollback_segments
+</td>
+<td align="right">
+             22
+</td>
+<td align="right">
+             22
+</td>
+<td>
+       519
+</td>
+<td>
+     65535
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+max_shared_servers
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              2
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+parallel_max_servers
+</td>
+<td align="right">
+              8
+</td>
+<td align="right">
+              8
+</td>
+<td>
+        80
+</td>
+<td>
+     32767
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+processes
+</td>
+<td align="right">
+             91
+</td>
+<td align="right">
+            115
+</td>
+<td>
+       300
+</td>
+<td>
+       300
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+sessions
+</td>
+<td align="right">
+             67
+</td>
+<td align="right">
+            102
+</td>
+<td>
+       472
+</td>
+<td>
+       472
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+smartio_buffer_memory
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+smartio_metadata_memory
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+smartio_overhead_memory
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+smartio_sessions
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+         0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+sort_segment_locks
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              2
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+temporary_table_locks
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+ UNLIMITED
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+transactions
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+       519
+</td>
+<td>
+ UNLIMITED
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.00
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_links">Database links</h2>
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+HOST
+</th>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SEEDDATA
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.01
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_top_50_hot_tables">Database top 50 hot tables</h2>
+<br>
+
+<br>
+Tables with monitoring enabled (see dba_tables) are updated regularly with the DML activity counts and cleared out with each dbms_stat.gather* activity which generally means the figures are representative of one full 24 hours period at most.
+<br>
+
+<br>
+Elapsed: 00:00:00.52
+
+<br>
+Working out the daily_inserts, daily_updates and daily_deletes is difficult because large high transaction rate tables sometimes do not have any statistics gathered on them, and so the dba_tables last_analyzed column is null.  Often there are a lot of tables with a NULL values for the last_analyzed column which can cause the selector for the TOP 50 tables to be inaccurate.  To work around this, when the last_analyzed column is null, I have substituted the dba_tables.create date.  This may not be an accurate approach, but it seems like a good approximation for calculating the daily change rate.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+LOBCOLS
+</th>
+<th scope="col">
+STAMP
+</th>
+<th scope="col">
+STAMPDAYS
+</th>
+<th scope="col">
+TOTAL_INSERTS
+</th>
+<th scope="col">
+TOTAL_UPDATES
+</th>
+<th scope="col">
+TOTAL_DELETES
+</th>
+<th scope="col">
+DAILY_INSERTS
+</th>
+<th scope="col">
+DAILY_UPDATES
+</th>
+<th scope="col">
+DAILY_DELETES
+</th>
+<th scope="col">
+TRU
+</th>
+</tr>
+<tr>
+<td>
+MDSYS
+</td>
+<td>
+SDO_COORD_OP_PARAM_VALS
+</td>
+<td align="right">
+              2
+</td>
+<td>
+2017-01-26 15:05:00
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+          15099
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+             20
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+SYSTEM
+</td>
+<td>
+LOGSTDBY$SKIP_SUPPORT
+</td>
+<td align="right">
+              0
+</td>
+<td>
+2017-01-26 14:25:00
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+            407
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+            406
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+MDSYS
+</td>
+<td>
+SDO_XSD_TABLE
+</td>
+<td align="right">
+              1
+</td>
+<td>
+2017-01-26 15:18:29
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+            150
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+AUDSYS
+</td>
+<td>
+AUD$UNIFIED
+</td>
+<td align="right">
+              3
+</td>
+<td>
+2017-01-26 14:24:44
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+             76
+</td>
+<td align="right">
+             30
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+DBSNMP
+</td>
+<td>
+BSLN_STATISTICS
+</td>
+<td align="right">
+              0
+</td>
+<td>
+2017-01-26 14:24:46
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+             49
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+             49
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+MDSYS
+</td>
+<td>
+SDO_STYLES_TABLE
+</td>
+<td align="right">
+              2
+</td>
+<td>
+2017-01-26 15:05:01
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+             78
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+LBACSYS
+</td>
+<td>
+OLS$PROPS
+</td>
+<td align="right">
+              0
+</td>
+<td>
+2017-01-26 15:25:52
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              3
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              3
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+MDSYS
+</td>
+<td>
+SDO_XML_SCHEMAS
+</td>
+<td align="right">
+              1
+</td>
+<td>
+2017-01-26 15:05:02
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              6
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+LBACSYS
+</td>
+<td>
+OLS$INSTALLATIONS
+</td>
+<td align="right">
+              0
+</td>
+<td>
+2017-01-26 15:25:52
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              2
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              2
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+DBSNMP
+</td>
+<td>
+BSLN_BASELINES
+</td>
+<td align="right">
+              0
+</td>
+<td>
+2017-01-26 14:24:45
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              2
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+MDSYS
+</td>
+<td>
+SDO_GEOR_XMLSCHEMA_TABLE
+</td>
+<td align="right">
+              1
+</td>
+<td>
+2017-01-26 15:18:28
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+WMSYS
+</td>
+<td>
+WM$ENV_VARS$
+</td>
+<td align="right">
+              0
+</td>
+<td>
+2017-01-26 14:49:20
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$XDB_READY
+</td>
+<td align="right">
+              1
+</td>
+<td>
+2017-01-26 14:30:35
+</td>
+<td align="right">
+            763
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td>
+NO
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:02.06
+
+<br>
+The list of 50 tables with the most physical writes
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+OBJECT_NAME
+</th>
+<th scope="col">
+OBJECT_TYPE
+</th>
+<th scope="col">
+STATISTIC_NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_OPTSTAT_SNAPSHOT$
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+             13
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+COL_USAGE$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              9
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+OBJ$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              6
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_JOB
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              5
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_JOB_RUN_DETAILS
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              5
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_EVENT_LOG
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              5
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+OPTSTAT_SNAPSHOT$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              4
+</td>
+</tr>
+<tr>
+<td>
+DBSNMP
+</td>
+<td>
+BSLN_STATISTICS
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              3
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+TS$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SYS_C004882
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_ALERT_THRESHOLD_LOG_PK
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_ALERT_THRESHOLD_LOG
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_SCHEDULER_JOB4
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_SCHEDULER_JOB1
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+MON_MODS_ALL$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+FILE$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_FILE2
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+UNDO$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SEQ$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+CONTAINER$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+OPTSTAT_HIST_CONTROL$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+EXP_OBJ$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+EXP_STAT$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+HEAT_MAP_STAT$
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+RECENT_RESOURCE_INCARNATIONS$P
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_WINDOW
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_SCHEDULER_WINDOW1
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+SCHEDULER$_INSTANCE_PK
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+I_SCHEDULER_JOB_RUN_DETAILS
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+KU_UTLUSE
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_ALERT_OUTSTANDING
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_ALERTS_OUTSTANDING_PK
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_ALERT_HISTORY
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_ALERT_HISTORY_PK
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+OPATCH_XINV_TAB
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_SCH_CONTROL
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRI$_SCH_VOTES
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRM$_DATABASE_INSTANCE
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRM$_DATABASE_INSTANCE_PK
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+WRM$_WR_SETTINGS
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+DBMS_LOCK_ALLOCATED
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+DBMS_LOCK_EXPIRATION_IND
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+SYS
+</td>
+<td>
+ALERT_QT
+</td>
+<td>
+TABLE
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+DBSNMP
+</td>
+<td>
+BSLN_STATISTICS_PK1
+</td>
+<td>
+INDEX
+</td>
+<td>
+physical writes
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.32
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_components_installed">Database components installed</h2>
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+VERSION
+</th>
+<th scope="col">
+COMP_NAME
+</th>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+JServer JAVA Virtual Machine
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+OLAP Analytic Workspace
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Database Catalog Views
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Database Java Packages
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Database Packages and Types
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Database Vault
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Label Security
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Multimedia
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle OLAP API
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Real Application Clusters
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Text
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle Workspace Manager
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle XDK
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Oracle XML Database
+</td>
+</tr>
+<tr>
+<td>
+12.2.0.1.0
+</td>
+<td>
+Spatial
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.00
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+VERSION
+</th>
+<th scope="col">
+COMMENTS
+</th>
+</tr>
+<tr>
+<td>
+12.2.0.1
+</td>
+<td>
+RDBMS_12.2.0.1.0DBOCT2018RU_LINUX.X64_181002
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.01
+
+<br>
+<pre>
+      TARGET_VERSION
+      *
+</pre>
+ERROR at line 8:
+<br>
+ORA-00904: "TARGET_VERSION": invalid identifier
+<br>
+
+
+Elapsed: 00:00:00.04
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_streams_Replication">Database streams Replication</h2>
+<br>
+
+<br>
+Oracle 12c deprecated Streams replication which means there will be no further development of Streams.  You should now start planning to use another replication technology such as Oracle GoldenGate.
+<br>
+There are a number of known problems to consider during your migration planning 1. Streams cannot propagate ANYDATA messages that encapsulate payloads of object types, varrays, or nested tables between databases with different character sets. 2. Change Data Capture (CDC) is desupported and removed from Oracle 12c.
+<br>
+
+<br>
+Change Data Capture Publishers
+<br>
+
+<br>
+Change Data Capture Publishers
+<br>
+Elapsed: 00:00:00.02
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_XDB">Database XDB</h2>
+<br>
+
+<br>
+This is an earlier iteration to find documents stored in XDB which is difficult because documents can actually be stored anywhere.  However, the following result set should return a list of document paths along with a count of the number of resources under each path.  Specifically, a resource can be a folder or a file, however it looks like an empty folder is not included in this result set.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+RESOURCES
+</th>
+<th scope="col">
+PATH
+</th>
+</tr>
+<tr>
+<td align="right">
+              1
+</td>
+<td>
+/home/
+</td>
+</tr>
+<tr>
+<td align="right">
+              1
+</td>
+<td>
+/home/MDSYS/
+</td>
+</tr>
+<tr>
+<td align="right">
+              2
+</td>
+<td>
+/home/MDSYS/epsg/
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.25
+
+<br>
+This is the list of XMLTYPE tables as in "CREATE TABLE schema.table OF XMLTYPE".
+<br>
+
+<br>
+GoldenGate only supports XMLTYPE tables (dba_xml_tables) starting in version 11.2.1, and then XMLType stored in XDB can be captured by extract in integrated capture mode, but not in classic capture mode.
+<br>
+
+<br>
+If you cannot use integrated extract, then any tables of this type will have to be excluded from replication and carried over to the target during the live migration outage window.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+STORAGE_TYPE
+</th>
+<th scope="col">
+ELEMENT_NAME
+</th>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ACL
+</td>
+<td>
+BINARY
+</td>
+<td>
+acl
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ALL_MODEL
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+all
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ANY
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+any
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ANYATTR
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+anyAttribute
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ATTRGROUP_DEF
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+attributeGroup
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ATTRGROUP_REF
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+attributeGroup
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ATTRIBUTE
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+attribute
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$CHOICE_MODEL
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+choice
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$COMPLEX_TYPE
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+complexType
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$CONFIG
+</td>
+<td>
+BINARY
+</td>
+<td>
+xdbconfig
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$ELEMENT
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+element
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$GROUP_DEF
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+group
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$GROUP_REF
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+group
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$RESCONFIG
+</td>
+<td>
+BINARY
+</td>
+<td>
+ResConfig
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$RESOURCE
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+Resource
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$SCHEMA
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+schema
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$SEQUENCE_MODEL
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+sequence
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$SIMPLE_TYPE
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+simpleType
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+XDB$STATS
+</td>
+<td>
+OBJECT-RELATIONAL
+</td>
+<td>
+ContainerStats
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.34
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_real_application_testing">Database real application testing</h2>
+<br>
+
+<br>
+Real Application Testing database replay capture should not be active during GoldenGate replication.
+<br>
+
+<br>
+
+<br>
+Is real application testing installed
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+PARAMETER
+</th>
+<th scope="col">
+VALUE
+</th>
+</tr>
+<tr>
+<td>
+Real Application Testing
+</td>
+<td>
+TRUE
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.00
+
+<br>
+
+<br>
+Has the real application testing feature been used before?
+<br>
+
+<br>
+Elapsed: 00:00:00.06
+
+<br>
+
+<br>
+Are there any recent workload captures or replays?
+<br>
+
+<br>
+Elapsed: 00:00:00.26
+
+<br>
+Elapsed: 00:00:00.02
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_logical_standby">Database logical standby</h2>
+<br>
+
+<br>
+A logical standby database can be used to perform a rolling database upgrade either by adding a logical standby to the infrastructure or by temporarily converting a physical standby to a logical during a transient logical standby upgrade.  Equally, we choose to replatform and upgrade the database using Data Guard to reduce our outage window.
+<br>
+
+<br>
+
+<br>
+DBA_LOGSTDBY_UNSUPPORTED displays the schemas, tables, and columns in those tables that contain unsupported datatypes.
+<br>
+
+<br>
+Elapsed: 00:00:01.22
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_tablespace_usage">Database tablespace usage</h2>
+<br>
+
+<br>
+Tablespace sizing and usage
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+TABLESPACE_NAME
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+AUT
+</th>
+<th scope="col">
+USED_MB
+</th>
+<th scope="col">
+FREE_MB
+</th>
+<th scope="col">
+MAX_MB
+</th>
+<th scope="col">
+INCREMENT_MB
+</th>
+<th scope="col">
+FILE_NAME
+</th>
+</tr>
+<tr>
+<td>
+SYSAUX
+</td>
+<td>
+AVAILABLE
+</td>
+<td>
+YES
+</td>
+<td align="right">
+            660
+</td>
+<td align="right">
+          32108
+</td>
+<td align="right">
+          32768
+</td>
+<td align="right">
+             10
+</td>
+<td>
++DATA/LC1/DATAFILE/sysaux.261.999349045
+</td>
+</tr>
+<tr>
+<td>
+SYSTEM
+</td>
+<td>
+AVAILABLE
+</td>
+<td>
+YES
+</td>
+<td align="right">
+            810
+</td>
+<td align="right">
+          31958
+</td>
+<td align="right">
+          32768
+</td>
+<td align="right">
+             10
+</td>
+<td>
++DATA/LC1/DATAFILE/system.276.999348999
+</td>
+</tr>
+<tr>
+<td>
+TEMP
+</td>
+<td>
+ONLINE
+</td>
+<td>
+YES
+</td>
+<td align="right">
+             33
+</td>
+<td align="right">
+          32735
+</td>
+<td align="right">
+          32768
+</td>
+<td align="right">
+           .625
+</td>
+<td>
++DATA/LC1/TEMPFILE/temp.275.999349171
+</td>
+</tr>
+<tr>
+<td>
+UNDOTBS1
+</td>
+<td>
+AVAILABLE
+</td>
+<td>
+YES
+</td>
+<td align="right">
+            105
+</td>
+<td align="right">
+          32663
+</td>
+<td align="right">
+          32768
+</td>
+<td align="right">
+              5
+</td>
+<td>
++DATA/LC1/DATAFILE/undotbs1.274.999349071
+</td>
+</tr>
+<tr>
+<td>
+USERS
+</td>
+<td>
+AVAILABLE
+</td>
+<td>
+YES
+</td>
+<td align="right">
+              5
+</td>
+<td align="right">
+          32763
+</td>
+<td align="right">
+          32768
+</td>
+<td align="right">
+           1.25
+</td>
+<td>
++DATA/LC1/DATAFILE/users.270.999349071
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.19
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_level_triggers">Database level triggers</h2>
+<br>
+
+<br>
+User defined database level triggers are often missed during the initial analysis of the database migration, however these triggers often form an important part of the database security model.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+OWNER
+</th>
+<th scope="col">
+BASE_OBJECT_TYPE
+</th>
+<th scope="col">
+TRIGGERING_EVENT
+</th>
+<th scope="col">
+TRIGGER_NAME
+</th>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+GSMADMIN_INTERNAL
+</td>
+<td>
+SCHEMA
+</td>
+<td>
+LOGOFF
+</td>
+<td>
+GSMLOGOFF
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+ALTER
+</td>
+<td>
+LBAC$BEFORE_ALTER
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+CREATE
+</td>
+<td>
+LBAC$AFTER_CREATE
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+LBAC$AFTER_DROP
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+MDSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+CREATE
+</td>
+<td>
+SDO_ST_SYN_CREATE
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+MDSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DDL
+</td>
+<td>
+SDO_GEOR_ADDL_TRIGGER
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+MDSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DDL
+</td>
+<td>
+SDO_GEOR_BDDL_TRIGGER
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+MDSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+SDO_DROP_USER
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+MDSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+SDO_NETWORK_DROP_USER
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+AW_DROP_TRG
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+OJDS$ROLE_TRIGGER$
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP OR TRUNCATE
+</td>
+<td>
+XDB_PI_TRIG
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+RENAME
+</td>
+<td>
+AW_REN_TRG
+</td>
+</tr>
+<tr>
+<td>
+ENABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+TRUNCATE
+</td>
+<td>
+AW_TRUNC_TRG
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+MDSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+SDO_TOPO_DROP_FTBL
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+ALTER
+</td>
+<td>
+CDC_ALTER_CTABLE_BEFORE
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+CREATE
+</td>
+<td>
+CDC_CREATE_CTABLE_AFTER
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+CREATE
+</td>
+<td>
+CDC_CREATE_CTABLE_BEFORE
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+CREATE OR ALTER
+</td>
+<td>
+SYSLSBY_EDS_DDL_TRIG
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DDL
+</td>
+<td>
+LOGMNRGGC_TRIGGER
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+SYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+CDC_DROP_CTABLE_BEFORE
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+WMSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+CREATE OR ALTER OR DROP OR TRUNCATE OR RENAME
+</td>
+<td>
+NO_VM_DDL
+</td>
+</tr>
+<tr>
+<td>
+DISABLED
+</td>
+<td>
+WMSYS
+</td>
+<td>
+DATABASE
+</td>
+<td>
+DROP
+</td>
+<td>
+NO_VM_DROP_A
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.31
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Database_network_access_In/Out">Database network access In/Out</h2>
+<br>
+
+<br>
+Network Access information
+<br>
+
+<br>
+
+<br>
+The access control list assignments to network hosts.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+HOST
+</th>
+<th scope="col">
+LOWER_PORT
+</th>
+<th scope="col">
+UPPER_PORT
+</th>
+<th scope="col">
+ACL
+</th>
+<th scope="col">
+ACLID
+</th>
+<th scope="col">
+ACL_OWNER
+</th>
+</tr>
+<tr>
+<td>
+localhost
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+/sys/acls/oracle-sysman-ocm-Resolve-Access.xml
+</td>
+<td>
+0000000080002760
+</td>
+<td>
+SYS
+</td>
+</tr>
+<tr>
+<td>
+*
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+NETWORK_ACL_4700D20FF5FF557EE05387E5E50A8899
+</td>
+<td>
+0000000080002724
+</td>
+<td>
+SYS
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.10
+
+<br>
+The network privileges defined in all access control lists that are currently assigned to network hosts.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+ACL
+</th>
+<th scope="col">
+ACLID
+</th>
+<th scope="col">
+PRINCIPAL
+</th>
+<th scope="col">
+PRIVILEGE
+</th>
+<th scope="col">
+IS_GR
+</th>
+<th scope="col">
+INVER
+</th>
+<th scope="col">
+START_DATE
+</th>
+<th scope="col">
+END_DATE
+</th>
+<th scope="col">
+ACL_OWNER
+</th>
+</tr>
+<tr>
+<td>
+NETWORK_ACL_4700D20FF5FF557EE05387E5E50A8899
+</td>
+<td>
+0000000080002724
+</td>
+<td>
+GSMADMIN_INTERNAL
+</td>
+<td>
+resolve
+</td>
+<td>
+true
+</td>
+<td>
+false
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+</tr>
+<tr>
+<td>
+NETWORK_ACL_4700D20FF5FF557EE05387E5E50A8899
+</td>
+<td>
+0000000080002724
+</td>
+<td>
+GGSYS
+</td>
+<td>
+resolve
+</td>
+<td>
+true
+</td>
+<td>
+false
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+</tr>
+<tr>
+<td>
+/sys/acls/oracle-sysman-ocm-Resolve-Access.xml
+</td>
+<td>
+0000000080002760
+</td>
+<td>
+ORACLE_OCM
+</td>
+<td>
+resolve
+</td>
+<td>
+true
+</td>
+<td>
+false
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+SYS
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.16
+
+<br>
+Shared Server dispatchers
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+CONF_INDX
+</th>
+<th scope="col">
+NETWORK
+</th>
+<th scope="col">
+DISPATCHERS
+</th>
+<th scope="col">
+CONNECTIONS
+</th>
+<th scope="col">
+SESSIONS
+</th>
+<th scope="col">
+MULT
+</th>
+<th scope="col">
+LISTENER
+</th>
+<th scope="col">
+SERVICE
+</th>
+<th scope="col">
+CON_ID
+</th>
+</tr>
+<tr>
+<td align="right">
+              0
+</td>
+<td>
+(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+           1022
+</td>
+<td align="right">
+           1022
+</td>
+<td>
+OFF
+</td>
+<td>
+(ADDRESS=(PROTOCOL=IPC)(HOST=l1.mlh)(KEY=LISTENER_DATAGUARD)) (ADDRESS=(PROTOCOL=IPC)(HOST=l1.mlh)(KEY=LISTENER_APPLICATIONS)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1943)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1521)) (ADDRESS=(PROTOCOL=IPC)(HOST=l1.mlh)(KEY=LISTENER_MANAGEMENT)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1941)) (ADDRESS=(PROTOCOL=TCP)(HOST=L1.mlh)(PORT=1942))
+</td>
+<td>
+LC1XDB
+</td>
+<td align="right">
+              0
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.02
+
+<br>
+Shared Servers
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+MAXIMUM_CONNECTIONS
+</th>
+<th scope="col">
+MAXIMUM_SESSIONS
+</th>
+<th scope="col">
+SERVERS_STARTED
+</th>
+<th scope="col">
+SERVERS_TERMINATED
+</th>
+<th scope="col">
+SERVERS_HIGHWATER
+</th>
+<th scope="col">
+DISPATCHERS_CPU
+</th>
+<th scope="col">
+CON_ID
+</th>
+</tr>
+<tr>
+<td align="right">
+              0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              2
+</td>
+<td align="right">
+          18302
+</td>
+<td align="right">
+              0
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.02
+
+<br>
+Database Resident Connection Pooling (DRCP)
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+CONNECTION_POOL
+</th>
+<th scope="col">
+STATUS
+</th>
+<th scope="col">
+MINSIZE
+</th>
+<th scope="col">
+MAXSIZE
+</th>
+<th scope="col">
+INCRSIZE
+</th>
+<th scope="col">
+SESSION_CACHED_CURSORS
+</th>
+<th scope="col">
+INACTIVITY_TIMEOUT
+</th>
+<th scope="col">
+MAX_THINK_TIME
+</th>
+<th scope="col">
+MAX_USE_SESSION
+</th>
+<th scope="col">
+MAX_LIFETIME_SESSION
+</th>
+<th scope="col">
+NUM_CBROK
+</th>
+<th scope="col">
+MAXCONN_CBROK
+</th>
+<th scope="col">
+MAX_TXN_THINK_TIME
+</th>
+</tr>
+<tr>
+<td>
+SYS_DEFAULT_CONNECTION_POOL
+</td>
+<td>
+INACTIVE
+</td>
+<td align="right">
+              4
+</td>
+<td align="right">
+             40
+</td>
+<td align="right">
+              2
+</td>
+<td align="right">
+             20
+</td>
+<td align="right">
+            300
+</td>
+<td align="right">
+            120
+</td>
+<td align="right">
+         500000
+</td>
+<td align="right">
+          86400
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+          40000
+</td>
+<td align="right">
+              0
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.03
+Elapsed: 00:00:00.03
+Elapsed: 00:00:00.01
+EXECUTE DBMS_CONNECTION_POOL.START_POOL('SYS_DEFAULT_CONNECTION_POOL')
+<br>
+ezconnect -> IP:PORT/SERVICE_NAME:POOLED
+<br>
+tnsalias -> (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=myhost)(PORT=port))(CONNECT_DATA=(SERVICE_NAME=service_name)(SERVER=POOLED)))
+<br>
+requires local_listener to register against 1521 (default) or no default
+<br>
+EXECUTE DBMS_CONNECTION_POOL.STOP_POOL()
+<br>
+
+<br>
+EXECUTE DBMS_CONNECTION_POOL.ALTER_PARAM ('','MINSIZE','10')
+<br>
+EXECUTE DBMS_CONNECTION_POOL.ALTER_PARAM ('','MAX_USE_SESSION','30')
+<br>
+EXECUTE DBMS_CONNECTION_POOL.ALTER_PARAM ('','MAXCONN_CBROK','50000')
+<br>
+cat /etc/security/limits.conf
+<br>
+test_user HARD NOFILE 50000
+<br>
+EXECUTE DBMS_CONNECTION_POOL.RESTORE_DEFAULTS()
+<br>
+DRCP restart automatically after a database shutdown/startup
+<br>
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="SQL_stability_-_advisor_configuration">SQL stability - advisor configuration</h2>
+<br>
+
+<br>
+DBA advisor configuration parameters
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+TASK_NAME
+</th>
+<th scope="col">
+PARAMETER_NAME
+</th>
+<th scope="col">
+VALUE
+</th>
+<th scope="col">
+I
+</th>
+<th scope="col">
+DESCRIPTION
+</th>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ACCEPT_PLANS
+</td>
+<td>
+TRUE
+</td>
+<td>
+N
+</td>
+<td>
+TRUE if SQL plan baselines should be accepted by the task, FALSE otherwise
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+DAYS_TO_EXPIRE
+</td>
+<td>
+UNLIMITED
+</td>
+<td>
+N
+</td>
+<td>
+The expiration time in days for the current SQL Access Advisor task
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+DEFAULT_EXECUTION_TYPE
+</td>
+<td>
+SPM EVOLVE
+</td>
+<td>
+N
+</td>
+<td>
+Tune the performance of SQL statements
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+EXECUTION_DAYS_TO_EXPIRE
+</td>
+<td>
+30
+</td>
+<td>
+N
+</td>
+<td>
+Specifies the expiration time in days for individual executions of the current task
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+TARGET_OBJECTS
+</td>
+<td>
+1
+</td>
+<td>
+N
+</td>
+<td>
+Deprecated Parameter
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+TIME_LIMIT
+</td>
+<td>
+3600
+</td>
+<td>
+N
+</td>
+<td>
+The maximum time that an analysis can execute
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+DAYS_TO_EXPIRE
+</td>
+<td>
+UNLIMITED
+</td>
+<td>
+N
+</td>
+<td>
+The expiration time in days for the current SQL Access Advisor task
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+DEFAULT_EXECUTION_TYPE
+</td>
+<td>
+TUNE SQL
+</td>
+<td>
+N
+</td>
+<td>
+Tune the performance of SQL statements
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+EXECUTION_DAYS_TO_EXPIRE
+</td>
+<td>
+30
+</td>
+<td>
+N
+</td>
+<td>
+Specifies the expiration time in days for individual executions of the current task
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+LOCAL_TIME_LIMIT
+</td>
+<td>
+1200
+</td>
+<td>
+N
+</td>
+<td>
+Time limit per statement in a SQL Tuning Set
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+TARGET_OBJECTS
+</td>
+<td>
+1
+</td>
+<td>
+N
+</td>
+<td>
+Deprecated Parameter
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+TEST_EXECUTE
+</td>
+<td>
+FULL
+</td>
+<td>
+N
+</td>
+<td>
+FULL if SQL statements should be test-executed for the full local time limit to measure benefit, AUT
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+TIME_LIMIT
+</td>
+<td>
+3600
+</td>
+<td>
+N
+</td>
+<td>
+The maximum time that an analysis can execute
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ALTERNATE_PLAN_BASELINE
+</td>
+<td>
+EXISTING
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ALTERNATE_PLAN_LIMIT
+</td>
+<td>
+10
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ALTERNATE_PLAN_SOURCE
+</td>
+<td>
+CURSOR_CACHE+AUTOMATIC_WORKLOAD_REPOSITORY
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+APPLY_CAPTURED_COMPILENV
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+Indicated whether the advisor could use the compilation environment captured with the SQL statements
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+CON_DBID_MAPPING
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+END_SNAPSHOT
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The last snapshot id in the analysis period
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+END_TIME
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The end time filter for selecting data
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+INSTANCE
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The instance number for analysis
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+JOURNALING
+</td>
+<td>
+INFORMATION
+</td>
+<td>
+Y
+</td>
+<td>
+Specifies logging of messages to the advisor journal
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+LOCAL_TIME_LIMIT
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+Time limit per statement in a SQL Tuning Set
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+MODE
+</td>
+<td>
+COMPREHENSIVE
+</td>
+<td>
+Y
+</td>
+<td>
+Specifies either a limited or comprehensive analysis operation, where limited runs in less time but
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM1
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM10
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM2
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM3
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM4
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM5
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM6
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM7
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM8
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+ORA_EM_PARAM9
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+REMOTE_SOURCE
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+SQLSET_NAME
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+SQLSET_OWNER
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+START_SNAPSHOT
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The first snapshot id in the analysis period
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+START_TIME
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The start time filter for selecting data
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SPM_EVOLVE_TASK
+</td>
+<td>
+_SPM_VERIFY
+</td>
+<td>
+TRUE
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ACCEPT_SQL_PROFILES
+</td>
+<td>
+FALSE
+</td>
+<td>
+Y
+</td>
+<td>
+TRUE if SQL Profiles should be created by the task, FALSE otherwise
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+APPLY_CAPTURED_COMPILENV
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+Indicated whether the advisor could use the compilation environment captured with the SQL statements
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+BASIC_FILTER
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+SQL predicate to filter the SQL from the SQL Tuning Set
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+CON_DBID_MAPPING
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+DATABASE_LINK_TO
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+END_SNAPSHOT
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The last snapshot id in the analysis period
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+END_TIME
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The end time filter for selecting data
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+INSTANCE
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The instance number for analysis
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+JOURNALING
+</td>
+<td>
+INFORMATION
+</td>
+<td>
+Y
+</td>
+<td>
+Specifies logging of messages to the advisor journal
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+MAX_AUTO_SQL_PROFILES
+</td>
+<td>
+10000
+</td>
+<td>
+Y
+</td>
+<td>
+Maximum number of system SQL Profiles that are allowable at any one time
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+MAX_SQL_PROFILES_PER_EXEC
+</td>
+<td>
+20
+</td>
+<td>
+Y
+</td>
+<td>
+Maximum number of SQL Profiles that can be created by the system in one run
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+MODE
+</td>
+<td>
+COMPREHENSIVE
+</td>
+<td>
+Y
+</td>
+<td>
+Specifies either a limited or comprehensive analysis operation, where limited runs in less time but
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM1
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM10
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM2
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM3
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM4
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM5
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM6
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM7
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM8
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+ORA_EM_PARAM9
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+PLAN_FILTER
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+Plan filter applicable in case there are multiple plans (plan_hash_value) associated with the same s
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+RANK_MEASURE1
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+A first ORDER BY clause on the selected SQL
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+RANK_MEASURE2
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+A second ORDER BY clause on the selected SQL
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+RANK_MEASURE3
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+A third ORDER BY clause on the selected SQL
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+REMOTE_SOURCE
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+RESUME_FILTER
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+Specify the default action of a task execution.
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+SQL_LIMIT
+</td>
+<td>
+-1
+</td>
+<td>
+Y
+</td>
+<td>
+Limit the number of SQL from the filtered and ranked SQL tuning set
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+SQL_PERCENTAGE
+</td>
+<td>
+1
+</td>
+<td>
+Y
+</td>
+<td>
+A percentage on the sum of a ranking measure
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+START_SNAPSHOT
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The first snapshot id in the analysis period
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+START_TIME
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The start time filter for selecting data
+</td>
+</tr>
+<tr>
+<td>
+SYS.SYS_AUTO_SQL_TUNING_TASK
+</td>
+<td>
+USERNAME
+</td>
+<td>
+UNUSED
+</td>
+<td>
+Y
+</td>
+<td>
+The username for whom the SQL statement will be tuned
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.40
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="SQL_stability_-_outlines">SQL stability - outlines</h2>
+<br>
+
+<br>
+Database outlines - deprecated from 12c forwards.  Datapump expdp does not export the OUTLN schema tables from 12c onwards.  You can use classic export tooling, but this is not installed in a 12c database home.
+<br>
+
+<br>
+Elapsed: 00:00:00.05
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="SQL_stability_-_baselines">SQL stability - baselines</h2>
+<br>
+
+<br>
+SQL plan baselines (See the SQL baseline spfile settings above)
+<br>
+
+<br>
+Elapsed: 00:00:00.02
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="SQL_stability_-_plan_management">SQL stability - plan management</h2>
+<br>
+
+<br>
+SQL plan management configuration
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+PARAMETER_NAME
+</th>
+<th scope="col">
+PARAMETER_VALUE
+</th>
+</tr>
+<tr>
+<td>
+SPACE_BUDGET_PERCENT
+</td>
+<td>
+10
+</td>
+</tr>
+<tr>
+<td>
+PLAN_RETENTION_WEEKS
+</td>
+<td>
+53
+</td>
+</tr>
+<tr>
+<td>
+AUTO_CAPTURE_PARSING_SCHEMA_NAME
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AUTO_CAPTURE_MODULE
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AUTO_CAPTURE_ACTION
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+AUTO_CAPTURE_SQL_TEXT
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.33
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="SQL_stability_-_profiles">SQL stability - profiles</h2>
+<br>
+
+<br>
+SQL profiles
+<br>
+
+<br>
+Elapsed: 00:00:00.02
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="SQL_stability_-_tuning_statistics">SQL stability - tuning statistics</h2>
+<br>
+
+<br>
+SQL tuning statistics
+<br>
+
+<br>
+Elapsed: 00:00:00.03
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_AQ_Review">Schema AQ Review</h2>
+<br>
+Investigation into the advanced queue tables and views.
+<br>
+
+<br>
+Elapsed: 00:00:01.02
+
+<br>
+Review of the AQ table types
+<br>
+
+<br>
+Elapsed: 00:00:01.70
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_LOB_review">Schema LOB review</h2>
+<br>
+
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+.s2:  Schema LOB review
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+
+<br>
+LOB segments generally incur a lot of network round trips and I/O so it may be interesting to get an peek into any
+<br>
+potential special treatments.
+<br>
+
+<br>
+Column 1 is count of data-type
+<br>
+Column 2 is sum of gigabytes
+<br>
+                    owner,        LONG,        CLOB,        BLOB,       ROWID,     XMLTYPE,    LONG_RAW,       NCLOB,       BFILE,      UROWID
+<br>
+                        -,           -,           -,           -,           -,           -,           -,           -,           -,           -
+<br>
+                   AUDSYS,         0 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                   CTXSYS,         0 0,         6 0,         0 0,         9 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+        GSMADMIN_INTERNAL,         0 0,         4 0,         8 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                    MDSYS,         0 0,      34 .07,        17 0,         7 0,        24 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                  OJVMSYS,         0 0,         0 0,         1 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                  ORDDATA,         0 0,         0 0,         0 0,         0 0,        11 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                    OUTLN,         1 0,         1 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                      SYS,       246 0,       778 0,        75 0,        57 0,        72 0,         0 0,         3 0,         0 0,         1 0
+<br>
+                   SYSTEM,        11 0,         3 0,         6 0,         4 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                    WMSYS,         3 0,        19 0,         0 0,         3 0,         0 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                      XDB,         0 0,         4 0,         1 0,         2 0,        26 0,         0 0,         0 0,         0 0,         0 0
+<br>
+                  _Totals,       261 0,     852 .07,       108 0,        85 0,       133 0,         0 0,         3 0,         0 0,         1 0
+<br>
+Elapsed: 00:00:05.56
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_object_count">Schema object count</h2>
+<br>
+
+<br>
+This table is a count of the primary object types for each schema
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+Tables
+</th>
+<th scope="col">
+Indexes
+</th>
+<th scope="col">
+Views
+</th>
+<th scope="col">
+MV
+</th>
+<th scope="col">
+Sequences
+</th>
+<th scope="col">
+Synonyms
+</th>
+<th scope="col">
+Clusters
+</th>
+<th scope="col">
+Procedures
+</th>
+<th scope="col">
+Packages
+</th>
+<th scope="col">
+Pack-Bodies
+</th>
+<th scope="col">
+DB-Links
+</th>
+<th scope="col">
+trigger
+</th>
+<th scope="col">
+Totals
+</th>
+</tr>
+<tr>
+<td>
+DVF
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       1
+</td>
+<td align="right">
+       1
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+      22
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td align="right">
+      90
+</td>
+<td align="right">
+     155
+</td>
+<td align="right">
+      25
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      13
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+     292
+</td>
+</tr>
+<tr>
+<td>
+ORDPLUGINS
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       5
+</td>
+<td align="right">
+       5
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+      10
+</td>
+</tr>
+<tr>
+<td>
+SI_INFORMTN_SCHEMA
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       8
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+       8
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+---------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+----------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+-----------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+---------------
+</td>
+<td align="right">
+--------
+</td>
+</tr>
+<tr>
+<td>
+sum
+</td>
+<td align="right">
+      90
+</td>
+<td align="right">
+     155
+</td>
+<td align="right">
+      25
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      13
+</td>
+<td align="right">
+       8
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       6
+</td>
+<td align="right">
+       6
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+     332
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.99
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_constraint_count">Schema constraint count</h2>
+<br>
+
+<br>
+If the primary, unique or referential integrity constraints will be disabled during the migration, an assessment of the method and time required to enable the constraints should be considered.  Likely will be the choice of validate or novalidate [along with the application of a null check constraint on PK to avoid new data validation errors].
+<br>
+
+<br>
+
+<br>
+U      - Undefined
+<br>
+COT    - Check on Table
+<br>
+COV    - Check on View
+<br>
+ROOV   - ReadOnly on View
+<br>
+PK     - Primary Key
+<br>
+UK     - Unique Key
+<br>
+RI     - Referential Integrity
+<br>
+DRC    - Delete rule cascade
+<br>
+DRSN   - Delete rule set null
+<br>
+DRNA   - Delete rule no action
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+U
+</th>
+<th scope="col">
+COT
+</th>
+<th scope="col">
+COV
+</th>
+<th scope="col">
+ROOV
+</th>
+<th scope="col">
+PK
+</th>
+<th scope="col">
+UK
+</th>
+<th scope="col">
+RI
+</th>
+<th scope="col">
+DRC
+</th>
+<th scope="col">
+DRSN
+</th>
+<th scope="col">
+DRNA
+</th>
+<th scope="col">
+Totals
+</th>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+     281
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      24
+</td>
+<td align="right">
+      57
+</td>
+<td align="right">
+      35
+</td>
+<td align="right">
+      75
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      75
+</td>
+<td align="right">
+     475
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+</tr>
+<tr>
+<td>
+sum
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+     281
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      24
+</td>
+<td align="right">
+      57
+</td>
+<td align="right">
+      35
+</td>
+<td align="right">
+      75
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      75
+</td>
+<td align="right">
+     475
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:01.02
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_primary_keys_invalid">Schema primary keys invalid</h2>
+<br>
+
+<br>
+Invalid primary keys are ignored by GoldenGate supplemental logging
+<br>
+
+<br>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+U
+</th>
+<th scope="col">
+COT
+</th>
+<th scope="col">
+COV
+</th>
+<th scope="col">
+ROOV
+</th>
+<th scope="col">
+PK
+</th>
+<th scope="col">
+UK
+</th>
+<th scope="col">
+RI
+</th>
+<th scope="col">
+DRC
+</th>
+<th scope="col">
+DRSN
+</th>
+<th scope="col">
+DRNA
+</th>
+<th scope="col">
+Totals
+</th>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+</tr>
+<tr>
+<td>
+sum
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:01.01
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_primary_keys_missing_count">Schema primary keys missing count</h2>
+<br>
+
+<br>
+This is the count tables missing a primary or unique key by each schema
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+COUNT(*)
+</th>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td align="right">
+             21
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:01.61
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_PKUK_missing_list">Schema PKUK missing list</h2>
+<br>
+Tables missing a Primary or Unique Key.  The row operation counts are obtained from all_tab_modifications from which statistics are cleared after each statistics gathering for a table.
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+NUM_ROWS
+</th>
+<th scope="col">
+INSERTS
+</th>
+<th scope="col">
+UPDATES
+</th>
+<th scope="col">
+DELETES
+</th>
+<th scope="col">
+TRU
+</th>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_ANON_ATTRS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_ANON_RULES_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_ACTION_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_DAREFS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_LOCATORPATHS
+</td>
+<td align="right">
+             95
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_LOCATORPATHS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_LOCATORPATHS_WRK
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_PAR_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_VLD_MSG
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOC_REFS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPED_PATHS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PREFS_DEF_VALUES_TAB
+</td>
+<td align="right">
+              7
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PREFS_VALID_VALUES_TAB
+</td>
+<td align="right">
+             33
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PRV_ATTRS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_RT_PREF_PARAMS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STD_ATTRS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STORED_TAGS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_UID_DEFS_TMP
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td align="right">
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:02.57
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_keys_not_validated">Schema keys not validated</h2>
+<br>
+
+<br>
+Nonvalidated pk uk fk are ignored by GoldenGate supplemental logging
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+U
+</th>
+<th scope="col">
+COT
+</th>
+<th scope="col">
+COV
+</th>
+<th scope="col">
+ROOV
+</th>
+<th scope="col">
+PK
+</th>
+<th scope="col">
+UK
+</th>
+<th scope="col">
+RI
+</th>
+<th scope="col">
+DRC
+</th>
+<th scope="col">
+DRSN
+</th>
+<th scope="col">
+DRNA
+</th>
+<th scope="col">
+Totals
+</th>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      24
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      24
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+<td align="right">
+--------
+</td>
+</tr>
+<tr>
+<td>
+sum
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      24
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+       0
+</td>
+<td align="right">
+      24
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.86
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_public_objects">Schema public objects</h2>
+<br>
+
+<br>
+The owner object type contains a pointer (synonyms or functional call to an object in a replication schema).
+<br>
+Public synonyms are the simple case, less obvious cases bespoke code embedded in the SYS schema.
+<br>
+A working example includes Oracle E business suite in which many schema including APPLSYS and PO create triggers on tables owned by the APPS schema.
+<br>
+Datapump export only captures public synonyms in full export mode (full=y), but not schema level or table level mode.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Source Object Type
+</th>
+<th scope="col">
+Source Object
+</th>
+<th scope="col">
+Target Object Type
+</th>
+<th scope="col">
+Target Object
+</th>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_ADMIN_DOCS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_DICOM_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_PRVW_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_SPECIAL_TAG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_VERSION_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_WADO_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_XML_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DOCUMENTS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_ATTRS_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_DATA_MODEL_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_DICT_A_DA_ID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_DOCS_ID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_MPD_P_MPID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_VERSION_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_PRV_A_PA_ID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_RT_PREF_P_PPID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_STD_A_SA_ID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_STOREDTAGS_STID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+SEQUENCE
+</td>
+<td>
+ORDDATA.ORDDCM_UID_DEFS_UDID_SEQ
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_ACTION_TYPES
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_ATTRS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_ATTRS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_RULES
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_RULES_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_RULES_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_ANON_RULE_TYPES
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_ACTION
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_ACTION_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_ACTION_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_DAREFS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_DAREFS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_DAREFS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_LOCATORPATHS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_LOCATORPATHS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_LOCATORPATHS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_MACRO_DEP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_MACRO_DEP_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_MACRO_PAR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_MACRO_PAR_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_OPRD
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_OPRD_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_OPRD_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_PAR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_PAR_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_PAR_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_SET
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_SET_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DATA_MODEL
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DATA_MODEL_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DICT_ATTRS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DICT_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DICT_ATTRS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOCS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOCS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOCS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOC_REFS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOC_REFS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOC_REFS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOC_TYPES
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_INSTALL_DOCS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPED_PATHS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPED_PATHS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPED_PATHS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPING_DOCS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPING_DOCS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPING_DOCS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PREFS_LOOKUP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_ADMIN_DOCS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_DICOM_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_PRVW_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_SPECIAL_TAG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_VERSION_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_WADO_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_XML_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PRV_ATTRS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PRV_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PRV_ATTRS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_ADMIN_DOCS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_ATTR_CONFIG_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_DICOM_CONFIG_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_PRVW_CONFIG_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_SPECIAL_TAG_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_VERSION_CONFIG_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_WADO_CONFIG_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PR_XML_CONFIG_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_RT_PREF_PARAMS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_RT_PREF_PARAMS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_RT_PREF_PARAMS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_STD_ATTRS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_STD_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_STD_ATTRS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_STORED_TAGS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_STORED_TAGS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_STORED_TAGS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_UID_DEFS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_UID_DEFS_TMP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_UID_DEFS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_VR_DT_MAP
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_CONSTRAINT_NAMES
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DICT_ATTRS_USR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DOCS_USR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DOCUMENTS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DOCUMENT_TYPES
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPED_PATHS_USR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_MAPPING_DOCS_USR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_PRV_ATTRS_USR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_ADMIN_PRV
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_STD_ATTRS_USR
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_ACTION_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_DAREFS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_LOCATORPATHS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_MACRO_DEP_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_MACRO_PAR_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_OPRD_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_PAR_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_SET_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_CT_PRED_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOCS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_CT
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOC_REFS_WRK
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_ADMIN_DOCS
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_ATTR_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_DICOM_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_PRVW_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_SPECIAL_TAG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_VERSION_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_WADO_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+ORDSYS.ORD_DICOM_PROTOCOL
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_PROTOCOL_XML_CONFIG
+</td>
+</tr>
+<tr>
+<td>
+PACKAGE BODY
+</td>
+<td>
+SYS.ORDIMDPCALLOUTS
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOC_TYPES
+</td>
+</tr>
+<tr>
+<td>
+PROCEDURE
+</td>
+<td>
+SYS.VALIDATE_ORDIM
+</td>
+<td>
+TABLE
+</td>
+<td>
+ORDDATA.ORDDCM_DOCS
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+PUBLIC.ORDDCM_CONFORMANCE_VLD_MSGS
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_CONFORMANCE_VLD_MSGS
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+PUBLIC.ORDDCM_CONSTRAINT_NAMES
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_CONSTRAINT_NAMES
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+PUBLIC.ORDDCM_DBRELEASE_DOCS
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DBRELEASE_DOCS
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+PUBLIC.ORDDCM_DOCUMENTS
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DOCUMENTS
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+PUBLIC.ORDDCM_DOCUMENT_REFS
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DOCUMENT_REFS
+</td>
+</tr>
+<tr>
+<td>
+SYNONYM
+</td>
+<td>
+PUBLIC.ORDDCM_DOCUMENT_TYPES
+</td>
+<td>
+VIEW
+</td>
+<td>
+ORDDATA.ORDDCM_DOCUMENT_TYPES
+</td>
+</tr>
+<tr>
+<td>
+TYPE BODY
+</td>
+<td>
+ORDSYS.ORDSOURCE
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+ORDPLUGINS.ORDX_FILE_SOURCE
+</td>
+</tr>
+<tr>
+<td>
+TYPE BODY
+</td>
+<td>
+ORDSYS.ORDSOURCE
+</td>
+<td>
+PACKAGE
+</td>
+<td>
+ORDPLUGINS.ORDX_HTTP_SOURCE
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:04.97
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_segment_analysis">Schema segment analysis</h2>
+<br>
+
+<br>
+For every schema occupying more than 0.1mb of segments, this table illustrates the total MegaBytes for each of the segment types.  The XDB schema is included in this report in an attempt to catch situations where the XDB schema is used as a document store.
+<br>
+
+<br>
+owner                    ,       total,         tab,    tab_part, tab_subpart,         ind,    ind_part, ind_subpart,      lobseg,      lobind,    lob_part, lob_subpart,     cluster,nested_table
+<br>
+-------------------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------,------------
+<br>
+ORDDATA                  ,        16.2,         4.9,           0,           0,         7.9,           0,           0,         2.9,          .4,           0,           0,           0,          .1
+<br>
+XDB                      ,          68,         7.1,           0,           0,         4.6,           0,           0,        38.2,        18.1,           0,           0,           0,           0
+<br>
+Elapsed: 00:00:01.54
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_sequences">Schema sequences</h2>
+<br>
+
+<br>
+Sequence treatment needs to be considered for each database platform. Low transaction systems can use the OGG replication facilities.  Very high transaction system may have to delay sequence migration for some or all of the sequences until the migration night.  Always attempt to replicate sequences with GoldenGate until it becomes clear that the replication lag is adversely affected by sequence replication.
+<br>
+In active-active environment, sequence replication is not supported, and therefore the application design must ensure sequence values fall into distinct subsets.
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+SEQUENCE_OWNER
+</th>
+<th scope="col">
+COUNT(*)
+</th>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td align="right">
+             13
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.69
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_domain_indexes">Schema domain indexes</h2>
+<br>
+
+<br>
+A domain index is an index designed for a specialized domain, such as spatial or image processing.  As a domain index is stored within a table structure rather than an indexes structure, the tablespace column of dba and user indexes tables is null.
+<br>
+The follow is the list of user domain indexes
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+INDEX_NAME
+</th>
+<th scope="col">
+INDEX_TYPE
+</th>
+<th scope="col">
+TABLE_OWNER
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_AGT_PID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_ACTION_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_DAREFS_GT_IDX1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_DAREFS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_DAREFS_GT_IDX2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_DAREFS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_LPT_DID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_LOCATORPATHS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_LPT_PSID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_LOCATORPATHS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PGT_FPID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PGT_OP_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PGT_REF_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_POGT_PID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PPGT_PID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_PAR_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PSGT_DOCID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PSGT_NAME_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PSGT_PID_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PSGT_SPR_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PSGT_STATUS_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PSGT_TYPE_IDX
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DICT_ATTRS_GT_IDX2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DICT_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DICT_ATTRS_GT_IDX3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DICT_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_GT_IDX1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_GT_IDX2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_GT_IDX3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PRV_AGT_IDX1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PRV_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PRV_AGT_IDX2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PRV_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PRV_AGT_IDX3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PRV_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STD_AGT_IDX1
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STD_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STD_AGT_IDX2
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STD_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STD_AGT_IDX3
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_STD_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+SYS_C006172
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DICT_ATTRS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+SYS_C006216
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+SYS_C006218
+</td>
+<td>
+NORMAL
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_SET_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+SYS_IL0000062319C00005$$
+</td>
+<td>
+LOB
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+SYS_IL0000062341C00007$$
+</td>
+<td>
+LOB
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS_TMP
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA
+</td>
+<td>
+SYS_IL0000062355C00004$$
+</td>
+<td>
+LOB
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_TMP
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.61
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_deferred_constraints">Schema deferred constraints</h2>
+<br>
+
+<br>
+Deferred constaints may cause ADD TRANDATA to select the wrong column for logging. Use KEYCOLS for tables with deferred constaints
+<br>
+
+<br>
+Elapsed: 00:00:00.92
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_data_type_usage_summary">Schema data type usage summary</h2>
+<br>
+
+<br>
+This is a numeric count of each table column data type used by each schema.  Take notice of any ROWID counts as tables with ROWID columns may cause replication problems.  ROWID columns data can be replicated but in a logically instantiated target database, that is a database built using export/import, datapump, data unloading, the ROWID values may no longer correctly point to a valid row.  If the target database is a physical replica, the ROWID values may be valid, but only for the instantiation. As replication is purely SQL driven by inserts, update and deletes, a rowid may not replicate in a meaningful context.  Therefore you should analyse usage of the tables containing a ROWID data type.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+DATA_TYPE
+</th>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+COUNT(*)
+</th>
+</tr>
+<tr>
+<td>
+BLOB
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+              9
+</td>
+</tr>
+<tr>
+<td>
+DATE
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+              5
+</td>
+</tr>
+<tr>
+<td>
+NUMBER
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+            274
+</td>
+</tr>
+<tr>
+<td>
+ORD_STR_LIST
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+RAW
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+TIMESTAMP(6)
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+VARCHAR2
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+            281
+</td>
+</tr>
+<tr>
+<td>
+XMLTYPE
+</td>
+<td>
+ORDDATA
+</td>
+<td align="right">
+             11
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:01.96
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_non_scalar_columns">Schema non scalar columns</h2>
+<br>
+
+<br>
+BLOB, CLOB, LONG, LONG RAW, NCLOB, XMLTYPE form an interesting consideration because they generally contain reasonably large amounts of data that will place a sufficiently heavy load on the GoldenGate capture throughput that may cause lag to appear throughout the system.  Of course, shifting large volumes of data does not imply a performace problem, simply a delay, or lag, caused by the burden of a heavy load.
+<br>
+Additionally the BLOB, CLOB, LONG, LONG RAW, NCLOB, XMLTYPE columns may cause extract to fetch the some or all rows from the database, due to row chaining which is likely with large objects that span many database blocks.  In these cases the extract processes uses flashback queries to get a read consistent value of the row to capture the change data.
+<br>
+As a flashback queries are going to be more computationally more intensive than a online redo log file scan or archive log scan, fetching these data-types could place additional load on the GoldenGate infrastructure, again represented as further lag.
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+DATA_TYPE
+</th>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+COLUMN_NAME
+</th>
+</tr>
+<tr>
+<td>
+XMLTYPE
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD
+</td>
+<td>
+OPERAND
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_TMP
+</td>
+<td>
+OPERAND
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_USR
+</td>
+<td>
+OPERAND
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_WRK
+</td>
+<td>
+OPERAND
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS
+</td>
+<td>
+DOC_CONTENT
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_TMP
+</td>
+<td>
+DOC_CONTENT
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_WRK
+</td>
+<td>
+DOC_CONTENT
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS
+</td>
+<td>
+XSLT
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS_TMP
+</td>
+<td>
+XSLT
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS_USR
+</td>
+<td>
+XSLT
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS_WRK
+</td>
+<td>
+XSLT
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:02.03
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_one_column_tables">Schema one column tables</h2>
+<br>
+
+<br>
+Single column tables with non scalar data types generally cannot be replicated because in update/delete situations the target row cannot be identified using a "select where" SQL construct.  Generally the treatment for the non scalar tables is to exclude them from replication and transfer them during the migration outage window.
+<br>
+
+<br>
+Elapsed: 00:00:02.71
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_unused_column_tables">Schema unused column tables</h2>
+<br>
+
+<br>
+Tables with unused columns are not directly replicable with GoldenGate so the approach can be a little complicated in so much that you need to defgen the source table and create a SOURCEDEFS entry in the target replicat.  However, when we used SOURCEDEFS replicat cannot apply DDL to the affected target because with SOURCEDEFS we have created a static dictionary metadata entry.  Not only DDL that modified the table column structure but also DDL for table partitioning.  And it is the partitioning element that is generally the reason we need to know about unused columns.
+<br>
+Elapsed: 00:00:00.75
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_hidden/invisible_column_tables">Schema hidden/invisible column tables</h2>
+<br>
+
+<br>
+In Oracle Database 12c, table columns can be defined as invisible either during its creation with the CREATE TABLE command or by modifying existing table columns via the ALTER TABLE statement. By default, table columns are always visible. Once a column has been set to invisible, it can be reverted back to visible using the ALTER TABLE statement.
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+DATA_TYPE
+</th>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+TABLE_NAME
+</th>
+<th scope="col">
+COLUMN_NAME
+</th>
+</tr>
+<tr>
+<td>
+BLOB
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD
+</td>
+<td>
+SYS_NC00004$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_TMP
+</td>
+<td>
+SYS_NC00004$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_CT_PRED_OPRD_WRK
+</td>
+<td>
+SYS_NC00004$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS
+</td>
+<td>
+SYS_NC00005$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_TMP
+</td>
+<td>
+SYS_NC00005$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_DOCS_WRK
+</td>
+<td>
+SYS_NC00005$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS
+</td>
+<td>
+SYS_NC00007$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS_TMP
+</td>
+<td>
+SYS_NC00007$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_MAPPING_DOCS_WRK
+</td>
+<td>
+SYS_NC00007$
+</td>
+</tr>
+<tr>
+<td>
+RAW
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PREFS_LOOKUP
+</td>
+<td>
+SYS_NC0000700008$
+</td>
+</tr>
+<tr>
+<td>
+&nbsp;
+</td>
+<td>
+ORDDATA
+</td>
+<td>
+ORDDCM_PREFS_LOOKUP
+</td>
+<td>
+SYS_NC0000900010$
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.75
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_unsupported_column_types">Schema unsupported column types</h2>
+<br>
+
+<br>
+Tables containing any of the following data types need special treatment in the GoldenGate classic extract mode.  Mostly these tables are candidates to be excluded from replication but there may use cases where the supported columns are replicated and the unsupported column values pragmatically treated at the target database.  The decision to replicate the table or exclude and transport during the database migration window will depend largely on the size of the table, the time to transfer the table and the cost/value of the unsupported column - in cases where the unsupported column has a very low cost/value, it may be expedient to exclude the affected column.
+<br>
+Elapsed: 00:00:03.09
+
+<br>
+The ROWID data-type is replicated by GoldenGate, but you must consider whether the ROWID will be valid in the target database.  Generally, the ROWID value will not point to the correct table row when it gets to the target database, but that understanding really only derives from your own understanding of your business data.
+<br>
+ROWID are not always stored as a ROWID data-type, occasionally we find the ROWID are stored as VARCHAR2 but finding the tables can be a little tricky.  The following listing attempts to find the tricky subset of ROWID in varchar2 and includes the ROWID data-types as well.
+<br>
+UROWID is supported from GoldenGate 12.1.2.0.x, Integrated Capture, but not classic capture.
+<br>
+Elapsed: 00:00:03.08
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_compressed_tables">Schema compressed tables</h2>
+<br>
+Any table with compression enabled cannot be captured with classic GoldenGate replication.  The typical approach for these tables is to exclude them from replication but to migrate them using CTAS or export/import or datapump.
+<br>
+
+<br>
+Elapsed: 00:00:02.71
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Schema_50_biggest_tables">Schema 50 biggest tables</h2>
+<br>
+
+<br>
+Large tables are necessarily difficult to migrate, but when they are missing a PKUK then logical replication may not be possible.  Large table with lots of indexes are a problem for export/import migrations.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Table Name
+</th>
+<th scope="col">
+M_BYTES
+</th>
+<th scope="col">
+TABLE_BLOCKS
+</th>
+<th scope="col">
+COMPRESS
+</th>
+<th scope="col">
+DRO
+</th>
+<th scope="col">
+PAR
+</th>
+<th scope="col">
+ENCRYPTED_COLUMNS
+</th>
+<th scope="col">
+PKUK_CONSTRAINTS
+</th>
+<th scope="col">
+TOTAL_INDEXES
+</th>
+</tr>
+<tr>
+<td>
+ORDDATA.ORDDCM_STD_ATTRS
+</td>
+<td align="right">
+            .38
+</td>
+<td align="right">
+             43
+</td>
+<td>
+DISABLED
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+<tr>
+<td>
+ORDDATA.ORDDCM_STD_ATTRS_WRK
+</td>
+<td align="right">
+            .38
+</td>
+<td align="right">
+             43
+</td>
+<td>
+DISABLED
+</td>
+<td>
+NO
+</td>
+<td>
+NO
+</td>
+<td align="right">
+              0
+</td>
+<td align="right">
+              1
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:02.42
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Tool_-_Datapump">Tool - Datapump</h2>
+<br>
+
+<br>
+The datapump tool has a couple of restrictions that should be considered
+<br>
+1. impdp over a network link can reach 2 full versions down.  So 12.1.0.2 database can import over a network link from 10.2.0.5
+<br>
+2. impdp over a network link can reach 1 full version up.  So 10.2.0.5 can import over a network link from 11.2.0.4
+<br>
+3. impdp over a network link cannot import tables containing a LONG column data-type
+<br>
+These tables cannot be imported over a network_link because of the LONG data-type
+<br>
+Elapsed: 00:00:02.70
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Tool_-_GoldenGate">Tool - GoldenGate</h2>
+<br>
+
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+.s2:  Major feature availability
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+
+<br>
+Classic capture dblogreader from database 10.2.0.5 but not 11.1.x
+<br>
+Classic Coordinated apply from GoldenGate 12.1.2.0.0
+<br>
+Integrated data capture from database 11.2.0.3.0 with bundle patch for Integrated Extract 11.2.x (Doc ID 1557031.1)
+<br>
+Integrated DDL capture from database 11.2.0.4
+<br>
+Integrated apply from database 11.2.0.4 with GoldenGate 12.1.2.0.0
+<br>
+add schematrandata from database 10.2.0.5 with GoldenGate 11.2
+<br>
+add schematrandata from database 11.2.0.3 with GoldenGate 11.2
+<br>
+
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+.s2:  Schema - Mixed case schema owners or objects
+<br>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<br>
+
+<br>
+Oracle database naming conventions are case insensitive which is actually another way of hinting to the fact that all
+<br>
+object names are stored in uppercase in the dictionary tables.  However, it is possible for users to create case
+<br>
+sensitive objects in application schema.  So it is worth quickly checking for any case sensitive object that may affect our
+<br>
+migration.
+<br>
+
+<br>
+Mixed case tables are supported from OGG 11.2, but if you are forced to use a lower OGG version
+<br>
+<pre>
+<br>
+ALTER TABLE "MixedTableName" add SUPPLEMENTAL LOG DATA (ALL) COLUMNS
+<br>
+create NEWTABLE as select * from "MixedTableName" where 1=0
+<br>
+</pre>
+<br>
+Add to extract parameter file:
+<br>
+<pre>
+<br>
+Table schema.NEWTABLE, ALTID < OBJECT_ID of the original mixed case table>
+<br>
+select object_id from all_objects where owner='SCHEMA' and table_name = 'MixedTableName'
+<br>
+</pre>
+<br>
+
+<br>
+The list of users stored in mixed case
+<br>
+
+<br>
+Elapsed: 00:00:00.60
+
+<br>
+The list of tables stored in mixed case
+<br>
+
+<br>
+Elapsed: 00:00:00.63
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="Tool_-_Oracle_Migration_Manager">Tool - Oracle Migration Manager</h2>
+<br>
+
+<br>
+<ul><li>NFS storage for classic and datapump export can be written to networked storage</li><li>Only use decicated local file system for OMM scheduler on target</li><li>Install on source /u01/omm</li><li>Install on target /u01/omm</li><li>SSH equivalence from source to target</li><li>Firewalls open from target to source for SQLNET, SSH</li><li>Firewalls open from source to target to for GoldenGate is using only migration</li><li>Network needs sufficient real world throughput to support replication</li></ul>
+<br>
+
+<br>
+The following is a list of parent schema that create triggers on child schema tables, though this is only interest from an OMM perspective when the trigger owner is an application schema because it is possible that the trigger owner schema will need to be managed so that the schema import occurs late in the transition phase.  After reviewing the following listings, it may become obvious that certain schema need to be migrated at the end of the transition phase.  You can achieve delayed transition by manually adding "exit 1" to the start of the parent schema import shell script and by setting the scheduler NUM_JOBS_IMP=1, NUM_JOBS_IDP=1 which ensure the non parent imports occur in sequence order.  After the infrastructure imports have completed, ramp up the NUM_JOBS_* parameters to figures that strain the target environment.  When the child schema imports have completed successfully, remove "exit 1" from the parent schema import and re-submit the parent schema import.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+TRIGGER_OWNER
+</th>
+<th scope="col">
+TABLE_OWNER
+</th>
+<th scope="col">
+COUNT(*)
+</th>
+</tr>
+<tr>
+<td>
+GSMADMIN_INTERNAL
+</td>
+<td>
+GSMCATUSER
+</td>
+<td align="right">
+              1
+</td>
+</tr>
+<tr>
+<td>
+LBACSYS
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+              3
+</td>
+</tr>
+<tr>
+<td>
+MDSYS
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+              6
+</td>
+</tr>
+<tr>
+<td>
+WMSYS
+</td>
+<td>
+SYS
+</td>
+<td align="right">
+              2
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.26
+
+<br>
+The following is a list of parent schema that create index on child schema tables.  Similar to the triggers issue, it may be advisable to delay the parent schema import.
+<br>
+
+<br>
+Elapsed: 00:00:00.12
+
+<br>
+Sometimes we find that procedural code stored in a referenced schema has not been installed to the target database, for example EBS migration requires that AD_CTX_DDL be loaded into the CTXSYS schema during the database build.  So, the follow table attempts to help focus our attention to any referenced schema objects that may need special treated at the target database (such as installing).
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Owner
+</th>
+<th scope="col">
+REFERENCED_OWNER
+</th>
+<th scope="col">
+REFERENCED_NAME
+</th>
+<th scope="col">
+REFERENCED_TYPE
+</th>
+</tr>
+<tr>
+<td>
+DVF
+</td>
+<td>
+DVSYS
+</td>
+<td>
+GET_FACTOR
+</td>
+<td>
+FUNCTION
+</td>
+</tr>
+<tr>
+<td>
+DVSYS
+</td>
+<td>
+LBACSYS
+</td>
+<td>
+SA_SESSION
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+GSMADMIN_INTERNAL
+</td>
+<td>
+XDB
+</td>
+<td>
+DBMS_XDB_CONFIG
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+MDSYS
+</td>
+<td>
+XDB
+</td>
+<td>
+DBMS_XMLDOM
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDSYS
+</td>
+<td>
+ORDAUDIO_PKG
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDSYS
+</td>
+<td>
+ORDDOCEXCEPTIONS
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDSYS
+</td>
+<td>
+ORDIMERRORCODES
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDSYS
+</td>
+<td>
+ORDSOURCEEXCEPTIONS
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDSYS
+</td>
+<td>
+ORDUTIL_PRV
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDSYS
+</td>
+<td>
+ORDVIDEO_PKG
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDSYS
+</td>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDX_FILE_SOURCE
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+ORDSYS
+</td>
+<td>
+ORDPLUGINS
+</td>
+<td>
+ORDX_HTTP_SOURCE
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+<tr>
+<td>
+XDB
+</td>
+<td>
+CTXSYS
+</td>
+<td>
+CTX_OUTPUT
+</td>
+<td>
+PACKAGE
+</td>
+</tr>
+</table>
+<p>
+Elapsed: 00:00:00.34
+
+<br>
+
+<br>
+O2O/OOO does not support 4kb+ triggers.  The follow list of triggers will have to be migrated during post migration (PMCL).
+<br>
+
+<br>
+Elapsed: 00:00:01.41
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<h2 id="And_finally.">And finally.</h2>
+<br>
+
+<br>
+This is the end of the document.  The generation runtime for this report is usually determined by the number of database objects and to some extent the volume of data.  However, sometimes, after adding some new code, the runtime increases.  Having a collection of runtimes from a large range of databases helps me keep track areas of unreasonable performance, which is why the final table exists below.
+<br>
+
+<br>
+<p>
+<table class='TT'>
+<tr>
+<th scope="col">
+Report Start Time
+</th>
+<th scope="col">
+Report End Time
+</th>
+<th scope="col">
+Report Elapsed Minutes
+</th>
+<th scope="col">
+Database Size GB
+</th>
+<th scope="col">
+Database Object Count
+</th>
+<th scope="col">
+Schema Filter
+</th>
+</tr>
+<tr>
+<td>
+28-feb-2019 10:36:38
+</td>
+<td>
+28-feb-2019 10:38:31
+</td>
+<td align="right">
+           1.88
+</td>
+<td align="right">
+           1.54
+</td>
+<td align="right">
+          72667
+</td>
+<td>
+undefined, undefined, undefined
+</td>
+</tr>
+</table>
+<p>
+
+<br>
+<a href="#z-header">Back to Top</a>
+<br>
+<script>
+var cssRules = [
+{ selector: ".TT b          ", rules: "font-family:Trebuchet MS,Arial,Helvetica,sans-serif;color:red;" },
+{ selector: ".TT caption    ", rules: "color:#004000;" },
+{ selector: ".TT table      ", rules: "table-layout:auto;" },
+{ selector: ".TT td         ", rules: "font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
+{ selector: ".TT th         ", rules: "font-size:.7em;text-align:left;padding-top:5px;padding-bottom:4px;background-color:#A7C942;color:#000;" },
+{ selector: ".TT            ", rules: "display: flex;flex-wrap: nowrap; font-family:Trebuchet MS,Arial,Helvetica,sans-serif;" },
+{ selector: ".button        ", rules: "background-color: #336699; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 2px;" },
+{ selector: ".cell-left     ", rules: "display: table-cell; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
+{ selector: ".cell-right    ", rules: "display: table-cell; nowrap; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
+{ selector: ".close         ", rules: "color: white; float: right; font-size: 28px; font-weight: bold;" },
+{ selector: ".close:hover   ", rules: "color: #000; text-decoration: none; cursor: pointer;" },
+{ selector: ".close:focus   ", rules: "color: #000; text-decoration: none; cursor: pointer;" },
+{ selector: ".column-center ", rules: "width=33%; padding: 4px;" },
+{ selector: ".column-left   ", rules: "float: left; width=33%;  padding: 4px;" },
+{ selector: ".column-right  ", rules: "float: right; width=33%; padding: 4px;" },
+{ selector: ".modal         ", rules: "display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: ; height: 100%; width: 100%; overflow: auto;   background-color: rgba(0,0,0,0.4);" },
+{ selector: ".modal-body    ", rules: "padding: 2px 16px;" },
+{ selector: ".modal-content ", rules: "position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 80%;" },
+{ selector: ".modal-hf      ", rules: "padding: 2px 16px; background-color: #5cb85c; color: white;" },
+{ selector: ".row           ", rules: "display: table-row;" },
+{ selector: "a              ", rules: "font:Arial,Helvetica,sans-serif;color:#630;vertical-align:top;margin-top:0;margin-bottom:0;" },
+{ selector: "body           ", rules: "border-left:.5em solid #EBEBEB;border-right:.5em solid #EBEBEB;border-top:.5em solid #d3d3d3;border-bottom:.5em solid #d3d3d3;font:.7em Arial,Helvetica,Geneva,sans-serif;color:#000;background:#F8F8F8;" },
+{ selector: "h1             ", rules: "font:bold 1.5em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;border-bottom: 3px double #336699; display: inline-block;margin-top:0pt;margin-bottom:0pt;padding:0px 0px 0px 0px;" },
+{ selector: "h2             ", rules: "font:bold 1.4em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;" },
+{ selector: "h3             ", rules: "font:bold 1.3em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;" },
+{ selector: "li             ", rules: "font:1em Arial,Helvetica,Geneva,sans-serif;color:black;" },
+{ selector: "pre            ", rules: "font:.7em Courier;color:#000;background:#fff;" },
+{ selector: "ul             ", rules: "list-style-type:circle;margin:1em;padding:0;background:#F8F8F8;" },
+{ selector: "p              ", rules: "color:#630; font-size: 1em;" }
+];
+function quote ( line ){return ( "\"" + line + "\"" );}
+function addMenu() { var headings = []; var tag_names = { h1:1, h2:1, h3:1, h4:1, h5:1, h6:1 }; function walk( root ) { if( root.nodeType === 1 && root.nodeName !== 'script' ) { if( tag_names.hasOwnProperty(root.nodeName.toLowerCase()) ) { headings.push( root ); } else { for( var i = 0; i < root.childNodes.length; i++ ) { walk( root.childNodes[i] ); } } } } function writemenu() { var anchor_name = ""; var heading_title = ""; var r0 = ""; var r1 = ""; var r2 = ""; var r3 = ""; for( var i = 0; i < headings.length; i++ ) { heading_title = headings[i].innerHTML.trim(); anchor_name = heading_title.split ( " " ).join ( "_" ).trim(); r0 =  "<li><a href=" + quote ( "#" + anchor_name ) + ">" + heading_title + "</a></li>"; if ( i <= headings.length/3 ) { r1 = r1 + r0; } else { if ( i <= headings.length/3*2) { r2 = r2+ r0; } else { r3 = r3 + r0; } } } r0 = "<table><tr valign=top><td><ul>" + r1 + "</ul></td><td><ul>" + r2 + "</ul></td><td><ul>" + r3 + "</ul></td></tr></table>"; document.getElementById('Menu1').innerHTML = r0; } walk( document.body ); writemenu();}
+function addRule(stylesheetId, selector, rule) { var stylesheet = document.getElementById(stylesheetId); if (stylesheet) { stylesheet = stylesheet.sheet; if (stylesheet.addRule) { stylesheet.addRule(selector, rule); } else if (stylesheet.insertRule) { stylesheet.insertRule(selector + ' { ' + rule + ' }', stylesheet.cssRules.length); } } }
+function addRules() { var index; for (index = 0; index < cssRules.length; index++) { addRule("myStyles", cssRules[index].selector.trim(), cssRules[index].rules); } }
+{ addMenu(); addRules(); }
+</script>
+</body>
+</html>
