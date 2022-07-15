@@ -2,7 +2,7 @@
 set term off
 /*
   Author:   Michael Hartley
-  Date:     Fri, 04 Oct 2019 16:29:52 GMT
+  Date:     Fri, 15 Jul 2022 13:23:28 GMT
   Synopsis: Migration Check List, should be run from a SYSDBA account.
 
             The runtime of mcl.sql depends on the number of database objects and the performance of your platform, the number of rows in tables is not a factor.  In general this
@@ -20,11 +20,26 @@ set term off
               it does NOT revoke
 
 
+            There are 3 connection options.
+              1. use sysdba for databases you install and manage
+              2. use admin for automous databases
+              3. create and use fjauditor for autonomous databases
+                    create user fjauditor identified by <your-password-here>;
+                    grant CREATE SESSION to fjauditor;
+                    grant SELECT on SYS.REGISTRY$HISTORY to fjauditor;
+                    grant SELECT_CATALOG_ROLE to fjauditor;
+                    grant DV_SECANALYST to fjauditor;
+                    grant AUDIT_VIEWER to fjauditor;
+                    grant CAPTURE_ADMIN to fjauditor;
+                    grant SELECT on DBA_USERS_WITH_DEFPWD to fjauditor;
+
             There is no need to enable dbms_output or start a spool file, all this is done for you.
             e.g.
                 connect un/pw@//hostname:port/service_name as sysdba
                 connect un/pw@db as sysdba
                 connect / as sysdba
+                connect fjauditor/<your-password-here>@tns-alias
+
 
                 SQL> @mcl.sql
                   or
@@ -69,14 +84,14 @@ set timing on
 
 define time_start
 define time_stop
-define version="Fri, 04 Oct 2019 16:29:52 GMT"
+define version="Fri, 15 Jul 2022 13:23:28 GMT"
 
 set truncate off
 set numwidth 15
 
 SET MARKUP HTML ON PREFORMAT OFF ENTMAP OFF SPOOL ON HEAD " -
 <meta name='author' content='Michael Hartley'> -
-<meta name='version' content='Fri, 04 Oct 2019 16:29:52 GMT'> -
+<meta name='version' content='Fri, 15 Jul 2022 13:23:28 GMT'> -
 <meta name='title' content='Migration Check List'> -
 <title>Migration Check List</title> -
 <style id=myStyles>.x {border: solid 1px black;width: 300px;height: 300px;}</style>" -
@@ -128,6 +143,7 @@ prompt
 --.s1:  Migration Check List
 --~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>
 
+prompt <img width=100% height=120px src="https://dns-prefetch.github.io/assets/logos/mcl.svg" alt="mcl"/>
 prompt <button class="button" id="myBtn">Migration Check List</button>
 
 prompt <!-- The Modal -->
@@ -460,9 +476,9 @@ BEGIN
   html_table_row('Who am I',
                  'Migration Check List');
   html_table_row('What is my version',
-                 '1906');
+                 '2206');
   html_table_row('What is my patch date',
-                 'Fri, 04 Oct 2019 16:29:52 GMT');
+                 'Fri, 15 Jul 2022 13:23:28 GMT');
   html_table_row('Who is my creator',
                  'Michael Hartley');
   html_table_row('Why am I here',
@@ -489,9 +505,7 @@ set markup HTML OFF
 prompt <div id='Menu1'></div>
 set markup HTML ON
 prompt
-prompt Database migrations are complicated and detailed and even the most simple lift and shift exercises can go wrong if an insufficient degree of analysis is undertaken.  The information collected by this script can be used to help with migration planning for even small simplistic database environments.
-prompt
-prompt This script is read-only against the database catalogue, database objects are not created or modified.  There is no attempt to capture information contained within an application schema, other than table and column names.  If you have any table or column names that you wish to keep private, simply edit and rename the resulting spool file.  Any gap analysis performed with the data extract by this script does not rely on the table or column names, though the names may be used as points for discussion within a migration gap analysis document.
+prompt This script is read-only against the database catalogue, database objects are not created or modified.  There is no attempt to capture information contained within an application schema, other than table and column names.  If you have any table or column names that you wish to keep private, simply edit and rename the resulting spool file.  Any gap analysis performed with the data extract by this script does not rely on the table or column names, though the names may be used as points for discussion within a gap analysis document.
 
 prompt
 prompt <h1 id="Database_Summary">Database Summary</h1>
@@ -3853,26 +3867,6 @@ prompt DRCP restart automatically after a database shutdown/startup
 
 prompt
 prompt <a href="#z-header">Back to Top</a>
-prompt <h2 id="SQL_stability_-_advisor_configuration">SQL stability - advisor configuration</h2>
-
-prompt
-prompt DBA advisor configuration parameters
-prompt
-
-SELECT owner || '.' || task_name task_name,
-       parameter_name,
-       substr(parameter_value,1,100) value,
-       is_default,
-       substr(DESCRIPTION,1,100) description
-  FROM DBA_ADVISOR_PARAMETERS
- WHERE task_name LIKE 'SYS%'
- ORDER BY is_default,
-          1,
-          2;
-
-prompt
-
-prompt <a href="#z-header">Back to Top</a>
 prompt <h2 id="SQL_stability_-_outlines">SQL stability - outlines</h2>
 
 prompt
@@ -5344,37 +5338,40 @@ set define OFF
 prompt <script>
 
 prompt var cssRules = [
-prompt { selector: ".TT b          ", rules: "font-family:Trebuchet MS,Arial,Helvetica,sans-serif;color:red;" },
-prompt { selector: ".TT caption    ", rules: "color:#004000;" },
-prompt { selector: ".TT table      ", rules: "table-layout:auto;" },
-prompt { selector: ".TT td         ", rules: "font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
-prompt { selector: ".TT th         ", rules: "font-size:.7em;text-align:left;padding-top:5px;padding-bottom:4px;background-color:#A7C942;color:#000;" },
-prompt { selector: ".TT            ", rules: "display: flex;flex-wrap: nowrap; font-family:Trebuchet MS,Arial,Helvetica,sans-serif;" },
-prompt { selector: ".button        ", rules: "background-color: #336699; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 2px;" },
-prompt { selector: ".cell-left     ", rules: "display: table-cell; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
-prompt { selector: ".cell-right    ", rules: "display: table-cell; nowrap; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;" },
-prompt { selector: ".close         ", rules: "color: white; float: right; font-size: 28px; font-weight: bold;" },
-prompt { selector: ".close:hover   ", rules: "color: #000; text-decoration: none; cursor: pointer;" },
-prompt { selector: ".close:focus   ", rules: "color: #000; text-decoration: none; cursor: pointer;" },
-prompt { selector: ".column-center ", rules: "width=33%; padding: 4px;" },
-prompt { selector: ".column-left   ", rules: "float: left; width=33%;  padding: 4px;" },
-prompt { selector: ".column-right  ", rules: "float: right; width=33%; padding: 4px;" },
-prompt { selector: ".modal         ", rules: "display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: ; height: 100%; width: 100%; overflow: auto;   background-color: rgba(0,0,0,0.4);" },
-prompt { selector: ".modal-body    ", rules: "padding: 2px 16px;" },
-prompt { selector: ".modal-content ", rules: "position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 80%;" },
-prompt { selector: ".modal-hf      ", rules: "padding: 2px 16px; background-color: #5cb85c; color: white;" },
-prompt { selector: ".row           ", rules: "display: table-row;" },
-prompt { selector: "a              ", rules: "font:Arial,Helvetica,sans-serif;color:#630;vertical-align:top;margin-top:0;margin-bottom:0;" },
-prompt { selector: "body           ", rules: "border-left:.5em solid #EBEBEB;border-right:.5em solid #EBEBEB;border-top:.5em solid #d3d3d3;border-bottom:.5em solid #d3d3d3;font:.7em Arial,Helvetica,Geneva,sans-serif;color:#000;background:#F8F8F8;" },
-prompt { selector: "h1             ", rules: "font:bold 1.5em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;border-bottom: 3px double #336699; display: inline-block;margin-top:0pt;margin-bottom:0pt;padding:0px 0px 0px 0px;" },
-prompt { selector: "h2             ", rules: "font:bold 1.4em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;" },
-prompt { selector: "h3             ", rules: "font:bold 1.3em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;" },
-prompt { selector: "li             ", rules: "font:1em Arial,Helvetica,Geneva,sans-serif;color:black;" },
-prompt { selector: "pre            ", rules: "font:.7em Courier;color:#000;background:#fff;" },
-prompt { selector: "ul             ", rules: "list-style-type:circle;margin:1em;padding:0;background:#F8F8F8;" },
-prompt { selector: "p              ", rules: "color:#630; font-size: 1em;" }
+prompt { selector: '.TT b          ', rules: 'font-family:Trebuchet MS,Arial,Helvetica,sans-serif;color:red;' },
+prompt { selector: '.TT caption    ', rules: 'font-size:1em;color:#004000; caption-side: top;' },
+prompt { selector: '.TT table      ', rules: 'table-layout:auto;' },
+prompt { selector: '.TT td         ', rules: 'font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+prompt { selector: '.TT th         ', rules: 'font-size:1em;text-align:left;padding-top:5px;padding-bottom:4px;background-color:#A7C942;color:#000;' },
+prompt { selector: '.TT            ', rules: 'caption-side: bottom; flex-wrap: nowrap; font-family:Trebuchet MS,Arial,Helvetica,sans-serif;' },
+prompt { selector: '.button        ', rules: 'background-color: #336699; border: none; color: white; padding: 1px 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 2px;' },
+prompt { selector: '.cell-left     ', rules: 'display: table-cell; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+prompt { selector: '.cell-right    ', rules: 'display: table-cell; nowrap; width: 50%;font-size:.7em;border:1px solid #98bf21;padding:3px 7px 2px;background-color:#F1F1F1;' },
+prompt { selector: '.close         ', rules: 'color: white; float: right; font-size: 28px; font-weight: bold;'},
+prompt { selector: '.close:hover   ', rules: 'color: #000; text-decoration: none; cursor: pointer;'},
+prompt { selector: '.close:focus   ', rules: 'color: #000; text-decoration: none; cursor: pointer;'},
+prompt { selector: '.column-center ', rules: 'width=33%; padding: 4px;' },
+prompt { selector: '.column-left   ', rules: 'float: left; width=33%;  padding: 4px;' },
+prompt { selector: '.column-right  ', rules: 'float: right; width=33%; padding: 4px;' },
+prompt { selector: '.modal         ', rules: 'display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width:0 ; height: 100%; width: 100%; overflow: auto;   background-color: rgba(0,0,0,0.4);' },
+prompt { selector: '.modal-body    ', rules: 'padding: 2px 16px;' },
+prompt { selector: '.modal-content ', rules: 'position: relative; background-color: #fefefe; margin: auto; padding: 0; border: 1px solid #888; width: 90%;' },
+prompt { selector: '.modal-header  ', rules: 'padding: 20px; background-color: #5cb85c; color: white;' },
+prompt { selector: '.modal-footer  ', rules: 'padding: 2px 16px; background-color: #5cb85c; color: white;' },
+prompt { selector: '.row           ', rules: 'display: table-row;' },
+prompt { selector: '.column        ', rules: 'float: left;  padding: 30px;' },
+prompt { selector: '.row:after     ', rules: 'content: ""; display: table; clear: both;' },
+prompt { selector: 'a              ', rules: 'font:Arial,Helvetica,sans-serif;color:#630;vertical-align:top;margin-top:0;margin-bottom:0;' },
+prompt { selector: 'body           ', rules: 'border-left:.5em solid #EBEBEB;border-right:.5em solid #EBEBEB;border-top:.5em solid #d3d3d3;border-bottom:.5em solid #d3d3d3;font:1em Arial,Helvetica,Geneva,sans-serif;color:#000;background:#F8F8F8;' },
+prompt { selector: 'h1             ', rules: 'font:bold 1.5em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;border-bottom: 3px double #336699; display: inline-block;margin-top:0pt;margin-bottom:0pt;padding:0px 0px 0px 0px;' },
+prompt { selector: 'h2             ', rules: 'font:bold 1.4em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;' },
+prompt { selector: 'h3             ', rules: 'font:bold 1.3em Arial,Helvetica,Geneva,sans-serif;color:#336699;background-color:#F8F8F8;;border-bottom: 3px double #336699; display: inline-block;margin-top:4pt;margin-bottom:0pt;' },
+prompt { selector: 'li             ', rules: 'font:1em Arial,Helvetica,Geneva,sans-serif;color:black;' },
+prompt { selector: 'pre            ', rules: 'font:.7em Courier;color:#000;background:#fff;' },
+prompt { selector: 'ul             ', rules: 'list-style-type:circle;margin:1em;padding:0;background:#F8F8F8;' },
+prompt { selector: 'p              ', rules: 'color:#630; font-size: 1em;' },
+prompt { selector: '*              ', rules: 'box-sizing: border-box;' },
 prompt ];;
-
 
 prompt function quote ( line ){return ( "\"" + line + "\"" );}
 prompt function addMenu() { var headings = []; var tag_names = { h1:1, h2:1, h3:1, h4:1, h5:1, h6:1 }; function walk( root ) { if( root.nodeType === 1 && root.nodeName !== 'script' ) { if( tag_names.hasOwnProperty(root.nodeName.toLowerCase()) ) { headings.push( root ); } else { for( var i = 0; i < root.childNodes.length; i++ ) { walk( root.childNodes[i] ); } } } } function writemenu() { var anchor_name = ""; var heading_title = ""; var r0 = ""; var r1 = ""; var r2 = ""; var r3 = ""; for( var i = 0; i < headings.length; i++ ) { heading_title = headings[i].innerHTML.trim(); anchor_name = heading_title.split ( " " ).join ( "_" ).trim(); r0 =  "<li><a href=" + quote ( "#" + anchor_name ) + ">" + heading_title + "</a></li>"; if ( i <= headings.length/3 ) { r1 = r1 + r0; } else { if ( i <= headings.length/3*2) { r2 = r2+ r0; } else { r3 = r3 + r0; } } } r0 = "<table><tr valign=top><td><ul>" + r1 + "</ul></td><td><ul>" + r2 + "</ul></td><td><ul>" + r3 + "</ul></td></tr></table>"; document.getElementById('Menu1').innerHTML = r0; } walk( document.body ); writemenu();}

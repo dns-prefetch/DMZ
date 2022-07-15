@@ -15,6 +15,10 @@ Use cases
 # Instructions
 
 * Download mcl.sql
+    * wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/MCL/mcl.sql
+    * curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/MCL/mcl.sql > mcl.sql
+    * wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/MCL/mcl-light.sql
+    * curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/MCL/mcl-light.sql > mcl.sql
 * SQL*Plus run mcl.sql against your database (this script is read only, and does not access business data)
     * SQL*Plus from your laptop over SQL*Net
     * SQL*Plus from your database host.
