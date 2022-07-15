@@ -1,7 +1,6 @@
-# DMZ
- Oracle: Cloud, Linux, and Database
+<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="100%">
 
-![DMZ](https://dns-prefetch.github.io/assets/logos/dmz-header.svg?raw=true "DMZ big title")
+# Oracle: Cloud, Linux, and Database
 
 &nbsp;
 

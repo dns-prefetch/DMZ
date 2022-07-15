@@ -1,12 +1,17 @@
-# DMZ
- Oracle: Cloud, Linux, and Database
+<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="100%">
 
-<p>
-    <img src="https://dns-prefetch.github.io/assets/logos/dmz-header.svg">
-</p>
+# Oracle: Cloud, Linux, and Database
 
 &nbsp;
 
+![Employee data](sample_output/sample.png?raw=true "Employee Data title")
+
+# Migration Check List
+
+
+# Instructions
+
+* Download mcl.sql
 Migration Check List, should be run from a SYSDBA account.
 
 The runtime of mcl.sql depends on the number of database objects and the performance of your platform, the number of rows in tables is not a factor.  In general this
