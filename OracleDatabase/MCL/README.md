@@ -8,18 +8,28 @@
 
 # Migration Check List
 
+Use cases
+1. Use the script mcl.sql to capture Oracle database setup and configuration details and start to plan the database migration.  Typically, the first and most daunting tasks for most DBA's is to form a good understanding of the database, mcl.sql will help.
+2. I frequently ask DBA teams to run mcl.sql to give me an introduction to their database as part of my first fact gathering exercise.
 
 # Instructions
 
 * Download mcl.sql
-Migration Check List, should be run from a SYSDBA account.
+* SQL*Plus run mcl.sql against your database (this script is read only, and does not access business data)
+    * SQL*Plus from your laptop over SQL*Net
+    * SQL*Plus from your database host.
+        * If the database is configured as RAC, run against any online instance
+        * If the database is configured with Data Guard, run against the primary
+* Copy the output html file to your laptop
+* Open in your favourite browser
 
-The runtime of mcl.sql depends on the number of database objects and the performance of your platform, the number of rows in tables is not a factor.  In general this
-script takes between 30 seconds and 40 minutes, on average, completing within 2 minutes
+__Migration Check List, should be run from a SYSDBA account.__
+
+The runtime of mcl.sql depends on the number of database objects and the performance of your platform, the number of rows in tables is not a factor.  In general this script takes between 30 seconds and 40 minutes, on average, completing within 2 minutes
 
 This script is read-only
 
-* it does SELECT
+* it does SELECT against dictionary tables
 * it does NOT insert
 * it does NOT update
 * it does NOT delete
