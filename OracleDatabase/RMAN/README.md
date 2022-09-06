@@ -18,6 +18,8 @@ Bash wrapper script that sits between Linux CRON and RMAN to execute backups, we
    * Tidy operations to remove log files over 30 days old
    * Backup retension period is 30 days
    
+<img src="sample_output/sample.png" alt="Sample Output" title="orb help and installed files" />
+
 
 # Instructions
 
@@ -63,7 +65,7 @@ Config suggests a set of crontab entries for the database backup.
 | orb command           | Description                                    |
 --- | --- | 
 | orb.sh help           | Display help                                   |
-| orb.sh config   db21c | Configure the datbase db21c for backups        |
+| orb.sh config   db21c | Configure the database db21c for backups        |
 | orb.sh archive  db21c | Backup the archivelogs for db21c               |
 | orb.sh daily    db21c | Daily backup (incremental level 1) for db21c   |
 | orb.sh weekly   db21c | Weekly backup (incremental level 0) for db21c  |
@@ -78,7 +80,3 @@ Config suggests a set of crontab entries for the database backup.
 ```
    find ~/orb/log
 ```
-
-
-
-
