@@ -4,27 +4,30 @@
 
 &nbsp;
 
-# Oracle Database Backup script
+# Oracle Database Backup wrapper script
 
-Use cases
-Oracle database single instance RMAN backups
-Oracle RAC database backups
-Oracle Data Guard database backups.  The script checks the DATABASE_ROLE=PRIMARY and exits if the database is a standby.
+Bash wrapper script that sits between Linux CRON and RMAN to execute backups, weekly tidy, with a 30 backup retention window.
+
+* Use cases
+   * Oracle database single instance RMAN backups
+   * Oracle RAC database backups
+   * Oracle Data Guard database backups.  The script checks the DATABASE_ROLE=PRIMARY and exits if the database is a standby.
+   * Weekly backups (incremental level 0) plus archive log
+   * Daily backups (incremental level 1) plus archive log
+   * Archive log backups seperate from the weekly and daily backups
+   * Tidy operations to remove log files over 30 days old
+   * Backup retension period is 30 days
+   
 
 # Instructions
 
-* Download orb.sh
+## Download orb.sh
     * wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh
     * curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh > orb.sh
 
-* Install on the database server
+## Install on the database server
 
-```
-chmod 700 orb.sh
-orb.sh install
-```
-
-To change the default installation location (default ~/orb) edit script and change
+The default configurable location (default ~/orb) is modified by editing orb.sh and modifying
 
 ```
 typeset folder_top=~/orb
@@ -32,46 +35,50 @@ typeset folder_top=~/orb
 typeset folder_top=<your-preferred-folder>/orb
 ```
 
+Then run the installation
 
-
-__Migration Check List, should be run from a SYSDBA account.__
-
-cd /mnt/hostm/Code/Unix/azure_db_backup
-chmod 700 orb.sh
+```
 orb.sh install
-
-* ~/orb/bin/orb.sh help
-* ~/orb/bin/orb.sh config   db21c
-* ~/orb/bin/orb.sh archive  db21c
-* ~/orb/bin/orb.sh daily    db21c
-* ~/orb/bin/orb.sh weekly   db21c
-* ~/orb/bin/orb.sh tidy     db21c
-* ~/orb/bin/orb.sh review   db21c
-
-* find ~/orb/log
-
-
-
-There is no need to enable dbms_output or start a spool file, all this is done for you.
-e.g.
-
-```
-    connect un/pw@//hostname:port/service_name as sysdba
-    or
-    connect un/pw@db as sysdba
-    or
-    connect / as sysdba
-
-    SQL> @mcl.sql
-
-    Finished. The spool file is mcl.html
-    SQL>
 ```
 
-Then ZIP with encryption
+## Configure the backup for a single database
+
+Configure the database (instance MySID) to be backed up.  Connects to the database using RMAN and executes a number of "CONFIGURE" commands.
 
 ```
-zip -e mcl.zip mcl.html
+  ~/orb/bin/orb.sh config MySID
 ```
+
+Config suggests a set of crontab entries for the database backup.
+
+```
+  @hourly           /home/oracle/orb/bin archive MySID     # Backup the archivelogs every hour
+  15 01 * * mon-sat /home/oracle/orb/bin daily   MySID     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
+  15 01 * * sun     /home/oracle/orb/bin weekly  MySID     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
+  30 01 1 * sun     /home/oracle/orb/bin tidy    MySID     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
+```
+
+# Finally, "orb.sh help" is a good place to start, but a few hints follow...
+
+| orb command           | Description                                    |
+--- | --- | 
+| orb.sh help           | Display help                                   |
+| orb.sh config   db21c | Configure the datbase db21c for backups        |
+| orb.sh archive  db21c | Backup the archivelogs for db21c               |
+| orb.sh daily    db21c | Daily backup (incremental level 1) for db21c   |
+| orb.sh weekly   db21c | Weekly backup (incremental level 0) for db21c  |
+| orb.sh tidy     db21c | Remove logs files over 30 days old             |
+| orb.sh review   db21c | List the backup summary for db21c              |
+
+## List the installed files
+```
+   find ~/orb/log
+```
+## List the log files
+```
+   find ~/orb/log
+```
+
+
 
 
