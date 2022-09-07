@@ -6,7 +6,7 @@
 
 # Oracle Database Backup wrapper script
 
-Bash wrapper script that sits between Linux CRON and RMAN to execute backups, weekly tidy, with a 30 backup retention window.
+Bash wrapper script that sits between Linux CRON and RMAN to execute backups, weekly tidy, with a 30 day backup retention window.  Backups are configured to  write to Cloud storage mounted on the host (default script variable rman_disk_folder=/mnt/orabackup).  T
 
 * Use cases
    * Oracle database single instance RMAN backups
@@ -17,6 +17,7 @@ Bash wrapper script that sits between Linux CRON and RMAN to execute backups, we
    * Archive log backups seperate from the weekly and daily backups
    * Tidy operations to remove log files over 30 days old
    * Backup retension period is 30 days
+   * Backup destination modified by adjusting global variable: rman_disk_folder
    
 <img src="sample_output/sample.png" alt="Sample Output" title="orb help and installed files" />
 
