@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Author:         Michael Hartley
 # Date:           15/07/2022 15:35:21
@@ -11,6 +12,10 @@
 #
 # Modifications:  18/07/2022 12:22:13 MH Added disk backup destination
 #                 14/09/2022 12:22:44 MH Update tidy - add missing log files to list
+#                 14/09/2022 15:37:25 MH Update rman_run - removed reference to log_syslog
+#                 14/09/2022 18:39:06 MH Update config - use db_name when creating backup folder path
+#                 14/09/2022 18:39:01 MH Update config - fixed example crontab syntax
+#                 14/09/2022 18:38:55 MH Update main - add oraenv to path for crontab execution
 #
 # ToDo
 #                 18/07/2022 12:26:08 MH extend to handle RAC
@@ -415,7 +420,7 @@ rman_script=$2
 rman_logfile=$3
 
 # set oraenv and exit on failure
-log_info "Setting ORAENV using ${db_sid}"
+#log_info "Setting ORAENV using ${db_sid}"
 set_oraenv ${db_sid}
 if [ $? -eq 1 ]; then
   log_fail "rman_run: database SID (${db_sid}) was not set"
@@ -453,7 +458,7 @@ else
 
   if [ $? -eq 1 ];then
     s=$(basename $rman_script)
-    log_syslog "database=${db_sid}: $s :reason=database backup failure"
+    #log_syslog "database=${db_sid}: $s :reason=database backup failure"
     grep -E "ORA-|RMAN-" $rman_logfile
     log_fail "RMAN action failed. See the log file"
   fi
@@ -474,12 +479,16 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 rman_run ${dbsid} ${rman_script} ${rman_logfile}
 
+dbUniqueName=$( ( echo -e "connect / as sysdba\n set head off\n show parameter db_name" | sqlplus -s /nolog; ) | grep db_name | awk '{print $3}' )
+
 # For RAC this needs to be changed to db_unique_name
 #for myrows in $(ps -ef | grep lgwr | grep -v grep | awk 'BEGIN {FS="_"} {print $3}')
 #do
   # create full rman to disk folder path.  Note the ^^ forces myrows value to UPPERCASE
-  log_info "Creating backup folder: ${rman_disk_folder}/${dbsid}"
-  mkdir -p ${rman_disk_folder}/${dbsid}
+  #log_info "Creating backup folder: ${rman_disk_folder}/${dbsid}"
+  log_info "Creating backup folder: ${rman_disk_folder}/${dbUniqueName}"
+  mkdir -p ${rman_disk_folder}/${dbUniqueName}
+  #mkdir -p ${rman_disk_folder}/${dbsid}
 #done
 
 log_info "CRONTAB schedule suggestion - add this to the ${USER} crontab"
@@ -488,10 +497,10 @@ log_info "CRONTAB schedule suggestion - add this to the ${USER} crontab"
 #do
 cat << END
   =========================================================================================
-  @hourly           ${folder_bin} archive ${dbsid}     # Backup the archivelogs every hour
-  15 01 * * mon-sat ${folder_bin} daily   ${dbsid}     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
-  15 01 * * sun     ${folder_bin} weekly  ${dbsid}     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
-  30 01 1 * sun     ${folder_bin} tidy    ${dbsid}     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
+  @hourly           ${PROG_NAME} archive ${dbsid}     # Backup the archivelogs every hour
+  15 01 * * mon-sat ${PROG_NAME} daily   ${dbsid}     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
+  15 01 * * sun     ${PROG_NAME} weekly  ${dbsid}     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
+  30 01 1 * sun     ${PROG_NAME} tidy    ${dbsid}     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
 END
 #done
 
@@ -513,6 +522,13 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 rman_run ${dbsid} ${rman_script} ${rman_logfile}
 
 cat ${rman_logfile}
+
+log_step "grep listing of FAIL: messages in all log files"
+grep FAIL: ${folder_log}/*.log
+log_step "grep listing of WARN: messages in all log files"
+grep WARN: ${folder_log}/*.log
+#log_step "grep listing of INFO: messages in all log files"
+#grep INFO: ${folder_log}/*.log
 
 }
 
@@ -540,6 +556,11 @@ rman_logfile=${folder_log}/rman_archivelog_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 (
+  log_title "archive backup"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
 ) > ${rman_stdout}
 
@@ -559,6 +580,11 @@ rman_logfile=${folder_log}/rman_daily_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 (
+  log_title "daily backup"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
 ) > ${rman_stdout}
 
@@ -578,6 +604,11 @@ rman_logfile=${folder_log}/rman_weekly_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 (
+  log_title "weekly backup"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
 ) > ${rman_stdout}
 
@@ -598,6 +629,11 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 
 (
+  log_title "tidy"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   # Remove expired backups, archivelogs and control file logging
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
   # Remove expired log files
@@ -624,9 +660,10 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 typeset g_application_title="Oracle RMAN Backup wrapper script"
 
 PROG_NAME=${0}
+PATH=$PATH:/usr/local/bin                                                                             # crontab execution needs this to put oraenv on search path
 
+#typeset rman_disk_folder=/mnt/hostdl/orabackup                                                        # Cloud NFS mount point folder
 typeset rman_disk_folder=/mnt/orabackup                                                               # Cloud NFS mount point folder
-typeset rman_disk_folder=/mnt/hostdl/orabackup                                                        # Cloud NFS mount point folder
 
 typeset folder_top=~/orb                                                                              # To install orb to a diferent folder, change this variable
 
