@@ -10,6 +10,7 @@
 #                 orb.sh tidy dbsid       Remove expired backups, archivelogs, and log files
 #
 # Modifications:  18/07/2022 12:22:13 MH Added disk backup destination
+#                 14/09/2022 12:22:44 MH Update tidy - add missing log files to list
 #
 # ToDo
 #                 18/07/2022 12:26:08 MH extend to handle RAC
@@ -214,7 +215,7 @@ LIST BACKUP SUMMARY;
 REPORT SCHEMA;
 END
 
-log_info "Createing the example backup restore notes"
+log_info "Creating the example backup restore notes"
 
 cat << END > ${rman_notes}
 function help_restore { # Help How to restore a CDB or PDB
@@ -601,11 +602,13 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
   # Remove expired log files
   cd ${folder_log}
-  find rman_tidy*.log -mtime +30 -delete;
-  find rman_config*.log -mtime +30 -delete;
-  find rman_weekly*.log -mtime +30 -delete;
-  find rman_archivelog*.log -mtime +30 -delete;
   find orb_session*.log -mtime +30 -delete;
+  find rman_archivelog*.log -mtime +30 -delete;
+  find rman_config*.log -mtime +30 -delete;
+  find rman_daily*.log -mtime +30 -delete;
+  find rman_review*.log -mtime +30 -delete;
+  find rman_tidy*.log -mtime +30 -delete;
+  find rman_weekly*.log -mtime +30 -delete;
 ) > ${rman_stdout}
 
 }
@@ -623,6 +626,7 @@ typeset g_application_title="Oracle RMAN Backup wrapper script"
 PROG_NAME=${0}
 
 typeset rman_disk_folder=/mnt/orabackup                                                               # Cloud NFS mount point folder
+typeset rman_disk_folder=/mnt/hostdl/orabackup                                                        # Cloud NFS mount point folder
 
 typeset folder_top=~/orb                                                                              # To install orb to a diferent folder, change this variable
 
