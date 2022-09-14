@@ -1,0 +1,74 @@
+
+---------------------------------------------------------------------------------------------------------------
+ Deployment instruction
+---------------------------------------------------------------------------------------------------------------
+
+  Initial install
+  ---------------
+    download orb.sh from git, upload to database server
+      On primary database host
+        ./orb.sh install
+        ~/orb/bin/orb.sh config MySID
+      On standby database host
+        ./orb.sh install
+        ~/orb/bin/orb.sh config MySID
+
+    CRON the backup schedule.  The following suggestion is for a weekly L0, daily L1, hourly archivelog
+
+      @hourly           /home/oracle/orb/bin/orb.sh archive MySID     # Backup the archivelogs every hour
+      15 01 * * mon-sat /home/oracle/orb/bin/orb.sh daily   MySID     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
+      15 01 * * sun     /home/oracle/orb/bin/orb.sh weekly  MySID     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
+      30 01 1 * sun     /home/oracle/orb/bin/orb.sh tidy    MySID     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
+
+  Patch install
+  -------------
+    download orb.sh from git, upload to database server
+      On primary database host
+        ./orb.sh install
+        ~/orb/bin/orb.sh config MySID
+      On standby database host
+        ./orb.sh install
+        ~/orb/bin/orb.sh config MySID
+
+  Known issues
+  ------------
+  orb.sh config MySID generate error message when applied to standby database
+    Error stack similar to this is generated
+        RMAN-00569: =============== ERROR MESSAGE STACK FOLLOWS ===============
+        RMAN-00571: ===========================================================
+        RMAN-03002: failure of configure command at 10/07/2022 10:16:34
+        RMAN-05021: this configuration cannot be changed for a BACKUP or STANDBY control file
+        2022-10-07_10:16:34: FAIL: RMAN action failed. See the log file
+    Caused by
+        The "orb.sh config" was executed against the standby_role database when the follow configuration is applied by RMAN
+          CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 30 DAYS;
+    Work around
+        If RMAN "show configuration" already has "RECOVERY WINDOW OF 30 DAYS" you can ignore these messages
+        Otherwise
+          switchover to standby and run "orb.sh config MySID"
+
+
+---------------------------------------------------------------------------------------------------------------
+ HISTORY OF CHANGES
+---------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------
+  * VERSION 22.10.07
+-----------------------------------------------------------------------------------------------------------
+06/10/2022 11:43:42 MH Update config - CONFIGURE ARCHIVELOG DELETION POLICY -- retain archivelogs until backup x1 for flashback database operations
+06/10/2022 11:43:42 MH Update config - archivelog backups -- removed archivelog deletion prefering auto db deletion of managed files
+06/10/2022 13:32:45 MH Update rman_run - mandatory allow backup of standby database, and write warning message
+
+-----------------------------------------------------------------------------------------------------------
+  * VERSION 22.09.15
+-----------------------------------------------------------------------------------------------------------
+18/07/2022 12:22:13 MH Added disk backup destination
+14/09/2022 12:22:44 MH Update tidy - add missing log files to list
+14/09/2022 15:37:25 MH Update rman_run - removed reference to log_syslog
+14/09/2022 18:39:06 MH Update config - use db_name when creating backup folder path
+14/09/2022 18:39:01 MH Update config - fixed example crontab syntax
+14/09/2022 18:38:55 MH Update main - add oraenv to path for crontab execution
+15/09/2022 12:12:00 MH Update install - add CROSSCHECK BACKUP; to rman_daily_script generator. This is a control step for cases where the weekly L0 backup is missing or unavailable
+
+

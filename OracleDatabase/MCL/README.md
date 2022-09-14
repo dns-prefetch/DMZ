@@ -1,8 +1,7 @@
-<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="100%">
+---
+<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
 
 # Oracle: Cloud, Linux, and Database
-
-&nbsp;
 
 ![Employee data](sample_output/sample.png?raw=true "Employee Data title")
 
@@ -67,3 +66,4 @@ zip -e mcl.zip mcl.html
 ```
 
 
+---

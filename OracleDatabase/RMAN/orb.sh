@@ -1,6 +1,7 @@
+#!/bin/bash
 #
 # Author:         Michael Hartley
-# Date:           15/07/2022 15:35:21
+# Version:        22.10.07
 # Synopsis:       Oracle RMAN Backup (orb) for Azure Files (This is a backup to disk installation)
 # Usage:
 #                 orb.sh install          Install orb, create folders, and files
@@ -8,13 +9,13 @@
 #                 orb.sh weekly dbsid     Run weekly level 0 backup for database
 #                 orb.sh daily dbsid      Run daily level 1 backup for database
 #                 orb.sh tidy dbsid       Remove expired backups, archivelogs, and log files
-#
-# Modifications:  18/07/2022 12:22:13 MH Added disk backup destination
-#                 14/09/2022 12:22:44 MH Update tidy - add missing log files to list
+#                 ** important (06/10/2022 13:36:17) **
+#                    Ensure backup and tidy schedule also execute on Data Guard standby databases
+#                      RMAN archivelog deletion policy requires archivelog applied to standby and 1x backup archivelog
+#                      archives on standby will be retained until backed up, therefore, backup essential
 #
 # ToDo
 #                 18/07/2022 12:26:08 MH extend to handle RAC
-#                 18/07/2022 12:26:08 MH extend to handle Data Guard physical standby
 #                 20/07/2022 14:56:09 MH Started added restore and recovery notes
 
 function help { # Help
@@ -92,11 +93,15 @@ function log_step {             # no-help-output
 }
 
 function log_title {             # no-help-output
-  a=$(printf '=%.0s' {1..10})
+  a0=$(printf ' %.0s' {1..30})
+  a1=$(printf ' %.0s' {1..10})
+  a2=$(printf ' %.0s' {1..10})
   b=$(echo $1 | tr "[:alnum:]" "-")
-  echo -e "\E[1;31;33m$a $b $a\E[m"
-  echo -e "\E[1;31;33m$a $1 $a\E[m"
-  echo -e "\E[1;31;33m$a $b $a\E[m"
+
+  echo ""
+  echo -e "$a0$a2\E[1;41;22m $1 \E[m"
+  echo -e "$a0\E[1;44;33m$a1 $b $a1\E[m"
+  echo ""
 }
 
 function log_debug {             # no-help-output
@@ -133,9 +138,10 @@ cat << END > ${rman_daily_script}
 
 run
 {
+CROSSCHECK BACKUP;
 SHOW ALL;
 BACKUP SECTION SIZE 100G AS BACKUPSET FILESPERSET = 15 INCREMENTAL LEVEL 1 CUMULATIVE DATABASE TAG 'DB_DAILY_L1';
-BACKUP FILESPERSET = 15 ARCHIVELOG ALL DELETE ALL INPUT TAG 'archivelog';
+BACKUP FILESPERSET = 15 ARCHIVELOG ALL TAG 'archivelog';
 }
 END
 
@@ -146,7 +152,7 @@ cat << END > ${rman_archivelog_script}
 run
 {
 SHOW ALL;
-BACKUP FILESPERSET = 15 ARCHIVELOG ALL DELETE ALL INPUT TAG 'archivelog';
+BACKUP FILESPERSET = 15 ARCHIVELOG ALL TAG 'archivelog';
 }
 END
 
@@ -158,7 +164,7 @@ run
 {
 SHOW ALL;
 BACKUP SECTION SIZE 100G AS BACKUPSET FILESPERSET = 15 INCREMENTAL LEVEL 0 DATABASE TAG 'DB_WEEKLY_L0';
-BACKUP FILESPERSET = 15 ARCHIVELOG ALL DELETE ALL INPUT TAG 'ARCHIVELOG';
+BACKUP FILESPERSET = 15 ARCHIVELOG ALL TAG 'ARCHIVELOG';
 }
 END
 
@@ -184,8 +190,9 @@ cat << END > ${rman_config_script}
 #CONFIGURE ARCHIVELOG DELETION POLICY TO BACKED UP 1 TIMES TO DEVICE type SBT;
 #CONFIGURE CHANNEL DEVICE TYPE sbt FORMAT '%d_%I_%U' PARMS='ENV=( NB_ORA_SERV=TheNetbackServerIPorDNS, NB_ORA_POLICY=TheNetbackupPolicyName, NB_ORA_SCHED=TheNetbackupScheduleName, NB_ORA_CLIENT=TheNetbackupClient )';
 #CONFIGURE DEFAULT DEVICE TYPE TO SBT;
+#CONFIGURE ARCHIVELOG DELETION POLICY TO APPLIED ON ALL STANDBY;
 
-CONFIGURE ARCHIVELOG DELETION POLICY TO APPLIED ON ALL STANDBY;
+CONFIGURE ARCHIVELOG DELETION POLICY TO APPLIED ON ALL STANDBY BACKED UP 1 TIMES TO DEVICE TYPE DISK;
 CONFIGURE BACKUP OPTIMIZATION ON;
 CONFIGURE CHANNEL 1 DEVICE TYPE DISK FORMAT '${rman_disk_folder}/%d/%d_%T_%s_%U';
 CONFIGURE CHANNEL 2 DEVICE TYPE DISK FORMAT '${rman_disk_folder}/%d/%d_%T_%s_%U';
@@ -202,7 +209,7 @@ CONFIGURE DEVICE TYPE SBT PARALLELISM 4 BACKUP TYPE TO BACKUPSET;
 CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 30 DAYS;
 CONFIGURE RMAN OUTPUT TO KEEP FOR 31 DAYS;
 # Size the control file to purge backup logs after 31 days
-alter system set CONTROL_FILE_RECORD_KEEP_TIME=31;
+alter system set CONTROL_FILE_RECORD_KEEP_TIME=31 scope=both;
 # Low activity databases write an archive log every 5 minutes
 alter system set archive_lag_target=300 scope=both;
 END
@@ -218,7 +225,6 @@ END
 log_info "Creating the example backup restore notes"
 
 cat << END > ${rman_notes}
-function help_restore { # Help How to restore a CDB or PDB
 
 # These notes are RMAN restore and recovery notes
 # Check these notes before attempting to perform any restore or recovery operations
@@ -247,26 +253,42 @@ REPORT SCHEMA;
 CROSSCHECK COPY;
 CROSSCHECK BACKUP;
 
+###########################  Full CDB restore  ###########################
+
+# Restore CDB, first shutdown, then restore and mount the controlfile
+shutdown abort
+startup mount
+
+run
+{
+  RESTORE DATABASE;
+  RECOVER DATABASE;
+}
+
+###########################  Single PDB restore  ###########################
+
 # Backup and individual PDB
 BACKUP PLUGGABLE DATABASE p1;
 BACKUP PLUGGABLE DATABASE p1, p2;
 
-# Restore PDB to SCN
+# Point in time restore of PDB to SCN
 ALTER PLUGGABLE DATABASE p1 CLOSE;
 RUN
 {
 SET UNTIL SCN 3155002;
 RESTORE PLUGGABLE DATABASE p1 validate;
 }
+
 RUN
 {
 SET UNTIL SCN 3155002;
-RESTORE PLUGGABLE DATABASE p1 validate;
-RECOVER PLUGGABLE DATABASE p1 validate;
+RESTORE PLUGGABLE DATABASE p1;
+RECOVER PLUGGABLE DATABASE p1;
 }
+
 ALTER PLUGGABLE DATABASE p1 OPEN RESETLOGS;
 
-# Restore PDB to timestamp
+# Point in time restore of PDB to timestamp
 ALTER PLUGGABLE DATABASE p1 CLOSE;
 run
 {
@@ -276,7 +298,6 @@ run
 }
 ALTER PLUGGABLE DATABASE p1 OPEN RESETLOGS;
 
-}
 END
 
 log_info "orb is installed here: ${folder_top}"
@@ -415,7 +436,7 @@ rman_script=$2
 rman_logfile=$3
 
 # set oraenv and exit on failure
-log_info "Setting ORAENV using ${db_sid}"
+#log_info "Setting ORAENV using ${db_sid}"
 set_oraenv ${db_sid}
 if [ $? -eq 1 ]; then
   log_fail "rman_run: database SID (${db_sid}) was not set"
@@ -438,8 +459,8 @@ fi
 # Check the database is primary (this works for single instance and Data Guard)
 is_database_primary ${db_sid}
 if [ $? -eq 1 ];then
-  log_fail "rman_run: Database is not primary"
-  exit
+  log_warn "rman_run: Database is Data Guard with standby_role, running anyway"
+  # exit
 fi
 
 log_info "Preparing to run the RMAN script: $rman_script"
@@ -453,7 +474,7 @@ else
 
   if [ $? -eq 1 ];then
     s=$(basename $rman_script)
-    log_syslog "database=${db_sid}: $s :reason=database backup failure"
+    #log_syslog "database=${db_sid}: $s :reason=database backup failure"
     grep -E "ORA-|RMAN-" $rman_logfile
     log_fail "RMAN action failed. See the log file"
   fi
@@ -474,12 +495,16 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 rman_run ${dbsid} ${rman_script} ${rman_logfile}
 
+dbUniqueName=$( ( echo -e "connect / as sysdba\n set head off\n show parameter db_name" | sqlplus -s /nolog; ) | grep db_name | awk '{print $3}' )
+
 # For RAC this needs to be changed to db_unique_name
 #for myrows in $(ps -ef | grep lgwr | grep -v grep | awk 'BEGIN {FS="_"} {print $3}')
 #do
   # create full rman to disk folder path.  Note the ^^ forces myrows value to UPPERCASE
-  log_info "Creating backup folder: ${rman_disk_folder}/${dbsid}"
-  mkdir -p ${rman_disk_folder}/${dbsid}
+  #log_info "Creating backup folder: ${rman_disk_folder}/${dbsid}"
+  log_info "Creating backup folder: ${rman_disk_folder}/${dbUniqueName}"
+  mkdir -p ${rman_disk_folder}/${dbUniqueName}
+  #mkdir -p ${rman_disk_folder}/${dbsid}
 #done
 
 log_info "CRONTAB schedule suggestion - add this to the ${USER} crontab"
@@ -488,13 +513,17 @@ log_info "CRONTAB schedule suggestion - add this to the ${USER} crontab"
 #do
 cat << END
   =========================================================================================
-  @hourly           ${folder_bin} archive ${dbsid}     # Backup the archivelogs every hour
-  15 01 * * mon-sat ${folder_bin} daily   ${dbsid}     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
-  15 01 * * sun     ${folder_bin} weekly  ${dbsid}     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
-  30 01 1 * sun     ${folder_bin} tidy    ${dbsid}     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
+  @hourly           ${PROG_NAME} archive ${dbsid}     # Backup the archivelogs every hour
+  15 01 * * mon-sat ${PROG_NAME} daily   ${dbsid}     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
+  15 01 * * sun     ${PROG_NAME} weekly  ${dbsid}     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
+  30 01 1 * sun     ${PROG_NAME} tidy    ${dbsid}     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
 END
 #done
 
+}
+
+function help_restore { # Help How to restore a CDB or PDB
+  log_info "Simple reminder to restore a single pluggable database see: ${folder_top}/rman-scripts/rman-notes.txt"
 }
 
 function review {                                                                                   # List Review the RMAN configuration
@@ -510,9 +539,18 @@ rman_script=${rman_review_script}
 rman_logfile=${folder_log}/rman_review_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
+export NLS_DATE_FORMAT="yymmdd hh24:mi:ss"
+
 rman_run ${dbsid} ${rman_script} ${rman_logfile}
 
 cat ${rman_logfile}
+
+log_step "grep listing of FAIL: messages in all log files"
+grep FAIL: ${folder_log}/*.log
+log_step "grep listing of WARN: messages in all log files"
+grep WARN: ${folder_log}/*.log
+#log_step "grep listing of INFO: messages in all log files"
+#grep INFO: ${folder_log}/*.log
 
 }
 
@@ -540,6 +578,11 @@ rman_logfile=${folder_log}/rman_archivelog_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 (
+  log_title "archive backup"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
 ) > ${rman_stdout}
 
@@ -559,6 +602,11 @@ rman_logfile=${folder_log}/rman_daily_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 (
+  log_title "daily backup"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
 ) > ${rman_stdout}
 
@@ -578,6 +626,11 @@ rman_logfile=${folder_log}/rman_weekly_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 (
+  log_title "weekly backup"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
 ) > ${rman_stdout}
 
@@ -598,6 +651,11 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 
 
 (
+  log_title "tidy"
+  log_info "dbsid=$dbsid"
+  log_info "rman_script=${rman_script}"
+  log_info "rman_logfile=${rman_logfile}"
+  log_info "rman_stdout=${rman_stdout}"
   # Remove expired backups, archivelogs and control file logging
   rman_run ${dbsid} ${rman_script} ${rman_logfile}
   # Remove expired log files
@@ -624,9 +682,10 @@ rman_stdout=${folder_log}/orb_session_$(get_date_string).log
 typeset g_application_title="Oracle RMAN Backup wrapper script"
 
 PROG_NAME=${0}
+PATH=$PATH:/usr/local/bin                                                                             # crontab execution needs this to put oraenv on search path
 
+#typeset rman_disk_folder=/mnt/hostdl/orabackup                                                        # Cloud NFS mount point folder
 typeset rman_disk_folder=/mnt/orabackup                                                               # Cloud NFS mount point folder
-typeset rman_disk_folder=/mnt/hostdl/orabackup                                                        # Cloud NFS mount point folder
 
 typeset folder_top=~/orb                                                                              # To install orb to a diferent folder, change this variable
 
