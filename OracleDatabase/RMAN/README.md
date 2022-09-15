@@ -1,10 +1,13 @@
+---
 <img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="100%">
+title: Title of the Document
+author: Dave Knot
+description: Description for the document
+no-loc: [Title, Document]
 
-# Oracle: Cloud, Linux, and Database
+---
 
-&nbsp;
-
-# Oracle Database Backup wrapper script
+# ORB (Oracle RMAN Backup)
 
 Bash wrapper script that sits between Linux CRON and RMAN to execute backups, weekly tidy, with a 30 day backup retention window.  Backups are configured to  write to Cloud storage mounted on the host (default script variable rman_disk_folder=/mnt/orabackup).
 
@@ -18,66 +21,241 @@ Bash wrapper script that sits between Linux CRON and RMAN to execute backups, we
    * Tidy operations to remove log files over 30 days old
    * Backup retension period is 30 days
    * Backup destination modified by adjusting global variable: rman_disk_folder
-   
+
 <img src="sample_output/sample.png" alt="Sample Output" title="orb help and installed files" />
 
 
-# Instructions
+# Single Instance host instructions
 
 ## Download orb.sh
-    * wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh
-    * curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh > orb.sh
+  * wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh
+  * curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh > orb.sh
 
-## Install on the database server
+## Mount NAS to /mnt/orabackup
 
-The default configurable location (default ~/orb) is modified by editing orb.sh and modifying
+  Create your NAS partition, and mount onto the database server, and grant the database owner (oracle) read/write permission.
 
-```
-typeset folder_top=~/orb
- to
-typeset folder_top=<your-preferred-folder>/orb
-```
+  > [!NOTE]
+  > This is the default backup folder, you can use any folder path that meets your requirements, but remember to update the variable reference in the script configuration section.
 
-Then run the installation
+## Install ORB
 
-```
-orb.sh install
-```
+  Execute the orb installation task to create the installation folders, activity files, and copy the orb.sh script into the folder structure.
 
-## Configure the backup for a single database
+    orb.sh install
 
-Configure the database (instance MySID) to be backed up.  Connects to the database using RMAN and executes a number of "CONFIGURE" commands.
+  The default configurable location (default ~/orb) is modified by editing orb.sh and modify folder_top to your preference (typeset folder_top=~/orb).
 
-```
-  ~/orb/bin/orb.sh config MySID
-```
+## Configure a database backup
 
-Config suggests a set of crontab entries for the database backup.
+  Orb connects to the database using RMAN, configures RMAN, and create the database specific folder under /mnt/orabackup
 
-```
-  @hourly           /home/oracle/orb/bin archive MySID     # Backup the archivelogs every hour
-  15 01 * * mon-sat /home/oracle/orb/bin daily   MySID     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
-  15 01 * * sun     /home/oracle/orb/bin weekly  MySID     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
-  30 01 1 * sun     /home/oracle/orb/bin tidy    MySID     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
-```
+    ~/orb/bin/orb.sh config MySID
 
-# Finally, "orb.sh help" is a good place to start, but a few hints follow...
+Also, config suggests a set of crontab entries for the database backup.
+
+    @hourly           /home/oracle/orb/bin/orb.sh archive MySID     # Backup the archivelogs every hour
+    15 01 * * mon-sat /home/oracle/orb/bin/orb.sh daily   MySID     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
+    15 01 * * sun     /home/oracle/orb/bin/orb.sh weekly  MySID     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
+    30 01 1 * sun     /home/oracle/orb/bin/orb.sh tidy    MySID     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
+
+  > [!NOTE]
+  > Add crontab entries to automated the backup schedule.
+
+## Test Test Test
+
+  Manually run each of the backup tasks in this order
+
+  1. weekly
+  1. daily
+  1. archive
+  1. tidy
+
+  The review the generated sets of file
+
+  1. Scan the database backup files:
+
+    find /mnt/orabackup
+
+  2. Scan the log files for interesting messages
+
+    grep FAIL: ~/orb/log/*
+    grep WARN: ~/orb/log/*
+    grep INFO: ~/orb/log/*
+
+# Data Guard primary and standby host instructions
+
+  The Data Guard host installations are broadly similar to the single installation setup, with he differences being reasonably simple to manage.  The installation pattern we follow should make sense if you have managed a Data Guard site before:
+
+  1. On the primary host
+      1. Mount NAS disk to /mnt/orabackup
+      1. Install Orb
+      1. Configure the database backup
+      1. Schedule the Orb weekly, daily, archive, and tidy actions with CRON (or your enterprise scheduler)
+  1. Switchover to standby
+      1. Perform a Data Guard switchover of the primary role to the standby database
+  1. On the standby host
+      1. Mount NAS disk to /mnt/orabackup (This should be the same NAS primary host partition shared with standby)
+      1. Install Orb
+      1. Configure the database backup
+      1. Schedule the Orb weekly, daily, archive, and tidy actions with CRON (or your enterprise scheduler)
+  1. Switchover to primary
+      1. Perform a Data Guard switchover of the primary role to the primary database
+  1. Finally, run the backup tests
+      1. weekly
+      1. daily
+      1. archive
+      1. tidy
+
+  > [!NOTE]
+  > Orb does not backup the standby database, only the primary database will be backed up.
+
+  > Do schedule Orb to run the backup tasks on the standby host.
+  > Orb will detect the standby database does not have the primary role, and will write a log message, and exit
+
+  > When the primary role is switched over to the standby database, the scheduled Orb backups will detect
+  > the the database is now the primary, and will perform the required backups.
+
+
+## Download orb.sh
+
+  * wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh
+  * curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh > orb.sh
+
+## On the primary host
+
+### Mount NAS to /mnt/orabackup
+
+  Create your NAS partition, and mount onto the database server, and grant the database owner (oracle) read/write permission.
+
+  > [!NOTE]
+  > This is the default backup folder, you can use any folder path that meets your requirements, but remember to update the variable reference in the script configuration section.
+
+  > This is the same NAS partition that is mounted to the primary database server.
+
+### Install ORB
+
+  Execute the orb installation task to create the installation folders, activity files, and copy the orb.sh script into the folder structure.
+
+    orb.sh install
+
+  The default configurable location (default ~/orb) is modified by editing orb.sh and modify folder_top to your preference (typeset folder_top=~/orb).
+
+### Configure the database backup
+
+  Orb connects to the database using RMAN, configures RMAN, and create the database specific folder under /mnt/orabackup
+
+    ~/orb/bin/orb.sh config MySID
+
+Also, config suggests a set of crontab entries for the database backup.
+
+    @hourly           /home/oracle/orb/bin/orb.sh archive MySID     # Backup the archivelogs every hour
+    15 01 * * mon-sat /home/oracle/orb/bin/orb.sh daily   MySID     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
+    15 01 * * sun     /home/oracle/orb/bin/orb.sh weekly  MySID     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
+    30 01 1 * sun     /home/oracle/orb/bin/orb.sh tidy    MySID     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
+
+  > [!NOTE]
+  > Add crontab entries to automated the backup schedule.
+
+## Switchover to standby
+
+  Switchover using your preferred method which should be Data Guard Manager (dgmgrl) but SQL*Plus is if you like to make your life unnecesarily complicated.
+
+    dgmgrl
+      connect sys/spiffingly23Complex56Password@$tnsalias as sysdba
+      show configuration
+      switchover to standby-name;
+      show configuration
+
+  > [!NOTE]
+  > If you are on the spectrum, please rest assured, that my spiffingly23Complex56Password password only exists
+  > as a documentation artefact.  In the real world, my passwords are never this complex and never involve multi-factor authentication (joke haha).
+
+  > If you are NOT on the spectrum, these please skip this note (another joke).
+
+## On the standby host
+
+### Mount NAS to /mnt/orabackup
+
+  Create your NAS partition, and mount onto the database server, and grant the database owner (oracle) read/write permission.
+
+  > [!NOTE]
+  > This is the default backup folder, you can use any folder path that meets your requirements, but remember to update the variable reference in the script configuration section.
+
+  > Recall the previous notes regarding sharing the NAS partition between primary and standby
+
+### Install ORB
+
+  Execute the orb installation task to create the installation folders, activity files, and copy the orb.sh script into the folder structure.
+
+    orb.sh install
+
+  The default configurable location (default ~/orb) is modified by editing orb.sh and modify folder_top to your preference (typeset folder_top=~/orb).
+
+### Configure the database backup
+
+  Orb connects to the database using RMAN, configures RMAN, and create the database specific folder under /mnt/orabackup
+
+    ~/orb/bin/orb.sh config MySID
+
+Also, config suggests a set of crontab entries for the database backup.
+
+    @hourly           /home/oracle/orb/bin/orb.sh archive MySID     # Backup the archivelogs every hour
+    15 01 * * mon-sat /home/oracle/orb/bin/orb.sh daily   MySID     # Backup the database incremental level 1 and archivelog Monday-Saturday at 01:15
+    15 01 * * sun     /home/oracle/orb/bin/orb.sh weekly  MySID     # Backup the database incremental level 0 and archivelog on Sunday at 01:15
+    30 01 1 * sun     /home/oracle/orb/bin/orb.sh tidy    MySID     # Remove expired backups, archivelog, and orb backup logs weekly on Sunday at 01:30
+
+  > [!NOTE]
+  > Add crontab entries to automated the backup schedule.
+
+
+## Switchover to primary
+
+  Switchover using your preferred method which should be Data Guard Manager (dgmgrl) but SQL*Plus is if you like to make your life unnecesarily complicated.
+
+    dgmgrl
+      connect sys/spiffingly23Complex56Password@$tnsalias as sysdba
+      show configuration
+      switchover to primary-name;
+      show configuration
+
+  > [!NOTE]
+  > Please refer the the previous password security artefact notes.
+
+## Test Test Test
+
+  Manually run each of the backup tasks in this order
+
+  1. weekly
+  1. daily
+  1. archive
+  1. tidy
+
+  The review the generated sets of file
+
+  1. Scan the database backup files:
+
+    find /mnt/orabackup
+
+  2. Scan the log files for interesting messages
+
+    grep FAIL: ~/orb/log/*
+    grep WARN: ~/orb/log/*
+    grep INFO: ~/orb/log/*
+
+
+# And finally
+
+"orb.sh help" is a good place to start, but a few hints follow...
 
 | orb command           | Description                                    |
---- | --- | 
+| --- | --- |
 | orb.sh help           | Display help                                   |
-| orb.sh config   db21c | Configure the database db21c for backups        |
-| orb.sh archive  db21c | Backup the archivelogs for db21c               |
-| orb.sh daily    db21c | Daily backup (incremental level 1) for db21c   |
-| orb.sh weekly   db21c | Weekly backup (incremental level 0) for db21c  |
-| orb.sh tidy     db21c | Remove logs files over 30 days old             |
-| orb.sh review   db21c | List the backup summary for db21c              |
+| orb.sh config   MySID | Configure the database db21c for backups       |
+| orb.sh archive  MySID | Backup the archivelogs for db21c               |
+| orb.sh daily    MySID | Daily backup (incremental level 1) for db21c   |
+| orb.sh weekly   MySID | Weekly backup (incremental level 0) for db21c  |
+| orb.sh tidy     MySID | Remove logs files over 30 days old             |
+| orb.sh review   MySID | List the backup summary for db21c              |
 
-## List the installed files
-```
-   find ~/orb/log
-```
-## List the log files
-```
-   find ~/orb/log
-```
+---
