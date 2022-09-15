@@ -184,7 +184,7 @@ Also, config suggests a set of crontab entries for the database backup.
 
     orb.sh install
 
-  The default configurable location (default ~/orb) is modified by editing orb.sh and modify folder_top to your preference (typeset folder_top=~/orb).
+  The default configurable location (default \~/orb) is modified by editing orb.sh and modify folder_top to your preference (typeset folder_top=~/orb).
 
 ### Configure the database backup
 
