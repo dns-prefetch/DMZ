@@ -1,11 +1,5 @@
 ---
 <img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="100%">
-title: Title of the Document
-author: Dave Knot
-description: Description for the document
-no-loc: [Title, Document]
-
----
 
 # ORB (Oracle RMAN Backup)
 
