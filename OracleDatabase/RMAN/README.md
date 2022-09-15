@@ -5,16 +5,16 @@
 
 Bash wrapper script that sits between Linux CRON and RMAN to execute backups, weekly tidy, with a 30 day backup retention window.  Backups are configured to  write to Cloud storage mounted on the host (default script variable rman_disk_folder=/mnt/orabackup).
 
-* Use cases
-   * Oracle database single instance RMAN backups
-   * Oracle RAC database backups
-   * Oracle Data Guard database backups.  The script checks the DATABASE_ROLE=PRIMARY and exits if the database is a standby.
-   * Weekly backups (incremental level 0) plus archive log
-   * Daily backups (incremental level 1) plus archive log
-   * Archive log backups seperate from the weekly and daily backups
-   * Tidy operations to remove log files over 30 days old
-   * Backup retension period is 30 days
-   * Backup destination modified by adjusting global variable: rman_disk_folder
+  - Use cases
+    - Oracle database single instance RMAN backups
+    - Oracle RAC database backups
+    - Oracle Data Guard database backups.  The script checks the DATABASE_ROLE=PRIMARY and exits if the database is a standby.
+    - Weekly backups (incremental level 0) plus archive log
+    - Daily backups (incremental level 1) plus archive log
+    - Archive log backups seperate from the weekly and daily backups
+    - Tidy operations to remove log files over 30 days old
+    - Backup retension period is 30 days
+    - Backup destination modified by adjusting global variable: rman_disk_folder
 
 <img src="sample_output/sample.png" alt="Sample Output" title="orb help and installed files" />
 
@@ -82,24 +82,24 @@ Also, config suggests a set of crontab entries for the database backup.
   The Data Guard host installations are broadly similar to the single installation setup, with he differences being reasonably simple to manage.  The installation pattern we follow should make sense if you have managed a Data Guard site before:
 
   1. On the primary host
-      1. Mount NAS disk to /mnt/orabackup
-      1. Install Orb
-      1. Configure the database backup
-      1. Schedule the Orb weekly, daily, archive, and tidy actions with CRON (or your enterprise scheduler)
+     - Mount NAS disk to /mnt/orabackup
+     - Install Orb
+     - Configure the database backup
+     - Schedule the Orb weekly, daily, archive, and tidy actions with CRON (or your enterprise scheduler)
   1. Switchover to standby
-      1. Perform a Data Guard switchover of the primary role to the standby database
+     - Perform a Data Guard switchover of the primary role to the standby database
   1. On the standby host
-      1. Mount NAS disk to /mnt/orabackup (This should be the same NAS primary host partition shared with standby)
-      1. Install Orb
-      1. Configure the database backup
-      1. Schedule the Orb weekly, daily, archive, and tidy actions with CRON (or your enterprise scheduler)
+     - Mount NAS disk to /mnt/orabackup (This should be the same NAS primary host partition shared with standby)
+     - Install Orb
+     - Configure the database backup
+     - Schedule the Orb weekly, daily, archive, and tidy actions with CRON (or your enterprise scheduler)
   1. Switchover to primary
-      1. Perform a Data Guard switchover of the primary role to the primary database
+     - Perform a Data Guard switchover of the primary role to the primary database
   1. Finally, run the backup tests
-      1. weekly
-      1. daily
-      1. archive
-      1. tidy
+     - weekly
+     - daily
+     - archive
+     - tidy
 
   > [!NOTE]
   > Orb does not backup the standby database, only the primary database will be backed up.
