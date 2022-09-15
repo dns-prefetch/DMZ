@@ -125,7 +125,9 @@ Also, config suggests a set of crontab entries for the database backup.
   > [!NOTE]
   > This is the default backup folder, you can use any folder path that meets your requirements, but remember to update the variable reference in the script configuration section.
 
-  > This is the same NAS partition that is mounted to the primary database server.
+  > It is not necessary to mount the same NAS partition to primary and standby.
+
+  > Daily ORB incremental level 1 backups first crosscheck existing backup files and automatically perform an incremental level 0 if a full backup is not available.
 
 ### Install ORB
 
@@ -173,10 +175,12 @@ Also, config suggests a set of crontab entries for the database backup.
 
   Create your NAS partition, and mount onto the database server, and grant the database owner (oracle) read/write permission.
 
-  > [!NOTE]
+> [!NOTE]
   > This is the default backup folder, you can use any folder path that meets your requirements, but remember to update the variable reference in the script configuration section.
 
-  > Recall the previous notes regarding sharing the NAS partition between primary and standby
+  > It is not necessary to mount the same NAS partition to primary and standby.
+
+  > Daily ORB incremental level 1 backups first crosscheck existing backup files and automatically perform an incremental level 0 if a full backup is not available.
 
 ### Install ORB
 

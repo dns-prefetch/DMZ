@@ -16,6 +16,7 @@
 #                 14/09/2022 18:39:06 MH Update config - use db_name when creating backup folder path
 #                 14/09/2022 18:39:01 MH Update config - fixed example crontab syntax
 #                 14/09/2022 18:38:55 MH Update main - add oraenv to path for crontab execution
+#                 15/09/2022 12:12:00 MH Update install - add CROSSCHECK BACKUP; to rman_daily_script generator. This is a control step for cases where the weekly L0 backup is missing or unavailable
 #
 # ToDo
 #                 18/07/2022 12:26:08 MH extend to handle RAC
@@ -138,6 +139,7 @@ cat << END > ${rman_daily_script}
 
 run
 {
+CROSSCHECK BACKUP;
 SHOW ALL;
 BACKUP SECTION SIZE 100G AS BACKUPSET FILESPERSET = 15 INCREMENTAL LEVEL 1 CUMULATIVE DATABASE TAG 'DB_DAILY_L1';
 BACKUP FILESPERSET = 15 ARCHIVELOG ALL DELETE ALL INPUT TAG 'archivelog';
