@@ -93,11 +93,15 @@ function log_step {             # no-help-output
 }
 
 function log_title {             # no-help-output
-  a=$(printf '=%.0s' {1..10})
+  a0=$(printf ' %.0s' {1..30})
+  a1=$(printf ' %.0s' {1..10})
+  a2=$(printf ' %.0s' {1..10})
   b=$(echo $1 | tr "[:alnum:]" "-")
-  echo -e "\E[1;31;33m$a $b $a\E[m"
-  echo -e "\E[1;31;33m$a $1 $a\E[m"
-  echo -e "\E[1;31;33m$a $b $a\E[m"
+
+  echo ""
+  echo -e "$a0$a2\E[1;41;22m $1 \E[m"
+  echo -e "$a0\E[1;44;33m$a1 $b $a1\E[m"
+  echo ""
 }
 
 function log_debug {             # no-help-output
