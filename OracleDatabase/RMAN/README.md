@@ -65,7 +65,7 @@ Also, config suggests a set of crontab entries for the database backup.
   1. archive
   1. tidy
 
-  The review the generated sets of file
+  Then review the generated sets of files
 
   1. Scan the database backup files:
 
