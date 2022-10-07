@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Author:         Michael Hartley
-# Date:           15/07/2022 15:35:21
+# Version:        22.10.07
 # Synopsis:       Oracle RMAN Backup (orb) for Azure Files (This is a backup to disk installation)
 # Usage:
 #                 orb.sh install          Install orb, create folders, and files
@@ -9,18 +9,13 @@
 #                 orb.sh weekly dbsid     Run weekly level 0 backup for database
 #                 orb.sh daily dbsid      Run daily level 1 backup for database
 #                 orb.sh tidy dbsid       Remove expired backups, archivelogs, and log files
-#
-# Modifications:  18/07/2022 12:22:13 MH Added disk backup destination
-#                 14/09/2022 12:22:44 MH Update tidy - add missing log files to list
-#                 14/09/2022 15:37:25 MH Update rman_run - removed reference to log_syslog
-#                 14/09/2022 18:39:06 MH Update config - use db_name when creating backup folder path
-#                 14/09/2022 18:39:01 MH Update config - fixed example crontab syntax
-#                 14/09/2022 18:38:55 MH Update main - add oraenv to path for crontab execution
-#                 15/09/2022 12:12:00 MH Update install - add CROSSCHECK BACKUP; to rman_daily_script generator. This is a control step for cases where the weekly L0 backup is missing or unavailable
+#                 ** important (06/10/2022 13:36:17) **
+#                    Ensure backup and tidy schedule also execute on Data Guard standby databases
+#                      RMAN archivelog deletion policy requires archivelog applied to standby and 1x backup archivelog
+#                      archives on standby will be retained until backed up, therefore, backup essential
 #
 # ToDo
 #                 18/07/2022 12:26:08 MH extend to handle RAC
-#                 18/07/2022 12:26:08 MH extend to handle Data Guard physical standby
 #                 20/07/2022 14:56:09 MH Started added restore and recovery notes
 
 function help { # Help
@@ -142,7 +137,7 @@ run
 CROSSCHECK BACKUP;
 SHOW ALL;
 BACKUP SECTION SIZE 100G AS BACKUPSET FILESPERSET = 15 INCREMENTAL LEVEL 1 CUMULATIVE DATABASE TAG 'DB_DAILY_L1';
-BACKUP FILESPERSET = 15 ARCHIVELOG ALL DELETE ALL INPUT TAG 'archivelog';
+BACKUP FILESPERSET = 15 ARCHIVELOG ALL TAG 'archivelog';
 }
 END
 
@@ -153,7 +148,7 @@ cat << END > ${rman_archivelog_script}
 run
 {
 SHOW ALL;
-BACKUP FILESPERSET = 15 ARCHIVELOG ALL DELETE ALL INPUT TAG 'archivelog';
+BACKUP FILESPERSET = 15 ARCHIVELOG ALL TAG 'archivelog';
 }
 END
 
@@ -165,7 +160,7 @@ run
 {
 SHOW ALL;
 BACKUP SECTION SIZE 100G AS BACKUPSET FILESPERSET = 15 INCREMENTAL LEVEL 0 DATABASE TAG 'DB_WEEKLY_L0';
-BACKUP FILESPERSET = 15 ARCHIVELOG ALL DELETE ALL INPUT TAG 'ARCHIVELOG';
+BACKUP FILESPERSET = 15 ARCHIVELOG ALL TAG 'ARCHIVELOG';
 }
 END
 
@@ -191,8 +186,9 @@ cat << END > ${rman_config_script}
 #CONFIGURE ARCHIVELOG DELETION POLICY TO BACKED UP 1 TIMES TO DEVICE type SBT;
 #CONFIGURE CHANNEL DEVICE TYPE sbt FORMAT '%d_%I_%U' PARMS='ENV=( NB_ORA_SERV=TheNetbackServerIPorDNS, NB_ORA_POLICY=TheNetbackupPolicyName, NB_ORA_SCHED=TheNetbackupScheduleName, NB_ORA_CLIENT=TheNetbackupClient )';
 #CONFIGURE DEFAULT DEVICE TYPE TO SBT;
+#CONFIGURE ARCHIVELOG DELETION POLICY TO APPLIED ON ALL STANDBY;
 
-CONFIGURE ARCHIVELOG DELETION POLICY TO APPLIED ON ALL STANDBY;
+CONFIGURE ARCHIVELOG DELETION POLICY TO APPLIED ON ALL STANDBY BACKED UP 1 TIMES TO DEVICE TYPE DISK;
 CONFIGURE BACKUP OPTIMIZATION ON;
 CONFIGURE CHANNEL 1 DEVICE TYPE DISK FORMAT '${rman_disk_folder}/%d/%d_%T_%s_%U';
 CONFIGURE CHANNEL 2 DEVICE TYPE DISK FORMAT '${rman_disk_folder}/%d/%d_%T_%s_%U';
@@ -209,7 +205,7 @@ CONFIGURE DEVICE TYPE SBT PARALLELISM 4 BACKUP TYPE TO BACKUPSET;
 CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 30 DAYS;
 CONFIGURE RMAN OUTPUT TO KEEP FOR 31 DAYS;
 # Size the control file to purge backup logs after 31 days
-alter system set CONTROL_FILE_RECORD_KEEP_TIME=31;
+alter system set CONTROL_FILE_RECORD_KEEP_TIME=31 scope=both;
 # Low activity databases write an archive log every 5 minutes
 alter system set archive_lag_target=300 scope=both;
 END
@@ -225,7 +221,6 @@ END
 log_info "Creating the example backup restore notes"
 
 cat << END > ${rman_notes}
-function help_restore { # Help How to restore a CDB or PDB
 
 # These notes are RMAN restore and recovery notes
 # Check these notes before attempting to perform any restore or recovery operations
@@ -254,26 +249,42 @@ REPORT SCHEMA;
 CROSSCHECK COPY;
 CROSSCHECK BACKUP;
 
+###########################  Full CDB restore  ###########################
+
+# Restore CDB, first shutdown, then restore and mount the controlfile
+shutdown abort
+startup mount
+
+run
+{
+  RESTORE DATABASE;
+  RECOVER DATABASE;
+}
+
+###########################  Single PDB restore  ###########################
+
 # Backup and individual PDB
 BACKUP PLUGGABLE DATABASE p1;
 BACKUP PLUGGABLE DATABASE p1, p2;
 
-# Restore PDB to SCN
+# Point in time restore of PDB to SCN
 ALTER PLUGGABLE DATABASE p1 CLOSE;
 RUN
 {
 SET UNTIL SCN 3155002;
 RESTORE PLUGGABLE DATABASE p1 validate;
 }
+
 RUN
 {
 SET UNTIL SCN 3155002;
-RESTORE PLUGGABLE DATABASE p1 validate;
-RECOVER PLUGGABLE DATABASE p1 validate;
+RESTORE PLUGGABLE DATABASE p1;
+RECOVER PLUGGABLE DATABASE p1;
 }
+
 ALTER PLUGGABLE DATABASE p1 OPEN RESETLOGS;
 
-# Restore PDB to timestamp
+# Point in time restore of PDB to timestamp
 ALTER PLUGGABLE DATABASE p1 CLOSE;
 run
 {
@@ -283,7 +294,6 @@ run
 }
 ALTER PLUGGABLE DATABASE p1 OPEN RESETLOGS;
 
-}
 END
 
 log_info "orb is installed here: ${folder_top}"
@@ -445,8 +455,8 @@ fi
 # Check the database is primary (this works for single instance and Data Guard)
 is_database_primary ${db_sid}
 if [ $? -eq 1 ];then
-  log_fail "rman_run: Database is not primary"
-  exit
+  log_warn "rman_run: Database is Data Guard with standby_role, running anyway"
+  # exit
 fi
 
 log_info "Preparing to run the RMAN script: $rman_script"
@@ -508,6 +518,10 @@ END
 
 }
 
+function help_restore { # Help How to restore a CDB or PDB
+  log_info "Simple reminder to restore a single pluggable database see: ${folder_top}/rman-scripts/rman-notes.txt"
+}
+
 function review {                                                                                   # List Review the RMAN configuration
 
 # Check we have 1 input parameters
@@ -520,6 +534,8 @@ dbsid=$1
 rman_script=${rman_review_script}
 rman_logfile=${folder_log}/rman_review_$(get_date_string).log
 rman_stdout=${folder_log}/orb_session_$(get_date_string).log
+
+export NLS_DATE_FORMAT="yymmdd hh24:mi:ss"
 
 rman_run ${dbsid} ${rman_script} ${rman_logfile}
 

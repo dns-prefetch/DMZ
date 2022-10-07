@@ -8,7 +8,7 @@ Bash wrapper script that sits between Linux CRON and RMAN to execute backups, we
   - Use cases
     - Oracle database single instance RMAN backups
     - Oracle RAC database backups
-    - Oracle Data Guard database backups.  The script checks the DATABASE_ROLE=PRIMARY and exits if the database is a standby.
+    - Oracle Data Guard database backups.  (The archive deletion policy requires backup of the standby databases.)
     - Weekly backups (incremental level 0) plus archive log
     - Daily backups (incremental level 1) plus archive log
     - Archive log backups seperate from the weekly and daily backups
@@ -102,13 +102,9 @@ Also, config suggests a set of crontab entries for the database backup.
      - tidy
 
   > [!NOTE]
-  > Orb does not backup the standby database, only the primary database will be backed up.
-
-  > Do schedule Orb to run the backup tasks on the standby host.
-  > Orb will detect the standby database does not have the primary role, and will write a log message, and exit
-
-  > When the primary role is switched over to the standby database, the scheduled Orb backups will detect
-  > the the database is now the primary, and will perform the required backups.
+  > Data Guard: **Orb requires that you backup the standby.**
+  >   This is because the RMAN "CONFIGURE ARCHIVELOG DELETION POLICY" ensures archivelogs are applied ALL standbys and backed up on the primary.
+  >   You are free to modify the "CONFIGURE ARCHIVELOG DELETION POLICY" to suite you requirements
 
 
 ## Download orb.sh
@@ -164,10 +160,8 @@ Also, config suggests a set of crontab entries for the database backup.
       show configuration
 
   > [!NOTE]
-  > If you are on the spectrum, please rest assured, that my spiffingly23Complex56Password password only exists
-  > as a documentation artefact.  In the real world, my passwords are never this complex and never involve multi-factor authentication (joke haha).
-
-  > If you are NOT on the spectrum, these please skip this note (another joke).
+  > The spiffingly23Complex56Password password only exists as a documentation artefact.
+  > In the real world, my passwords are never this complex and never involve multi-factor authentication (joke haha).
 
 ## On the standby host
 
