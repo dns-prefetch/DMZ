@@ -4,16 +4,15 @@
 
 Cybersecurity Architect
 
-ISC2 Certified Information Systems Security Professional (CISSP)
-ISC2 Certified Cloud Security Professional (CCSP)
-Comptia Advanced Security Practitioner (CASP+)
-Comptia Security+
-
-Oracle Cloud Infrastructure
-Certified Architect Professional
-Certified Security Professional
-Certified DevOps Professional
-Certified Generative AI Professional
+* ISC2 Certified Information Systems Security Professional (CISSP)
+- ISC2 Certified Cloud Security Professional (CCSP)
+- Comptia Advanced Security Practitioner (CASP+)
+- Comptia Security+
+- Oracle Cloud Infrastructure
+- Certified Architect Professional
+- Certified Security Professional
+- Certified DevOps Professional
+- Certified Generative AI Professional
 
 &nbsp;
 
