@@ -1,10 +1,11 @@
-<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="100%">
+<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="20%">
 
 # Cybersecurity Architect
 
 ## ISC2 exam validations
 - Certified Information Systems Security Professional (CISSP)
 - ISC2 Certified Cloud Security Professional (CCSP)
+
 ## Comptia exam validations
 - Comptia Advanced Security Practitioner (CASP+)
 - Comptia Security+
@@ -20,5 +21,4 @@
 -  Certified Oracle DBA professional (11g)
 
 &nbsp;
-
 
