@@ -1,4 +1,5 @@
-<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="20%">
+---
+<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
 
 # Cybersecurity Architect
 
@@ -22,3 +23,4 @@
 
 &nbsp;
 
+---
