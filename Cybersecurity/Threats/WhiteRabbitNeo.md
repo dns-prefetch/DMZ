@@ -3,7 +3,7 @@
 
 <div style="text-align:right"><img src="../images/WhiteRabbitNeo.png" height="10%"></div>
 
-### Published 02/11/2024 10:54:27; Revised: Never
+##### Published 02/11/2024 10:54:27; Revised: Never
 
 # AI-Driven Cybersecurity Co-Pilot: WhiteRabbitNeo
 
