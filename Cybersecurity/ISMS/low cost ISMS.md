@@ -1,6 +1,8 @@
 ---
 <img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
 
+##### Published 02/11/2024 10:54:27; Revised: Never
+
 # Information Security Management System (ISMS)
 
 <img src="../images/ISMS-Intro.svg">

@@ -9,6 +9,8 @@ In this blog, I’ll be breaking down what really happens behind the scenes in the
 
 Expect practical tips, real-world case studies, and a few war stories from the field that show just how fast cybersecurity moves and why it’s so essential today.
 
-DMZ is Oracle focused; primarily Oracle OCI tenancy, Oracle databases, and Oracle Linux.
+DMZ is Oracle focused.  Mainly Oracle Cloud tenancy, Oracle databases, and Oracle Linux.
+
+It's a big topic, lets get started.
 
 ---
