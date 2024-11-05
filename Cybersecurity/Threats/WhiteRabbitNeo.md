@@ -3,6 +3,8 @@
 
 <div style="text-align:right"><img src="../images/WhiteRabbitNeo.png" height="10%"></div>
 
+### Published 02/11/2024 10:54:27; Revised: Never
+
 # AI-Driven Cybersecurity Co-Pilot: WhiteRabbitNeo
 
 WhiteRabbitNeo is like a hacker’s Swiss Army knife, designed to streamline both offensive and defensive security tasks using AI. It’s basically an open-source AI model built for pentesting (offensive security) and defense, and it’s catching a lot of attention because of how much it can do. Unlike most AIs, which have a bunch of filters that limit “controversial” responses, WhiteRabbitNeo is uncensored—meaning it can generate code to simulate attacks, test Wi-Fi networks, and even suggest remediation steps if it finds vulnerabilities.
