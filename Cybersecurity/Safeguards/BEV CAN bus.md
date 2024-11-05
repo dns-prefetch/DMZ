@@ -36,4 +36,5 @@ As vehicles become more connected and autonomous, the security of the CAN bus wi
 ### Conclusion
 
 CAN bus offers several inherent security features, but is not immune to threats posed by modern cyberattacks. As vehicles grow more complex and interdependent on digital communication, it is imperative to prioritize security in the design and implementation of automotive networks. By enhancing existing security measures and adopting new technologies, the automotive industry can protect vehicles and their occupants from potential risks associated with cyber vulnerabilities.
+
 ---
