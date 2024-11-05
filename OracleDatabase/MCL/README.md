@@ -3,8 +3,6 @@
 
 # Oracle: Cloud, Linux, and Database
 
-&nbsp;
-
 ![Employee data](sample_output/sample.png?raw=true "Employee Data title")
 
 # Migration Check List

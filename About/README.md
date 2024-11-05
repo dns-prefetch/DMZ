@@ -21,6 +21,4 @@
 -  Certified Oracle DBA professional (10g)
 -  Certified Oracle DBA professional (11g)
 
-&nbsp;
-
 ---

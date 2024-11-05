@@ -50,6 +50,5 @@ At stage 1:
 
 <img src="images/ISMS-process.svg">
 
-&nbsp;
 
 ---
