@@ -112,6 +112,13 @@ Also, config suggests a set of crontab entries for the database backup.
   * wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh
   * curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/RMAN/orb.sh > orb.sh
 
+Example to download a raw script file directly using wget or curl
+
+```
+wget https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/MCL/mcl.sql
+curl https://raw.githubusercontent.com/dns-prefetch/DMZ/main/OracleDatabase/MCL/mcl.sql > mcl.sql
+```
+
 ## On the primary host
 
 ### Mount NAS to /mnt/orabackup
