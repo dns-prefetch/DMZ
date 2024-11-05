@@ -3,6 +3,9 @@
 
 <div style="text-align:right"><img src="../images/WhiteRabbitNeo.png" height="10%"></div>
 
+<img src="../images/ISMS-Intro.svg">
+<img src="../images/WhiteRabbitNeo.png" height="10%">
+
 Published: 02/11/2024 10:38:56; Updated: Never
 
 # AI-Driven Cybersecurity Co-Pilot: WhiteRabbitNeo
