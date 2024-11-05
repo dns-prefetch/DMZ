@@ -1,6 +1,9 @@
 ---
 <img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
 
+<img src="images/Safeguards.svg" height="10%">
+
+
 # 5 thoughts for this year
 
 1. **“There are two types of organisations: those who have been hacked, and those who don’t know they’ve been hacked yet.”** — often attributed to former Cisco CEO John Chambers.
