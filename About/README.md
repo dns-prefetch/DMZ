@@ -5,7 +5,7 @@
 
 ## About me
 - Dave Knot
-- My current employer is [Fujitsu UK](https://duckduckgo.com).https://www.fujitsu.com/uk/about/local/)
+- My current employer is [Fujitsu UK](https://www.fujitsu.com/uk/about/local/)
 - Proud to be a 2024 FDE nominee
 
 ## ISC2 exam validations
