@@ -3,13 +3,19 @@
 
 ##### Published 14/11/2024 17:18:06; Revised: None
 
-# How Oracle Data Safe access a target Oracle database unified_audit_trail
+# How Oracle Data Safe accesses the UNIFIED_AUDIT_TRAIL
 
 <img src="../images/oracle-data-safe.svg">
 
 Oracle **Data Safe** is a security and auditing service that helps organizations monitor, assess, and protect their Oracle Databases. It can read and analyze various database logs, including the **Unified Audit Trail** (`UNIFIED_AUDIT_TRAIL`), to enhance security monitoring, track user activity, and provide insights into potential risks or compliance issues.
 
 ## The Data Safe Architecture
+
+The UNIFIED_AUDIT_TRAIL is a data dictionary view that captures audit policy events.  Some events are defined as part of the default configuration, but for protective monitoring perspective, your security team should be defining a fine grained event capture policy. The unified audit trail resides in a read-only table in the AUDSYS schema.
+
+If we assume your security team have defined the Oracle database auditing policy for your organisation, the policy is deployed to existing databases and will be deployed to future databases, the next important consideration is how the audit events, currently locked inside the Oracle database UNIFIED_AUDIT_TRAIL table can be loaded into a data analytics solutions or a SIEM.
+
+Another consideration, sometimes ignored, which can lead ultimately to an oversized AUDSYS schema tablespace, is the data retention cycle of the audit records.
 
 The **Data Safe** service operates within a separate Oracle services tenancy, distinct from your own tenancy. To authenticate and authorize connections between the Data Safe service and your individual databases, a target database user account and password are required. Additionally, network routes and firewall rules must be configured to enable the necessary network traffic.
 
@@ -18,6 +24,8 @@ Data Safe connects to target databases using SQL\*Net. For enhanced security, Or
 Since Data Safe uses SQL\*Net to connect to target databases, it supports a wide range of distribution channels, including **Oracle FastConnect**, **Azure ExpressRoute**, **AWS Direct Connect**, and **Google Cloud Interconnect (GCS)**. While a Libreswan VPN tunnel across the internet may be an option for development or proof-of-concept environments, it is not recommended for production use. Configuring a VPN between Oracle Cloud and your customer premises equipment (CPE) introduces additional complexity and may introduce security risks, even with in-flight encryption. Furthermore, for SQL\*Net connections to a target database, the database must be accessible via a public endpoint on the internet, which is generally an impractical use case.
 
 In practice, the optimal configuration for Data Safe involves using a direct **SQL\*Net** connection to the target database within Oracle Cloud, secured via an **mTLS/NNE** tunnel. This ensures that the connection never traverses the internet, providing a more secure and efficient setup. This should be the preferred approach for all direct SQL\*Net connections.
+
+**Data Safe** assists in defining and enforcing audit policies for each target database, while also managing the data retention lifecycle for the **UNIFIED_AUDIT_TRAIL** table. Effective retention management is crucial, as high-traffic databases can generate a large volume of audit records that eventually need to be purged. A standard SQL `DELETE` statement may not be efficient enough to keep up with the removal of these records, so implementing a table partitioning strategy is recommended to improve performance and streamline the retention process.
 
 
 ### How Oracle Data Safe Connects to Oracle Database to Read the `UNIFIED_AUDIT_TRAIL`
