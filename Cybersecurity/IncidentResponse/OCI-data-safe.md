@@ -100,7 +100,7 @@ Once connected, Oracle Data Safe can help you review the unified audit logs. For
 
 ### 3. **Technical Workflow for Reading the Unified Audit Trail**
 
-Here’s an overview of the technical flow:
+Overview of the technical flow:
 
 1. **Database Setup**:
    - Ensure Unified Auditing is enabled in the Oracle Database.
