@@ -25,7 +25,7 @@ Since Data Safe uses SQL\*Net to connect to target databases, it supports a wide
 
 In practice, the optimal configuration for Data Safe involves using a direct **SQL\*Net** connection to the target database within Oracle Cloud, secured via an **mTLS/NNE** tunnel. This ensures that the connection never traverses the internet, providing a more secure and efficient setup. This should be the preferred approach for all direct SQL\*Net connections.
 
-**Data Safe** assists in defining and enforcing audit policies for each target database, while also managing the data retention lifecycle for the **UNIFIED_AUDIT_TRAIL** table. Effective retention management is crucial, as high-traffic databases can generate a large volume of audit records that eventually need to be purged. A standard SQL DELETE statement may not be efficient enough to keep up with the removal of these records, so implementing a table partitioning strategy is recommended to improve performance and streamline the retention process.
+Oracle **Data Safe** assists in defining and enforcing audit policies for each target database, while also managing the data retention lifecycle for the **UNIFIED_AUDIT_TRAIL** table. Effective retention management is crucial, as high-traffic databases can generate a large volume of audit records that eventually need to be purged. A standard SQL DELETE statement may not be efficient enough to keep up with the removal of these records, so implementing a table partitioning strategy is recommended to improve performance and streamline the retention process.
 
 
 ### How Oracle Data Safe Connects to Oracle Database to Read the `UNIFIED_AUDIT_TRAIL`
