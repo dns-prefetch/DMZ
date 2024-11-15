@@ -3,7 +3,7 @@
 
 ##### Published 14/11/2024 17:18:06; Revised: None
 
-# How Oracle database unified_audit_trail ingress to OCI Data Safe works
+# How Oracle Data Safe access a target Oracle database unified_audit_trail
 
 <img src="../images/oracle-data-safe.svg">
 
@@ -11,11 +11,14 @@ Oracle **Data Safe** is a security and auditing service that helps organizations
 
 ## The Data Safe Architecture
 
-The Data Safe service is contained with an Oracle services tenancy, entirely separate from your tenancy.  Authentication and Authorization from the Data Safe service to your individual databases requires a target database user account/password, then network routes and firewall rules to allow network traffic to be established.  Data Safe connects to the target databases over SQL*Net and the recommendation is you configure Native Network Encryption (NNE) or Transport Layer Security (TLS) which Oracle call TCPS.  TCPS with mutual authentication (mTLS), which involves X.509 certificates installed with Data Safe and each target database which is not a simple endeavor in the Oracle ecosystem, unless you are using the Oracle Autonomous database which provides mTLS connection configuration and the X.509 certificates from the OCI dashboard.  Otherwise, managing certificates for every database in your environment will require either a busy team effort and a locally managed Certificate Authority that you manage, or a 3rd party vendor solution like Venafi.
+The **Data Safe** service operates within a separate Oracle services tenancy, distinct from your own tenancy. To authenticate and authorize connections between the Data Safe service and your individual databases, a target database user account and password are required. Additionally, network routes and firewall rules must be configured to enable the necessary network traffic.
 
-As the Data Safe connectively to the target database is SQL*Net, we can route via the full range of distribution channels such as Oracle FastConnect, Azure ExpressRoute, AWS Direct Connect, and the Google GCS connectors.  A Libreswan VPN connection tunnel across the internet, is only recommended for low cost development or proof of concept environments because you configured the VPN endpoints yourself, the first in Oracle Cloud, and the second on your customer premises equiment (CPE).  However, the VPN bridge will be safer than using SQL*Net across the internet, even though you have in-flight encryption, just keep in mind that for a SQL*Net connection to your target database, your database must support a public endpoint accessible from the internet, but this is a crazy use case, you will not use this use case.
+Data Safe connects to target databases using SQL\*Net. For enhanced security, Oracle recommends configuring Native Network Encryption (NNE) or Transport Layer Security (TLS), which Oracle refers to as **TCPS**. Implementing TCPS with mutual authentication (mTLS) involves installing X.509 certificates on both Data Safe and each target database. This process is complex within the Oracle ecosystem unless you're using Oracle Autonomous Database, which simplifies mTLS configuration and certificate management through the OCI dashboard. For non-Autonomous databases, managing certificates for each database typically requires significant effort, including either a dedicated Certificate Authority or a third-party vendor solution like **Venafi**.
 
-In practice a direct Data Safe SQL*Net connection to a target database through an mTLS/NNE tunnel will be entirely within Oracle Cloud and will never route over the internent.  It is important that this is the only use case for direct SQL*Net connections.
+Since Data Safe uses SQL\*Net to connect to target databases, it supports a wide range of distribution channels, including **Oracle FastConnect**, **Azure ExpressRoute**, **AWS Direct Connect**, and **Google Cloud Interconnect (GCS)**. While a Libreswan VPN tunnel across the internet may be an option for development or proof-of-concept environments, it is not recommended for production use. Configuring a VPN between Oracle Cloud and your customer premises equipment (CPE) introduces additional complexity and may introduce security risks, even with in-flight encryption. Furthermore, for SQL\*Net connections to a target database, the database must be accessible via a public endpoint on the internet, which is generally an impractical use case.
+
+In practice, the optimal configuration for Data Safe involves using a direct **SQL\*Net** connection to the target database within Oracle Cloud, secured via an **mTLS/NNE** tunnel. This ensures that the connection never traverses the internet, providing a more secure and efficient setup. This should be the preferred approach for all direct SQL\*Net connections.
+
 
 ### How Oracle Data Safe Connects to Oracle Database to Read the `UNIFIED_AUDIT_TRAIL`
 
