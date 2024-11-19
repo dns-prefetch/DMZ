@@ -2,7 +2,7 @@
 ---
 <img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
 
-##### Published 19/11/2024 10:37:55; Revised: Not Yet.
+##### Published 19/11/2024 10:37:55; Revised: Never
 
 # Selling InfoSec
 
