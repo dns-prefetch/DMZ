@@ -4,7 +4,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
 		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.07774in" height="3.7112in"
 		viewBox="0 0 581.597 267.207" xml:space="preserve" color-interpolation-filters="sRGB" class="st20">
-	<title>DevSecOps</title>
+	<title>ISMS</title>
 	<v:documentProperties v:langID="2057" v:metric="true" v:viewMarkup="false"/>
 
 	<style type="text/css">
@@ -21,7 +21,7 @@
 		.st10 {fill:#923931;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st11 {fill:#92d050;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st12 {fill:#ea700d;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
-		.st13 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st13 {stroke:#00b050;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
 		.st14 {fill:#ff0000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st15 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st16 {fill:#c05046;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
