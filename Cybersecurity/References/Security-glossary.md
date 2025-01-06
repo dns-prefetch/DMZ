@@ -7,6 +7,7 @@
 
 Acronym|Description|Comment|
 |---   |---        |---    |
+|2FA|Two-Factor Authentication|Authentication in which authentication factors from two different factor categories are used—for example, a password (knowledge factor) and an iris scan (characteristic factor).|
 |AAR|After Action Report||
 
 ---
