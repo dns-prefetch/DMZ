@@ -151,7 +151,7 @@ Security tools are software or hardware solutions designed to protect computer s
 |RudderStack Cloud Extract|Business|ESP/IPaaS|Enterprise Service Bus / Integration Platform as a Service||
 |SafeGuard|Business|PAM|Privileged access management|https://www.oneidentity.com/one-identity-safeguard/|
 |SailPoint|Security Operations|IAM|Customer Identity and Access Management|https://www.sailpoint.com/|
-|SAINT|Security|Live collection|(Security Administrator’s Integrated Network Tool) --> scanning computer networks for security vulnerabilities, and exploiting found vulnerabilities||
+|SAINT|Security|Live collection|(Security Administrator¦s Integrated Network Tool) --> scanning computer networks for security vulnerabilities, and exploiting found vulnerabilities||
 |sha256sum|Security|Hashing tools|Generate hash checksum (called a digest)|sha256sum grep|
 |Skyvia|Business|ESP/IPaaS|Enterprise Service Bus / Integration Platform as a Service||
 |Slacker|CISSP|Slacker|Windows tool to overwrite slack space on files (unused portions of allocated disk segments)||
