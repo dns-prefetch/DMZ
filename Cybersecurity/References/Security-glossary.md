@@ -5,5 +5,8 @@
 
 # Security Glossary of terms
 
+Acronym|Description|Comment|
+|---   |---        |---    |
+|AAR|After Action Report||
 
 ---
