@@ -7,7 +7,6 @@
 
 Security tools are software or hardware solutions designed to protect computer systems, networks, data, and digital infrastructure from threats such as cyberattacks, data breaches, malware, and unauthorized access. These tools play a critical role in safeguarding sensitive information, ensuring privacy, and maintaining the integrity and availability of IT environments. Security tools can be categorized based on the types of threats they address and the layers of defense they provide.
 
-
 |Tool Name|Description|
 |---|---|
 |AIDE|Host based intrusion detection|
@@ -152,7 +151,7 @@ Security tools are software or hardware solutions designed to protect computer s
 |RudderStack Cloud Extract|Enterprise Service Bus / Integration Platform as a Service|
 |SafeGuard|Privileged access management|
 |SailPoint|Customer Identity and Access Management|
-|SAINT|(Security AdministratorÆs Integrated Network Tool) --> scanning computer networks for security vulnerabilities, and exploiting found vulnerabilities|
+|SAINT|(Security Administrator¦s Integrated Network Tool) --> scanning computer networks for security vulnerabilities, and exploiting found vulnerabilities|
 |sha256sum|Generate hash checksum (called a digest)|
 |Skyvia|Enterprise Service Bus / Integration Platform as a Service|
 |Slacker|Windows tool to overwrite slack space on files (unused portions of allocated disk segments)|

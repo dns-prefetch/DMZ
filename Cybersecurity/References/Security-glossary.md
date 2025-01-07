@@ -5,6 +5,8 @@
 
 # Security Glossary of terms
 
+Big list of security acronymns and terms.
+
 
 |Acronym|Description|
 |---|---|
@@ -111,7 +113,7 @@
 |blob storage|A storage model that uses three components: a storage account, a container, and a blob.|
 |block storage|A storage model in which data is stored in pieces called blocks and as separate entities. Each block is given a unique identifier, which allows the system to select a block of data wherever it is most convenient.|
 |blockchain|A continuously growing list of records, called blocks, that are linked and secured using cryptography.|
-|Bluejacking |An attack in which an unsolicited message is sent to a Bluetooth-enabled device, often for the purpose of adding a business card to the victimÆs contact list.|
+|Bluejacking |An attack in which an unsolicited message is sent to a Bluetooth-enabled device, often for the purpose of adding a business card to the victim¦s contact list.|
 |Bluesnarfing |An attack that involves unauthorized access to a device using a Bluetooth connection.|
 |bootstrapping |The process of bringing an operating system to life; it occurs when the bootstrap code locates and loads the operating system files.|
 |BOSS|Business Operation Support Services|
@@ -200,8 +202,8 @@
 |cn|Common Name (CN)|
 |COBIT|Control Objectives for Information and Related Technologies|
 |code signing |The process of digitally signing executables and scripts so that the user installing the code can be assured that it comes from the verified author.|
-|cognitive password|A password that is a piece of information that can be used to verify an individualÆs identity. The user provides this information to the system by answering a series of questions based on her life, such as favorite color, petÆs name, motherÆs maiden name, and so on.|
-|combination password|A password, also called a composition password, that uses a mix of dictionary wordsùusually two that are unrelated.|
+|cognitive password|A password that is a piece of information that can be used to verify an individual¦s identity. The user provides this information to the system by answering a series of questions based on her life, such as favorite color, pet¦s name, mother¦s maiden name, and so on.|
+|combination password|A password, also called a composition password, that uses a mix of dictionary words·usually two that are unrelated.|
 |command injection |An attempt to execute an operating system command.|
 |commodity malware |Malware that is widely available either for purchase or as a free download.|
 |communications analysis |The process of analyzing communication over a network by capturing all or part of the communication and searching for particular types of activity.|
@@ -212,7 +214,7 @@
 |confidentiality |Assurance that data is protected from unauthorized access.|
 |configuration identification |The process of breaking down an operation into individual configuration items (CIs).|
 |conntrack|A set of free software tools for GNU/Linux that allows system administrators to interact, from user space, with the in-kernel Connection Tracking.|
-|containerization |Server virtualization in which the kernel allows for multiple isolated user space instances. The instances are known as containers, virtual private servers, or virtual environments. Also a feature of most mobile device management (MDM) software that creates an encrypted ôcontainerö to hold and quarantine corporate data separately from that of the users.|
+|containerization |Server virtualization in which the kernel allows for multiple isolated user space instances. The instances are known as containers, virtual private servers, or virtual environments. Also a feature of most mobile device management (MDM) software that creates an encrypted (container÷ to hold and quarantine corporate data separately from that of the users.|
 |container|A virtualization technique in which the kernel allows for multiple isolated user space instances. The instances are known as containers, virtual private servers, or virtual environments.|
 |containment |The process of performing countermeasures to stop a data breach in its tracks.|
 |content analysis |The process of analyzing the contents of a drive and giving a report detailing the types of data, by percentage, or analyzing the content of software, particularly malware, to determine the purpose for which the software was created.|
@@ -236,8 +238,8 @@
 |CRL|Certificate Revocation List|
 |crm|customer relationship management (CRM)|
 |CRM|Customer Resource Management|
-|cross-certification model|A federation model in which each organization certifies that every other organization is trusted. This trust is established when the organizations review each otherÆs standards.|
-|cross-certification |The process of establishing trust relationships between certification authorities (CAs) so that the participating CAs can rely on the other participantsÆ digital certificates and public keys.|
+|cross-certification model|A federation model in which each organization certifies that every other organization is trusted. This trust is established when the organizations review each other¦s standards.|
+|cross-certification |The process of establishing trust relationships between certification authorities (CAs) so that the participating CAs can rely on the other participants¦ digital certificates and public keys.|
 |cryptanalysis |The study of encryption algorithms with the intent of discovering how the algorithm may be attacked or compromised.|
 |crypto shredding|A method of making encrypted data permanently unavailable by deleting or overwriting the key used to decrypt it.|
 |Cryptographic bit splitting|See Bit Splitting|
@@ -301,7 +303,7 @@
 |DDoS|Distributed Denial of Service|
 |DDP|Dynamic Disk Pools|
 |de facto standard|A standard that is widely accepted but not formally adopted.|
-|deep fake |Synthetic media that impersonates a real personÆs appearance and speech.|
+|deep fake |Synthetic media that impersonates a real person¦s appearance and speech.|
 |deep learning|A form of machine learning that uses artificial neural networks and representational learning.|
 |deep packet inspection |The process used to identify data types that should not be on a network as well as data types that should not be leaving the network.|
 |deep web |Parts of the internet that can only be located and accessed via a direct URL or IP address.|
@@ -316,11 +318,11 @@
 |DFC|Device Fingerprint Challenge|
 |DHCP|Dynamic Host Configuration Protocol|
 |DHE|Diffie-Hellman Ephemeral|
-|digital signature|A hash value encrypted with the senderÆs private key.|
+|digital signature|A hash value encrypted with the sender¦s private key.|
 |digital watermarking |Embedding a logo or trademark in documents, pictures, or other objects. The watermark deters people from using the materials in an unauthorized manner.|
 |dig|A Linux command that is used to troubleshoot DNS.|
 |DIM|Data in Motion|
-|directory traversal |The process of breaking out of the web root folder in order to access restricted directories and execute commands outside of the web serverÆs root directory.|
+|directory traversal |The process of breaking out of the web root folder in order to access restricted directories and execute commands outside of the web server¦s root directory.|
 |disk imaging |The process of creating an exact image of the contents of a hard drive.|
 |distributed consensus |The process whereby distributed nodes reach agreement or consensus on the validity of transactions.|
 |DIT|Data in Transit|
@@ -418,7 +420,7 @@
 |ESP|Encapsulated Security Payload|
 |ESP|Executable-Space Protection - mark memory pages as non-executable -  see NX|
 |ESSID|Extended Service Set Identifier|
-|ETL|Extract û Transform û Load. |
+|ETL|Extract v Transform v Load. |
 |EU|European Union|
 |ev|Extended Validation (EV) certificate|
 |Exadata||
@@ -437,7 +439,7 @@
 |FCEB|Federal Civilian Executive Branch is an umbrella term for a large number of Federal agencies.  Some of these agencies are intercepting global email traffic activity|
 |FDE|Full Disk Encryption|
 |FDPIC|Federal Data Protection and Information Commissioner|
-|feature extraction |An approach to obtaining biometric information from a collected sample of a userÆs physiological or behavioral characteristics.|
+|feature extraction |An approach to obtaining biometric information from a collected sample of a user¦s physiological or behavioral characteristics.|
 |FedRAMP|Federal Risk and Authorization Management Program|
 |ferma|Federation of European Risk Management Associations (FERMA) |
 |FERPA|Family Educational Rights and Privacy Act|
@@ -477,7 +479,7 @@
 |geofencing |The application of geographic limits to where a device can be used.|
 |geotagging |The process of adding geographic metadata (a form of geospatial metadata) to various media, including photographs, videos, websites, SMS messages, or RSS feeds.|
 |gfs|grandfather/father/son (GFS)|
-|Ghidra|A software reverse engineering (SRE) suite of tools developed by the NSAÆs Research Directorate.|
+|Ghidra|A software reverse engineering (SRE) suite of tools developed by the NSA¦s Research Directorate.|
 |GLBA|Gramm-Leach-Bliley Act|
 |gpg|GNU Privacy Guard (GPG)|
 |GPO|Group Policy Object|
@@ -533,7 +535,7 @@
 |IDCS|Oracle Identity Cloud Service|
 |IDEA|International Data Encryption Algorithm|
 |identity proofing |An additional step in the identification portion of authentication. Also called two-step verification.|
-|identity theft |An attack in which someone obtains personal informationùsuch as driverÆs license number, bank account number, or Social Security numberùand uses that information to assume the identity of the individual whose information was stolen.|
+|identity theft |An attack in which someone obtains personal information·such as driver¦s license number, bank account number, or Social Security number·and uses that information to assume the identity of the individual whose information was stolen.|
 |IDE|Integrated Development Environment|
 |IDF|Intermediate Distribution Frame|
 |IdM|Identity Management|
@@ -556,7 +558,7 @@
 |in-band |Describes a direct connection to the network.|
 |incident response |The process of detecting and reacting to security events.|
 |INE|Inline Network Encryptor|
-|information security gap analysis |An audit that compares an organizationÆs security program to overall best security practices.|
+|information security gap analysis |An audit that compares an organization¦s security program to overall best security practices.|
 |inherent risk |The level of risk before mitigation factors or treatments are applied.|
 |input validation |The process of checking all input for things such as proper format and proper length.|
 |insider threat |Someone who has knowledge of and access to systems that outsiders do not have and who therefore has a much easier avenue for carrying out or participating in an attack. An organization should implement the appropriate event collection and log review policies to provide the means to detect insider threats as they occur.|
@@ -564,7 +566,7 @@
 |integrity |Assurance that data is protected from unauthorized modification or data corruption.|
 |intellectual property|A tangible or intangible asset to which an owner has exclusive rights.|
 |intelligence feed |An RSS feed dedicated to the sharing of information about the latest vulnerabilities.|
-|interface testing|A type of testing that evaluates whether an applicationÆs systems or components correctly pass data and control to one another.|
+|interface testing|A type of testing that evaluates whether an application¦s systems or components correctly pass data and control to one another.|
 |interpretation|A code processing method that involves analyzing a source instruction, performing the required operation, and moving to the next source instruction.|
 |ioc|indicator of compromise (IoC) |
 |iot|Internet of Things (IoT)|
@@ -594,7 +596,7 @@
 |ITAR|International Traffic in Arms Regulations|
 |ITA|International Trade Administration|
 |ITCP|IT Contingency Plan|
-|ITHC|IT Health Check û Penetration Test|
+|ITHC|IT Health Check v Penetration Test|
 |ITIL|Information Technology Infrastructure Library (formerly)|
 |ITOS|Information Technology Operation and Support|
 |ITSM|Information Technology Service Management|
@@ -652,7 +654,7 @@
 |MDT|Microsoft Deployment Toolkit|
 |md|message digest (MD)|
 |MEAP|Mobile Enterprise Application Platform|
-|measured boot|A boot process in which software and platform components have been identified, or ômeasured,ö using cryptographic techniques.|
+|measured boot|A boot process in which software and platform components have been identified, or (measured,÷ using cryptographic techniques.|
 |metadata |Information about a piece of data. This information can be assigned as a key word or term and stored in a tag.|
 |mfa|multifactor authentication (MFA) |
 |MFD|Multifunction Device|
@@ -660,7 +662,7 @@
 |MFT|Oracle Managed File Transfer capability|
 |middleware|A layer of software that acts as a bridge between an operating system and a database or an application.|
 |mime|Multipurpose Internet Mail Extensions (MIME) |
-|mission critical |Describes functions that, if missing, will impact the organizationsÆ ability to do business.|
+|mission critical |Describes functions that, if missing, will impact the organizations¦ ability to do business.|
 |MITM|Man in the Middle|
 |ml|machine learning (ML) |
 |MMS|Multimedia Message Service|
@@ -820,7 +822,7 @@
 |PFI|PCI Forensic Investigator|
 |PFS|Perfect Forward Secrecy|
 |pgp|Pretty Good Privacy (PGP) |
-|pharming |An attack that involves polluting the contents of a computerÆs DNS cache so that requests to a legitimate site are actually routed to an alternate site.|
+|pharming |An attack that involves polluting the contents of a computer¦s DNS cache so that requests to a legitimate site are actually routed to an alternate site.|
 |PHI|Personal Health Information|
 |PHI|Protected Health Information|
 |PIDAS|Permieter Intrusion Detection and Assessment system|
@@ -908,7 +910,7 @@
 |Region|Oracle regional data centre.|
 |regression testing|A type of software testing which catches bugs that may have been accidentally introduced into the new build or release candidate.|
 |regulatory requirement |Any requirement that must be documented and followed based on laws and regulations.|
-|relevant |In the context of evidence, the quality of proving a material fact related to a crime by showing that a crime has been committed, providing information describing the crime, providing information regarding the perpetuatorÆs motives, or verifying what occurred.|
+|relevant |In the context of evidence, the quality of proving a material fact related to a crime by showing that a crime has been committed, providing information describing the crime, providing information regarding the perpetuator¦s motives, or verifying what occurred.|
 |reliability |The ability of a control to perform as expected on a constant basis.|
 |reliable |In the context of evidence, the quality of ensuring freedom from tampering or modification.|
 |remote wipe |An instruction sent remotely to a mobile device to erase all the data, typically used when a device is lost or stolen.|
@@ -928,7 +930,7 @@
 |risk appetite |The level of exposure or risk that an organization views as acceptable.|
 |risk management life cycle |Best practice steps involved in risk management.|
 |risk register|A document or piece of software that is used to record assets, vulnerabilities, efforts to address vulnerabilities, and the result of such efforts.|
-|risk tolerance |The degree of variance from an organizationÆs risk appetite that the organization is willing to tolerate.|
+|risk tolerance |The degree of variance from an organization¦s risk appetite that the organization is willing to tolerate.|
 |RMF|Risk Management Framework|
 |RMI|Restrictive Management Environment.  FJ on-premises cycops equivalent now out of support|
 |ROC|Report of Compliance|
@@ -1089,7 +1091,7 @@
 |static password|A password that is the same for each login. It provides a minimum level of security because the password never changes.|
 |steganography analysis |The process of analyzing the graphic files on a drive to see whether the files have been altered or to discover the encryption used on the files. Data can be hidden within graphic files or hidden by other means.|
 |STIX|Structured Threat Information eXpression|
-|storage key |Versatile memory that contains the keys used to encrypt a computerÆs storage, including hard drives, USB flash drives, and so on.|
+|storage key |Versatile memory that contains the keys used to encrypt a computer¦s storage, including hard drives, USB flash drives, and so on.|
 |STP|Shielded Twisted Pair|
 |strategic intelligence |Intelligence that is gathered on a global scale.|
 |streaming pipeline|A sequence of elements supporting sequential and parallel aggregate operation. Commonly used in Java.|
@@ -1118,7 +1120,7 @@
 |TGT|Ticket Granting Ticket|
 |threat emulation |The process of simulating an attack to see how the security system in place reacts.|
 |throughput rate |The rate at which a biometric system will be able to scan characteristics and complete the analysis to permit or deny access.|
-|time of check to time of use |An attack in which a system is changed between a condition check and the display of the checkÆs results.|
+|time of check to time of use |An attack in which a system is changed between a condition check and the display of the check¦s results.|
 |TKIP|Temporal Key Integrity Protocol|
 |TLS|Transport Layer Security|
 |TOC/TOU|Time of Check/Time of Use|
@@ -1126,7 +1128,7 @@
 |TOE|Target of Evaluation|
 |TOS|Type of Service|
 |totp|time-based one-time password (TOTP) |
-|TPM chip|A security chip installed on a computerÆs motherboard that is responsible for protecting symmetric and asymmetric keys, hashes, and digital certificates. This chip provides services to protect passwords and encrypt drives and digital rights, making it much harder for attackers to gain access to the computers that have TPM chips enabled.|
+|TPM chip|A security chip installed on a computer¦s motherboard that is responsible for protecting symmetric and asymmetric keys, hashes, and digital certificates. This chip provides services to protect passwords and encrypt drives and digital rights, making it much harder for attackers to gain access to the computers that have TPM chips enabled.|
 |TPM|Trusted Platform Module|
 |TPoX|Transaction Processing over XML|
 |tracert|A utility that traces the path of a packet from its source to its destination.|
@@ -1176,7 +1178,7 @@
 |VLAN hopping |An attack that enables a device in one VLAN to obtain traffic destined for another VLAN|
 |VLAN|Virtual Local Area Network|
 |VLSM|Variable-length Subnet Masking|
-|VM escape |An attack in which the attacker ôbreaks outö of a VMÆs normally isolated state and interacts directly with the hypervisor.|
+|VM escape |An attack in which the attacker (breaks out÷ of a VM¦s normally isolated state and interacts directly with the hypervisor.|
 |VMFS|VMware File System|
 |VMI|Virtual Machine Introspection|
 |vmstat|A built-in monitoring utility in Linux that is typically used to help identify performance bottlenecks and diagnose problems and that can also be used in the same way as the ps command to identify malicious processes.|
