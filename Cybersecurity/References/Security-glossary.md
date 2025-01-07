@@ -5,6 +5,7 @@
 
 # Security Glossary of terms
 
+
 |Acronym|Description|
 |---|---|
 |2FA|Two-Factor Authentication|
