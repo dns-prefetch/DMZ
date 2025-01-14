@@ -1,8 +1,7 @@
 ---
 <img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
 
-<img src="images/Safeguards.svg" height="10%">
-
+##### Published 19/11/2024 10:37:55; Revised: Never
 
 # five whimsical cybersecurity thoughts for 2025 based on the top five cybersecurity threats:
 
@@ -23,6 +22,6 @@
 
 The future of cybersecurity is sure to be full of both hilarious challenges and bizarre breakthroughs—let's hope we're all ready for the ride!
 
-# 5 thoughts for this year
+<img src="images/Safeguards.svg" height="10%">
 
 ---
