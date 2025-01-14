@@ -22,6 +22,8 @@
 
 The future of cybersecurity is sure to be full of both hilarious challenges and bizarre breakthroughs—let's hope we're all ready for the ride!
 
+<p align="center">
 <img src="images/Safeguards.svg" height="10%">
+</p>
 
 ---
