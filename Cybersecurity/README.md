@@ -3,7 +3,7 @@
 
 ##### Published 19/11/2024 10:37:55; Revised: 14/01/2025 19:54:21
 
-# five whimsical cybersecurity thoughts for 2025 based on the top five cybersecurity threats:
+# Five whimsical cybersecurity thoughts for 2025 based on the top five cybersecurity threats:
 
 1. **AI-Driven Phishing Campaigns**
 "By 2025, phishing emails will no longer be from Nigerian princes, but rather from *AI-enhanced, emotionally intelligent* bots that know how to perfectly mimic your boss’s tone. Don’t be surprised if your manager starts asking you for Bitcoin to pay for an 'emergency team-building trip to Mars'."
