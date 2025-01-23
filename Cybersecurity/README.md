@@ -1,15 +1,30 @@
 ---
 <img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
 
+##### Published 19/11/2024 10:37:55; Revised: 14/01/2025 19:54:21
+
+# five whimsical cybersecurity thoughts for 2025 based on the top five cybersecurity threats:
+# Five whimsical cybersecurity thoughts for 2025 based on the top five cybersecurity threats:
+
+1. **AI-Driven Phishing Campaigns**
+"By 2025, phishing emails will no longer be from Nigerian princes, but rather from *AI-enhanced, emotionally intelligent* bots that know how to perfectly mimic your bossï¿½s tone. Donï¿½t be surprised if your manager starts asking you for Bitcoin to pay for an 'emergency team-building trip to Mars'."
+
+2. **Ransomware in the Cloud**
+"Imagine a future where instead of worrying about your files being locked, youï¿½re waiting for a ransom demand from a cloud server thatï¿½s now a sentient being and is negotiating for a higher payout. If you ever hear ï¿½I am the Cloud, and I demand 2,000 crypto coins for your cat memes,ï¿½ just know that itï¿½s not your imaginationï¿½ it's 2025."
+
+3. **Deepfake CEOs**
+"By 2025, expect a rise in ï¿½Deepfake CEOsï¿½ï¿½videos of executives giving important company announcements, only to realize halfway through that the 'CEO' is just an AI-created version of your boss whoï¿½s asking for personal info and telling you to ï¿½click the link for a surprise!ï¿½"
+
+4. **Quantum Hacking**
+"In the future, quantum computers might just crack your passwords faster than you can say ï¿½impenetrable encryption.ï¿½ But hey, at least the hackers might only take a couple of milliseconds to say ï¿½pleaseï¿½ before they drain your bank account!"
+
+5. **The Internet of Thieves**
+"The Internet of Things is now *The Internet of Thieves*ï¿½your smart fridge has a backdoor entry that lets cybercriminals steal your grocery list (and maybe your leftovers). When the fridge starts texting you at 3 a.m. asking for an update on your Wi-Fi password, just know itï¿½s probably *not* your fridge asking about dinner plans."
+
+The future of cybersecurity is sure to be full of both hilarious challenges and bizarre breakthroughsï¿½let's hope we're all ready for the ride!
+
+<p align="center">
 <img src="images/Safeguards.svg" height="10%">
-
-
-# 5 thoughts for this year
-
-1. **“There are two types of organisations: those who have been hacked, and those who don’t know they’ve been hacked yet.”** — often attributed to former Cisco CEO John Chambers.
-2. **"Passwords are like underwear: don’t let people see it, change it often, and you shouldn’t share it with strangers."**
-3. **“I don’t always test my code, but when I do, I do it in production.”** — A humorous nod to the risky (and often regrettable) move of testing live code.
-4. **"The most secure password is one you can’t remember."** — Highlights the paradox between secure passwords and usability.
-5. **"To err is human, but to really foul things up requires a computer."** — A classic reminder of the scale of errors possible in the digital age.
+</p>
 
 ---
