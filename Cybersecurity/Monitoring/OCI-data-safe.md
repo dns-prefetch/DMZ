@@ -5,7 +5,9 @@
 
 # How Oracle Data Safe accesses the UNIFIED_AUDIT_TRAIL
 
+<p align="center">
 <img src="../images/oracle-data-safe.svg">
+</p>
 
 Oracle **Data Safe** is a security and auditing service that helps organizations monitor, assess, and protect their Oracle Databases. It can read and analyze various database logs, including the **Unified Audit Trail** (`UNIFIED_AUDIT_TRAIL`), to enhance security monitoring, track user activity, and provide insights into potential risks or compliance issues.
 

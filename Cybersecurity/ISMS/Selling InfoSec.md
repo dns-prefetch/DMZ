@@ -22,7 +22,9 @@ Lets get started.
 
 ## Introduction
 
+<p align="center">
 <img src="../images/ISMS-Intro.svg">
+</p>
 
 Selling information security (infosec) within an organisation requires a strategic approach that emphasizes the value of security as a foundational element of the organization’s success. Begin by framing infosec not just as a technical necessity but as a critical business enabler. Highlight how strong security measures can protect sensitive data, maintain customer trust, and comply with regulatory requirements. Use real-world examples of security breaches that resulted in financial loss, reputational damage, or legal penalties to illustrate the potential consequences of inadequate security. Position infosec as a proactive investment rather than a reactive expense, showcasing how it can lead to long-term savings and enhanced business resilience.
 
@@ -65,7 +67,9 @@ Information security (infosec) involves protecting sensitive data, networks, and
 
 ## How do we portray the InfoSec vision
 
+<p align="center">
   <img src="../images/ISMS-Risk-Profile.svg">
+</p>
 
 An InfoSec vision is to create a resilient, proactive, and adaptive information security framework that empowers the organization to innovate confidently while safeguarding its data, systems, and digital assets.
 
@@ -149,7 +153,9 @@ InfoSec commitment is to stay ahead of emerging risks while driving continuous i
 
 ## How do we find and demonstrate InfoSec Business Value?
 
+<p align="center">
   <img src="../images/ISMS-Risk-BusinessValue.svg">
+</p>
 
   Obtaining business value from information security (infosec) requires aligning security practices with the organization's broader goals and demonstrating how security investments can support overall business objectives. The first step is to develop a clear, risk-based strategy that identifies critical assets and prioritizes protection efforts based on potential business impact. This involves integrating security into business processes and workflows, so that security measures are seen as enablers rather than obstacles.
 

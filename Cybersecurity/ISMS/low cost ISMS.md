@@ -5,7 +5,9 @@
 
 # Information Security Management System (ISMS)
 
+<p align="center">
 <img src="../images/ISMS-Intro.svg">
+</p>
 
 An ISMS approach to managing the security process for a small to medium sized project.
 
@@ -42,15 +44,20 @@ At stage 1:
 
 ## High level conceptual Threat Model
 
+<p align="center">
 <img src="../images/ISMS-HLTM.svg">
+</p>
 
 ## An ISMS approach
 
+<p align="center">
 <img src="../images/ISMS-Approach.svg">
+</p>
 
 ## ISMS for small projects
 
+<p align="center">
 <img src="../images/ISMS-process.svg">
-
+</p>
 
 ---

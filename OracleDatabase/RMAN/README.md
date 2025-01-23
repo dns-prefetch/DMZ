@@ -16,7 +16,9 @@ Bash wrapper script that sits between Linux CRON and RMAN to execute backups, we
     - Backup retension period is 30 days
     - Backup destination modified by adjusting global variable: rman_disk_folder
 
+<p align="center">
 <img src="sample_output/sample.png" alt="Sample Output" title="orb help and installed files" />
+</p>
 
 
 # Single Instance host instructions
