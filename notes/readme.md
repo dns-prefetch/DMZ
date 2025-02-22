@@ -7,8 +7,7 @@ These are very basic personal notes I can access on my phone and phablet. One of
 
 ##### Published 22/02/2025 09:15:30; Revised: Never
 
-
-AIW bounded by - PR-failover-DR-failback-PR\
+AIW (PR-DR-PR) - Acceptable Interruption Window – the maximum allowable downtime before it starts to have an impact on business functions. Our sales platform can be down for 30 minutes without significantly affecting client trust & reputational damage
 ALE\
 Alternate routing - e.g. microwave or fibre\
 BMIS - see diagram\
@@ -29,11 +28,11 @@ KPI - measure process efficiency and effectiveness\
 KRI - measure security incident trend metrics\
 LOLA Listen Observe Learn Act\
 Maturity Levels (Partial, Informed, Repeatable, Adaptable)\
-MTO for given SDO in DR before organisation negatively affected\
-NIST SP 800-30 Rev 1 Guide for Conducting Risk Assessments\
+MTO - Maximum Tollerable Outage - for given SDO in DR before organisation negatively affected\
 NIST 800-37 - Risk Management Framework for Information Systems and Organizations\
 NIST 800-53 - Security and Privacy Controls for Information Systems and Organizations\
 NIST CSF - Cybersecurity Framework\
+NIST SP 800-30 - Rev 1 Guide for Conducting Risk Assessments\
 RACI - risk treatment\
 Rgulation\
 ROSI\
