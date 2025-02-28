@@ -21,6 +21,7 @@ IR - SSG -> ISM\
 ISM -> IMT\
 ISM -> IRM -> IRT (Investigator, Incident handler)\
 ISO 27001 - Information security, cybersecurity and privacy protection — Information security management systems — Requirements\
+ISO/IEC 27004 - Information technology — Security techniques — Information security management — Monitoring, measurement, analysis and evaluation\
 ISO 27005 - Information security, cybersecurity and privacy protection — Guidance on managing information security risks\
 ISO 62443-2-1 - Security of Industrial Automation and Control Systems\
 KGI - measure goal attainment metric\
