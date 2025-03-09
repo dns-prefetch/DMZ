@@ -42,6 +42,7 @@ Security balanced score card\
 TOGAF\
 Zachman framework\
 
+
 ```Mermaid
 flowchart LR
     A[Idea] -->|Get money| B(Bank)
@@ -49,5 +50,7 @@ flowchart LR
     C -->|One| D[Box of burst stars]
     C -->|Two| E[Open landscape of volcanic islands]
     C -->|Three| F[Bag of quickly cooling steam - a big bag]
-```Mermaid
+```
+
+
 ---
