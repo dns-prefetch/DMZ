@@ -7,6 +7,18 @@ These are very basic personal notes I can access on my phone and phablet. One of
 
 ##### Published 22/02/2025 09:15:30; Revised: Never
 
+Flowchar example
+
+```mermaid
+    flowchart LR
+        A[Idea] -->|Get money| B(Bank)
+        B --> C{Spend Money}
+        C -->|One| D[Box of burst stars]
+        C -->|Two| E[Open landscape of volcanic islands]
+        C -->|Three| F[Bag of quickly cooling steam - a big bag]
+```
+
+
 AIW (PR-DR-PR) - Acceptable Interruption Window – the maximum allowable downtime before it starts to have an impact on business functions. Our sales platform can be down for 30 minutes without significantly affecting client trust & reputational damage
 ALE\
 Alternate routing - e.g. microwave or fibre\
@@ -21,6 +33,7 @@ IR - SSG -> ISM\
 ISM -> IMT\
 ISM -> IRM -> IRT (Investigator, Incident handler)\
 ISO 27001 - Information security, cybersecurity and privacy protection — Information security management systems — Requirements\
+ISO/IEC 27004 - Information technology — Security techniques — Information security management — Monitoring, measurement, analysis and evaluation\
 ISO 27005 - Information security, cybersecurity and privacy protection — Guidance on managing information security risks\
 ISO 62443-2-1 - Security of Industrial Automation and Control Systems\
 KGI - measure goal attainment metric\
