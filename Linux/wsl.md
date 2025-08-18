@@ -1,5 +1,5 @@
 ---
-<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
+<img src="https://raw.githubusercontent.com/dns-prefetch/DMZ/refs/heads/main/Assets/images/global/dmz-header-2.svg" width="100%" height="10%">
 
 ##### Published 18/08/2025 10:44:05; Revised: None
 
