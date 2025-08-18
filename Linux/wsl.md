@@ -7,6 +7,8 @@
 
 [Microsoft WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/)
 
+## But first some background
+
 Almost (almost) everything you need to start using Oracle Linux on your windows machine is documented on the excellent Microsoft documentation site.  However there are a number of details that need to be researched and implemented to get a working installation up and running.
 
 As a little background history to this article, I used to run Oracle Linux on my windows machines inside VirtualBox and this was a pattern I followed for approximately 15 years.  During this time, I started building virtual machines inside my Oracle cloud infrastructure tenancy, and this has been a great pattern for working with proof of concept jobs, but when I'm developing code on Linux, I prefer to minimize the network distance between my windows device and my virtual machine. Minimizing the network hops when I am busy and concentrating help to reduce to edit/save cycle delays smoooth my flow of consciousness.
@@ -14,17 +16,17 @@ As a little background history to this article, I used to run Oracle Linux on my
 So, now I have Oracle Cloud virtual machines, and WSL virtual machines.  I no longer have a need for VirtualBox.
 
 This is my plan
- - Install WSL
- - Install Oracle Linux
- - Configure the Linux installation to automatically start systemd
- - Move the WSL hard disk image for Oracle Linux to my D: drive
+- Install WSL
+- Install Oracle Linux
+- Configure the Linux installation to automatically start systemd
+- Move the WSL hard disk image for Oracle Linux to my D: drive
 
 Initially I was concerned about the practicality of the resources demands of Oracle Linux running inside WSL on Windows, but the hardware requirements are surprisingly low. To give you some idea of what my working environment includes; I have a tiny, quiet, low power machine that I use for the daily work:
- - MeLE Quieter 4C fanless mini PC
- - Intel N150, 16gb RAM, 500gb SSD
- - Windows 11
- - Windows drive C is 200gb
- - Windows drive D is 266gb, this drive is encrypted with BitLocker
+- MeLE Quieter 4C fanless mini PC
+- Intel N150, 16gb RAM, 500gb SSD
+- Windows 11
+- Windows drive C is 200gb
+- Windows drive D is 266gb, this drive is encrypted with BitLocker
 
 On to the MeLE I installed WSL along with Oracle Linux 9.5.  This is a fully working Oracle Linux running systemd which automatically starts the Linux background services.  WSL is default configured to start manually.
 
@@ -53,7 +55,13 @@ wsl --update
 
 These are my preferred default settings across all my WSL Linux installations.  These settings can also be configured using the WSL settings application (windows search: wsl settings).
 
-Create and edit %UserProfile%\.wslconfig
+Create and edit the WSL configuration file
+
+```
+%UserProfile%\.wslconfig
+```
+
+Then add the following, and save.
 
 ```
 [wsl2]
@@ -94,10 +102,10 @@ Exit the Linux vm.
 There are two reason for the relocation of the virtual disk, the first the C: drive is where I keep windows and the binary installations.  D: is encrypted and used primarily for my working material.
 
 This is the plan
- - Create the target folder on D:
- - Shutdown Oracle Linux
- - Export and unregister the VM from C:
- - Import and register the VM to D:
+- Create the target folder on D:
+- Shutdown Oracle Linux
+- Export and unregister the VM from C:
+- Import and register the VM to D:
 
 ```
 mkdir D:\WSL
