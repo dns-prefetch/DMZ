@@ -5,8 +5,6 @@
 
 # How to install WSL and Oracle Linux onto your windows device
 
-		code/text here
-
 [Microsoft WSL documentation](https://learn.microsoft.com/en-us/windows/wsl/)
 
 Almost (almost) everything you need to start using Oracle Linux on your windows machine is documented on the excellent Microsoft documentation site.  However there are a number of details that need to be researched and implemented to get a working installation up and running.
