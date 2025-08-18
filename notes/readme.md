@@ -1,5 +1,5 @@
 ---
-<img src="https://raw.githubusercontent.com/dns-prefetch/DMZ/refs/heads/main/Assets/images/global/dmz-header-2.svg" width="100%" height="10%">
+<img src="https://raw.githubusercontent.com/dns-prefetch/DMZ/refs/heads/main/Assets/images/global/dmz-header.svg" width="100%" height="10%">
 
 <p align="center">
 These are very basic personal notes I can access on my phone and phablet. One of my hobbies is studying and researching, and this is where I dump really basic stuff I'm thinking about today.
