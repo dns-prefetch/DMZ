@@ -1,5 +1,5 @@
 ---
-<img src="https://dns-prefetch.github.io/assets/logos/dmz-header-2.svg" width="100%" height="10%">
+<img src="https://raw.githubusercontent.com/dns-prefetch/DMZ/refs/heads/main/Assets/images/global/dmz-header.svg" width="100%" height="10%">
 
 # Oracle: Cloud, Linux, and Database
 

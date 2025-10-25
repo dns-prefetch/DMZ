@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" >
+ <g class="layer">
+  <title>DMZ Header</title>
+  <rect x="0" y="0" width="100%" height="100px" fill="#F0A957" />
+  <rect x="0" y="0" width="100%" height="100px" fill="#E3C800" />
+  <text x="10%" y="130" fill="black" font-size="5em">..DMZ..</text>
+ </g>
+</svg>
