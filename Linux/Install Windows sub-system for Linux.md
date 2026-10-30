@@ -1,7 +1,7 @@
 ---
 <img src="https://raw.githubusercontent.com/dns-prefetch/DMZ/refs/heads/main/Assets/images/global/dmz-header.svg" width="100%" height="10%">
 
-##### Published 18/08/2025 10:44:05; Revised: None
+##### Published 18/08/2025 10:44:05; ReviseE: None
 
 # How to install WSL and Oracle Linux onto your windows device
 
@@ -17,9 +17,9 @@ So, now I have Oracle Cloud virtual machines, and WSL virtual machines.  I no lo
 
 This is my plan
 - Install WSL
-- Install Oracle Linux
+- Install Oracle Linux, or Fedora, or Ubuntu
 - Configure the Linux installation to automatically start systemd
-- Move the WSL hard disk image for Oracle Linux to my D: drive
+- Move the WSL hard disk image for Oracle Linux to my E: drive
 
 Initially I was concerned about the practicality of the resources demands of Oracle Linux running inside WSL on Windows, but the hardware requirements are surprisingly low. To give you some idea of what my working environment includes; I have a tiny, quiet, low power machine that I use for the daily work:
 - MeLE Quieter 4C fanless mini PC
@@ -34,7 +34,7 @@ After a relatively small amount of research and investigation, these are my work
 
 ## Install the WSL dependencies
 
-Using a command or powershell prompt
+Using a command or powershell prompt running as administrator
 
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -44,7 +44,7 @@ dism.exe /Online /enable-feature /All /FeatureName:Microsoft-Hyper-V
 
 ## Install and update WSL
 
-Using a command or powershell prompt
+Using a command or powershell prompt running as administrator
 
 ```
 wsl --install
@@ -80,9 +80,11 @@ Using a command or powershell prompt
 
 ```
 wsl --install -d OracleLinux_9_5
+wsl --install -d FedoraLinux-44
+wsl --install -d Ubuntu-26.04
 ```
 
-The prompt should now be within Oracle Linux, ensure you are root then add this configuration
+The prompt should now be within WLS operating system terminal, ensure you are root then add this configuration
 
 ```
 cat << END > /etc/wsl.conf
@@ -97,29 +99,35 @@ Exit the Linux vm.
 
 (If you are new to WSL, you will be surprised to discover that starting the VM is as simple as running wsl.exe. This will start the VM and create a session within the VM.)
 
-## Move the Linux virtual disk from C: to D:
+## Move the Linux virtual disk from C: to E:
 
-There are two reason for the relocation of the virtual disk, the first the C: drive is where I keep windows and the binary installations.  D: is encrypted and used primarily for my working material.
+There are two reason for the relocation of the virtual disk, the first the C: drive is where I keep windows and the binary installations.  E: is encrypted and used primarily for my working material.
 
 This is the plan
-- Create the target folder on D:
+- Create the target folder on E:
 - Shutdown Oracle Linux
 - Export and unregister the VM from C:
-- Import and register the VM to D:
+- Import and register the VM to E:
 
 ```
-mkdir D:\WSL
-mkdir D:\WSL\OEL95
+mkdir E:\WSL
+mkdir E:\WSL\OEL95
+mkdir E:\WSL\Fedora
 
 wsl --shutdown
 wsl -t OracleLinux_9_5
+wsl -t FedoraLinux-44
 
-wsl --export OracleLinux_9_5 "D:\WSL\oel95-ex.tar"
+wsl --export OracleLinux_9_5 "E:\WSL\oel95-ex.tar"
+wsl --export FedoraLinux-44 "E:\WSL\f44-ex.tar"
+
 wsl --unregister OracleLinux_9_5
+wsl --unregister FedoraLinux-44
 
-wsl --import OracleLinux_9_5 "D:\WSL\OEL95" "D:\WSL\oel95-ex.tar"
+wsl --import OracleLinux_9_5 "E:\WSL\OEL95" "E:\WSL\oel95-ex.tar"
+wsl --import FedoraLinux-44 "E:\WSL\OEL95" "E:\WSL\f44-ex.tar"
 
-wsl --set-default OracleLinux_9_5
+wsl --set-default FedoraLinux-44
 ```
 
 # Miscellanious brain joggers for me
